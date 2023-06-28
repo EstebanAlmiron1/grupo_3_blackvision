@@ -1,13 +1,14 @@
-# grupo_3_blackvision
+### grupo_3_blackvision
 Trabajo Integrador Digital House
 # **BlackVision**
 
 ***
 
 ## **Descripcion de la empresa**
-
+Empresa de anteojos Black Vision dirigida a tales personas , etc
 
 ## **Descripcion de los productos**
+se van a vender dif anteojos, de dif marcas, dif marcos, etc, etc
 
 ***
 
@@ -30,8 +31,13 @@ Trabajo Integrador Digital House
 
 ### **Sitios de referencia**
 1. [Vulk](https://www.vulkeyewear.com/) 
-2. <https://web.unionpacific.com.ar/>
-3. 
-4. 
-5. 
+    Elegimos esta página porque bla bla bla
+2. [Union Pacific](https://web.unionpacific.com.ar/)
+    Elegimos esta página porque bla bla bla
+3. [otra pagina](https://www.OTRAPAGINA.com/)
+    Elegimos esta página porque bla bla bla
+4. [otra pagina](https://www.OTRAPAGINA.com/)
+    Elegimos esta página porque bla bla bla
+5. [otra pagina](https://www.OTRAPAGINA.com/)
+    Elegimos esta página porque bla bla bla
 ***

@@ -1,14 +1,15 @@
-### grupo_3_blackvision
+#### grupo_3_blackvision
 Trabajo Integrador Digital House
 # **BlackVision**
 
 ***
 
 ## **Descripcion de la empresa**
-Empresa de anteojos Black Vision dirigida a tales personas , etc
+Temática, mision, vision, descripcion y esas cosas de la empresa.
 
 ## **Descripcion de los productos**
-se van a vender dif anteojos, de dif marcas, dif marcos, etc, etc
+¿Qué productos o servicios brindará nuestro sitio? ¿Quién será nuestra audiencia
+objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
 
 ***
 
@@ -32,22 +33,23 @@ se van a vender dif anteojos, de dif marcas, dif marcos, etc, etc
 ### **Sitios de referencia**
 1. [Vulk](https://www.vulkeyewear.com/) 
 
-    Elegimos esta página porque bla bla bla
+    Elegimos esta página por los productos o servicios que ofrecen.
+
 
 2. [Union Pacific](https://web.unionpacific.com.ar/)
 
-    Elegimos esta página porque bla bla bla
+    Elegimos esta página por los clientes a los que apuntan
 
 3. [otra pagina](https://www.OTRAPAGINA.com/)
 
-    Elegimos esta página porque bla bla bla
+    Elegimos esta página por la estética que presentan.
 
 4. [otra pagina](https://www.OTRAPAGINA.com/)
 
-    Elegimos esta página porque bla bla bla
+    Elegimos esta página por las funcionalidades implementadas
 
 5. [otra pagina](https://www.OTRAPAGINA.com/)
 
-    Elegimos esta página porque bla bla bla
-    
+    Elegimos esta página por las funcionalidades implementadas
+
 ***

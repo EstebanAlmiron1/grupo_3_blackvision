@@ -27,7 +27,7 @@ objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
 
 - Jonathan 
 
-- Juan Cruz Vaschetto
+- Juan Cruz Vaschetto :aprendiendo a programar 
 
 ***
 

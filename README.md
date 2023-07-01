@@ -26,7 +26,7 @@ objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
 
 - Jonathan 
 
-- Juan
+- Juan Cruz Vaschetto
 
 ***
 

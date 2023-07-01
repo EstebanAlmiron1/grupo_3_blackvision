@@ -20,7 +20,8 @@ objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
 
 - Fiamma 
 
-- Alejandro
+- Alejandro Hillar: aprendiendo a programar a los 38, reforestador y viverista de plantas nativas, coordinador de elcorredor_reservanatural .  
+
 
 - Esteban
 

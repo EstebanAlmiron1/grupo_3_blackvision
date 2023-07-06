@@ -27,7 +27,8 @@ Trabajo Integrador Digital House
 
 - Esteban
 
-- Jonathan 
+- Jonathan:  
+    30 años, Licenciado en Turismo con muchas ganas de aprender a codear. Fanatico de Independiente, las motos y de la naturaleza.
 
 - Juan Cruz Vaschetto:  
     aprendiendo a programar 

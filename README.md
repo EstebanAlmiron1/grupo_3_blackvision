@@ -45,9 +45,9 @@ objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
 
     Elegimos esta página por la estética que presentan.
 
-4. [otra pagina](https://www.OTRAPAGINA.com/)
+4. [Palo santo](https://www.palosantoargentina.com.ar/)
 
-    Elegimos esta página por las funcionalidades implementadas
+    Elegimos esta página por la orientacion a lo ecologico
 
 5. [otra pagina](https://www.OTRAPAGINA.com/)
 

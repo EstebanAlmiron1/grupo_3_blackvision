@@ -5,11 +5,11 @@ Trabajo Integrador Digital House
 ***
 
 ## **Descripcion de la empresa**
-Temática, mision, vision, descripcion y esas cosas de la empresa.
+    Somos Black Vision una empresa orientada a hombres y mujeres de entre 13 y 99 años, nuestro trabajo es producir anteojos de sol. Nuestro objetivo es tener un producto con buenas prestaciones, ofrecer una mejor atención al cliente, entregar el producto con la mayor velocidad.Black Vision esta creada para una nueva generación de personas interesadas en expresar sus gustos sin prejuicios, dandole a la marca versatilidad y confianza.  
+
 
 ## **Descripcion de los productos**
-¿Qué productos o servicios brindará nuestro sitio? ¿Quién será nuestra audiencia
-objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
+    LENTE DE SOL/ SUNGLASSES
 
 ***
 
@@ -18,6 +18,7 @@ objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
     31 años, siempre con ganas de aprender algo nuevo, entrando en el mundo de la programacion de a poco pero motivado
 
 - Fiamma Ledesma:
+    Tengo 20, bailarina y un poco muy reflexiva. Me encanta la psicología y casi todo lo que tenga mucha info.
 
 - Alejandro Hillar:  
     Aprendiendo a programar a los 38, reforestador y viverista de plantas nativas, coordinador de @elcorredor_reservanatural.  

@@ -15,8 +15,7 @@ objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
 
 ## **Descripcion de los integrantes**
 - Lautaro Ondarza:  
-    Breve descripción de mi persona.  
-    Se deben dejar dos espacios despues del . y apretar Enter para que se vea bien.
+    31 años, siempre con ganas de aprender algo nuevo, entrando en el mundo de la programacion de a poco pero motivado
 
 - Fiamma Ledesma:
 
@@ -28,14 +27,15 @@ objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
 
 - Jonathan 
 
-- Juan Cruz Vaschetto :aprendiendo a programar 
+- Juan Cruz Vaschetto:  
+    aprendiendo a programar 
 
 ***
 
 ### **Sitios de referencia**
 1. [Vulk](https://www.vulkeyewear.com/) 
 
-    Elegimos esta página por los productos o servicios que ofrecen.
+    Elegimos esta página para inspirarnos en los colores y en el diseño moderno del home.
 
 
 2. [Union Pacific](https://web.unionpacific.com.ar/)

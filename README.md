@@ -9,7 +9,7 @@ Somos Black Vision una empresa orientada a hombres y mujeres de entre 13 y 99 a√
 
 
 ## **Descripcion de los productos**
-    LENTE DE SOL/ SUNGLASSES
+LENTE DE SOL / SUNGLASSES
 
 ***
 

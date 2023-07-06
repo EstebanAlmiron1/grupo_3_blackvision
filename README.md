@@ -18,7 +18,7 @@ objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
     Breve descripción de mi persona.  
     Se deben dejar dos espacios despues del . y apretar Enter para que se vea bien.
 
-- Fiamma 
+- Fiamma Ledesma:
 
 - Alejandro Hillar: aprendiendo a programar a los 38, reforestador y viverista de plantas nativas, coordinador de elcorredor_reservanatural .  
 
@@ -41,15 +41,15 @@ objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
 
     Elegimos esta página por los clientes a los que apuntan
 
-3. [otra pagina](https://www.OTRAPAGINA.com/)
+3. [Infinit](https://infinit.la)
 
     Elegimos esta página por la estética que presentan.
 
-4. [Palo santo](https://www.palosantoargentina.com.ar/)
+4. [Palo Santo](https://www.palosantoargentina.com.ar/)
 
-    Elegimos esta página por la orientacion a lo ecologico
+    Elegimos esta página por la orientacion a lo ecológico
 
-5. [otra pagina](https://www.OTRAPAGINA.com/)
+5. [Ray Ban](https://www.ray-ban.com/latam)
 
     Elegimos esta página por las funcionalidades implementadas
 

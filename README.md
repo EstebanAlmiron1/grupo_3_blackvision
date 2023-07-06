@@ -18,7 +18,7 @@ Trabajo Integrador Digital House
 - Lautaro Ondarza:  
     31 años, siempre con ganas de aprender algo nuevo, entrando en el mundo de la programacion de a poco pero motivado
 
-- Fiamma Ledesma:
+- Fiamma Ledesma:  
     Tengo 20, bailarina y un poco muy reflexiva. Me encanta la psicología y casi todo lo que tenga mucha info.
 
 - Alejandro Hillar:  

@@ -30,7 +30,7 @@ LENTE DE SOL / SUNGLASSES
     30 años, Licenciado en Turismo con muchas ganas de aprender a codear. Fanatico de Independiente, las motos y de la naturaleza.
 
 - Juan Cruz Vaschetto:  
-    aprendiendo a programar 
+    26 años, soy tecnico elecromecanico recivido en la E.E.S.T Nº 1 de Muñiz, me gustan los autos y las motos . Actualmente practico Motocross. 
 
 ***
 

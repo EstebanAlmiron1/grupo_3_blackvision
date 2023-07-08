@@ -24,7 +24,8 @@ LENTE DE SOL / SUNGLASSES
     Aprendiendo a programar a los 38, reforestador y viverista de plantas nativas, coordinador de @elcorredor_reservanatural.  
 
 
-- Esteban
+- Esteban Almiron:  
+    Argentino, nacido en Capital Federal, Buenos Aires. Estudiante de Programación Web FullStack. Tengo 24 años. Me apasiona aprender sobre la informática y me gustan los videojuegos.
 
 - Jonathan:  
     30 años, Licenciado en Turismo con muchas ganas de aprender a codear. Fanatico de Independiente, las motos y de la naturaleza.

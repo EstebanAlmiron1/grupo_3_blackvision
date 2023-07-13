@@ -59,3 +59,7 @@ LENTE DE SOL / SUNGLASSES
     Elegimos esta página por las funcionalidades implementadas
 
 ***
+
+## Tablero de trabajo
+
+1. [Trello](https://trello.com/invite/b/jBrQk0DU/ATTIbe04bb2fd7f27dcdd0b3692fc32e950677BCDDCC/black-vision)

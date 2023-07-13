@@ -4,12 +4,3 @@
     --marron: #AA8B56;
     --negro: #000;
 }
-
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
-body{
-    font-family: 'Roboto', sans-serif;
-}

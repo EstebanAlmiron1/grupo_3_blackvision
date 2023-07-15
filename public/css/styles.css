@@ -22,7 +22,7 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    ;
+    
 }
 .main-logo img{
     border: 1px solid white;
@@ -73,4 +73,48 @@ h2.titulo{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+footer{
+    align-items: top;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.redes{
+    display: flex;
+    flex-wrap: wrap;       
+    color:white;
+    width: 30%;
+    justify-content: left;
+}
+.redes-titulo{
+    width: 100%;   
+    
+}
+.redes-lista{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+.config{
+    color:white;
+    width: 30%;        
+}
+.crew{
+    color:white;
+    width: 30%;
+}
+a{  color:var(--celeste);    
+    text-decoration: none;
+}   
+ul{
+    list-style-type: none;
+    text-decoration: none;    
+}
+footer div a i{
+    margin-right: 15px;
 }

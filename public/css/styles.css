@@ -1,13 +1,11 @@
+@import "login.css";
+@import "carrito.css";
 :root{
     --celeste: #4592AF;
     --amarillo: #F0FF42;
     --marron: #AA8B56;
     --negro: #000;
 }
-
-@import "login.css";
-@import "carrito.css";
-
 
 *{
     margin: 0px;

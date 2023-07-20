@@ -1,0 +1,21 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing:border-box;
+    background-color: blueviolet;
+}
+
+.main-top{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+}
+
+.login-titulo{
+    width: 50%;
+}   
+
+.login-box {
+    width: 40%;
+}

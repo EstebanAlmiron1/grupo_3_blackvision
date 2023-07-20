@@ -5,6 +5,10 @@
     --negro: #000;
 }
 
+@import "login.css";
+@import "carrito.css";
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -12,6 +16,7 @@
 }
 
 body{
+    
     font-family: 'Roboto', sans-serif;
 
 }
@@ -39,13 +44,12 @@ header{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    
 }
 .destacados img{
     width: 35%;
 }
-.destacados div{
-    width: 15%;
-}
+
 .publicidad-home{
     width: 100%;
     border: 2px solid black;

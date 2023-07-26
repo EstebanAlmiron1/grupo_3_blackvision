@@ -38,7 +38,7 @@ header{
     transition: all 0.8s ease-in-out;
 }
 .header-izq a:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .header-izq div{
     width: 20%;
@@ -71,7 +71,7 @@ header{
     transition: all 0.8s; 
 }
 .header-der i:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .header-search{
     padding: 5px;
@@ -118,18 +118,36 @@ header div div{
     display: flex;
     justify-content: center;
 }
-.destacados{
-    border: 1px solid black;
-    width: 100%;
+#contenedorItemsCarrousel{
+    height: 35vh;
+    background-image: url("/img/salehsd.jpg");
+    overflow: hidden;
+}
+.item-carrousel{
+    
+    height: 100%;
+    position: relative;
+}
+.img-carrousel{
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+}
+.img-carrousel img{
+    height: 100%;
     
 }
-.destacados img{
-    width: 35%;
+.flechas-carrousel{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
+
 
 .publicidad-home{
     width: 100%;

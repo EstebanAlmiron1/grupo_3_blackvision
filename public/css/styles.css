@@ -21,7 +21,8 @@
 body{
     
     font-family: 'Roboto', sans-serif;
-
+    position: relative;    
+    min-height: 100vh;
 }
 header{
     background-color:#000 ;

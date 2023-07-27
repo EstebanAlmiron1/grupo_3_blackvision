@@ -3,6 +3,8 @@
 @import "productDetail.css";
 @import "register.css";
 @import "perfil.css";
+@import "productList.css";
+
 :root{
     --celeste: #4592AF;
     --amarillo: #F0FF42;

@@ -39,7 +39,7 @@ header{
 .fa-bars{
     color: var(--celeste);
     font-size: larger;
-    align-self: ;
+    
 }
 #linkmainlogo{
     display: none;
@@ -74,6 +74,16 @@ header{
     margin-right: 10px;    
 }
 .header-der i{
+    color: var(--celeste);
+    font-size:larger;
+    margin: 10px;
+    padding-left: 10px;   
+    transition: all 0.8s; 
+}
+.header-izq i:hover{
+    transform: scale(1.2);
+}
+.header-izq i{
     color: var(--celeste);
     font-size:larger;
     margin: 10px;
@@ -189,38 +199,46 @@ h2.titulo{
     justify-content: space-around;
 }
 footer{
-    align-items: top;
+    
     width: 100%;
     background-color: #000;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content:center;
-}
-
-.redes{
-    display: flex;
-    flex-wrap: wrap;       
-    color:white;
-    width: 30%;
-    justify-content: left;
+    text-align: center;
 }
 .redes-titulo{
     width: 100%;   
     
 }
-.redes-lista{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+.redes{
+    display: flex;
+    flex-wrap: wrap;       
+    color:white;
     width: 100%;
+    justify-content: center;
 }
+
+
 .config{
     color:white;
-    width: 30%;        
+    width: 90%;        
 }
 .crew{
     color:white;
-    width: 30%;
+    width: 90%;
+}
+.redes-lista{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width: 100%;
+}
+.redes-lista div{
+    padding-left: 15px;
+    
 }
 a{  color:var(--celeste);    
     text-decoration: none;
@@ -237,6 +255,9 @@ footer div a i{
 .ruta{
     width: 100%;
 }
+footer div{
+    padding: 5px;
+}
 
 @media (min-width: 425px){    
     #linkmainlogo{
@@ -244,6 +265,31 @@ footer div a i{
     }
     .header-izq i{
         display: none;
+    }
+    footer{
+        width: 100%;
+        flex-direction:row;
+        align-items: top;
+        justify-content:center;
+    }
+    .redes{
+      width: 30%;
+        
+    }
+    .redes-lista{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .redes-lista div {
+        width: 25%;
+    }
+    .config{     
+        width: 30%;        
+    }
+    .crew{     
+        width: 30%;
     }
 }
 @media (min-width: 768px){ 
@@ -253,5 +299,14 @@ footer div a i{
     .header-izq i{
         display: none;
     }
+    .redes{
+        width: 30%;          
+      }
+      .config{     
+          width: 30%;       
+      }
+      .crew{     
+          width: 30%;
+      }
 }
 

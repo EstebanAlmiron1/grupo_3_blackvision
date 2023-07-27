@@ -1,5 +1,8 @@
 @import "login.css";
-@import "carrito.css";
+@import "productCart.css";
+@import "productDetail.css";
+@import "register.css";
+@import "perfil.css";
 :root{
     --celeste: #4592AF;
     --amarillo: #F0FF42;
@@ -32,7 +35,14 @@ header{
     flex-wrap: wrap;    
     justify-content: space-around;
     align-items: center;
-    
+}
+.fa-bars{
+    color: var(--celeste);
+    font-size: larger;
+    align-self: ;
+}
+#linkmainlogo{
+    display: none;
 }
 .header-izq a{
     transition: all 0.8s ease-in-out;
@@ -121,6 +131,7 @@ header div div{
 #contenedorItemsCarrousel{
     height: 35vh;
     background-image: url("/img/salehsd.jpg");
+    background-size: cover;
     overflow: hidden;
 }
 .item-carrousel{
@@ -226,3 +237,21 @@ footer div a i{
 .ruta{
     width: 100%;
 }
+
+@media (min-width: 425px){    
+    #linkmainlogo{
+        display: block;
+    }
+    .header-izq i{
+        display: none;
+    }
+}
+@media (min-width: 768px){ 
+    #linkmainlogo{
+        display: block;
+    }   
+    .header-izq i{
+        display: none;
+    }
+}
+

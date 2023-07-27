@@ -273,6 +273,8 @@ footer div{
         flex-direction:row;
         align-items: top;
         justify-content:center;
+        position: absolute;
+        bottom: 0;
     }
     .redes{
       width: 30%;

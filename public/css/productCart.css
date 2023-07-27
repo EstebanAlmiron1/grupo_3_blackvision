@@ -21,6 +21,22 @@
 
 .seleccionados article{
     padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fotocaja{
+    width: 30%;
+}
+
+#foto-producto{
+    width: 100%;
+}
+
+.detalle-product{
+    width: 40%;
 }
 
 .cant-prec{

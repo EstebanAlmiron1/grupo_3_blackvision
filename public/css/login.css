@@ -1,19 +1,66 @@
-* {
-    padding: 0px;
-    margin: 0px;
+root{
+    --celeste: #4592AF;
+    --amarillo: #F0FF42;
+    --marron: #AA8B56;
+    --negro: #000;
+}
+
+.login-box{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding: 30px;
     box-sizing:border-box;
 }
-
-.main-top{
+.login-box label{
     display: flex;
-    flex-direction:column;
-    
+    align-items: center;
+    padding: 10px;
 }
+.login-box input{
+    display: flex;
+    flex-direction: column;
+    border-color: #000;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width:100%;
+}
+.login-box button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-color :transparent;
+    padding: 20px;
+    width:100%;
+    background-color: #AA8B56;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+.bv-end{
+    font-size: large;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 0px;
+    position: relative;
 
-.login-titulo{
-    width: 50%;
-}   
-
-.login-box {
-    width: 40%;
+}
+.login-boton{
+    font-size: 25px;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column ;
+    justify-content:center;
+    align-items: center;
+    padding: 0px;
 }

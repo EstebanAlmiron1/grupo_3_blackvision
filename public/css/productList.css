@@ -1,0 +1,50 @@
+.main-botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+.boton-filtrar{
+    padding: 5px 20px;
+    width: 50%;
+    border-right: 1.5px solid #c2c1be;
+}
+
+.boton-ordenar{
+    padding: 5px 20px;
+    width: 50%;
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.productos article{
+    width: 45%;
+}
+
+.productos-img img{
+    width: 100%;
+}
+
+.productos-flechas{
+    position: relative;
+}
+
+.productos-flechas .fa-chevron-left{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.productos-flechas .fa-chevron-right{
+    position: absolute;
+}
+
+.productos-flechas .fa-heart{
+    position: absolute;
+}

@@ -142,7 +142,7 @@ header div div{
     justify-content: center;
 }
 #contenedorItemsCarrousel{
-    height: 35vh;
+    height: 20vh;
     background-image: url("/img/salehsd.jpg");
     background-size: cover;
     overflow: hidden;
@@ -275,7 +275,7 @@ footer div{
         flex-direction:row;
         align-items: top;
         justify-content:center;
-        position: absolute;
+        position: relative;
         bottom: 0;
     }
     .redes{
@@ -313,6 +313,19 @@ footer div{
       }
       .crew{     
           width: 30%;
+      }
+      .publicidad-home{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .publicidad-img{
+        width: 50%;
+      }
+      .publicidad-texto{
+        width:100%;
+        order: 1;
       }
 }
 

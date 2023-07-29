@@ -1,13 +1,15 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <title>BLACKVISION</title>
 </head>
+
 <body>
     <header>
         <div class="header-izq">
@@ -29,32 +31,59 @@
         </div>
     </header>
     <main>
-        <div>
-                <section class="login-box">
-                    <h2>        BIENVENIDO!        </h2>
+        <div class="contenedor-loguinbox">
+            <section class="login-box">
+                <div class="bienvenido">
+                    <h2>BIENVENIDO!</h2>
+                </div>
+                <div class="contenedor-form">
                     <form action="get">
                         <label for="E-mail"></label>
                         <input type="text" placeholder="Correo Electronico" id="email">
-        
+
                         <label for="password"></label>
-                        <input type="password" placeholder="Contrasenia" id="password">
-        
+                        <input type="password" placeholder="Contraseña" id="password">
+
                         <button type="submit">INGRESAR</button>
-                    </form>
-                </section>
+                        <div class="olvide"><a href="#">OLVIDÉ MI CLAVE</a></div>
+                </div>
+                </form>
+            </section>
         </div>
         <div class="bv-end">
-                <h1>DISFRUTÁ</h1>
-                <h1>DE LA COMUNIDAD</h1>
-                <h1>BLACKVISION </h1>
-                <h1>ESTÉS DONDE ESTÉS</h1>
-        </div>    
-         <div class="login-boton">    
-                <i class="far fa-laugh-wink"><p>Eventos especiales</p></i>
-                <i class="fas fa-truck"><p>Envios gratis</p></i>
-            
+            <h1>DISFRUTÁ</h1>
+            <h1>DE LA COMUNIDAD</h1>
+            <h1>BLACKVISION </h1>
+            <h1>ESTÉS DONDE ESTÉS</h1>
+        </div>
+        <div class="login-boton">
+            <div id="div-loguin-boton">
+                <div>
+                    <i class="far fa-laugh-wink"></i>
+                </div>
+                <div>
+                    <p>Eventos</p>
+                    <p>especiales</p>
+                </div>
             </div>
-        </div>  
+            <div id="div-loguin-boton">                
+                <div>
+                    <p>Envios</p>
+                    <p>gratis</p>
+                </div>
+                <div>
+                    <i class="fas fa-truck"></i>
+                </div>
+            </div>
+            <div id="div-loguin-boton">
+                <div><i class="fas fa-concierge-bell"></i></div>
+                <div>
+                    <p>Modelos</p>
+                    <p>unicos</p>
+                </div>
+            </div>
+        </div>
+        </div>
     </main>
     <footer>
         <div class="redes">
@@ -99,4 +128,5 @@
         </div>
     </footer>
 </body>
+
 </html>

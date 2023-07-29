@@ -104,3 +104,9 @@ root{
 #div-loguin-boton i{
     font-size: 1.5em;
 }
+@media (min-width: 426px){
+
+}
+@media (min-width: 769px){
+    
+}

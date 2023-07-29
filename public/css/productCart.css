@@ -95,17 +95,22 @@ h3{
     width: 80%;
 }
 
-.pasoFinal button{
-    background-color: transparent;
+.pasoFinal button {
+    background-color: var(--celeste);
     border: none;
     color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
 }
 
-.envio div{
-    padding: 2px 5px 2px 5px;
-    background-color: var(--celeste);
+.pasoFinal input {
+    text-align: center;
+    border: none;
+    padding: 5px;
+    border: none;
+    font-size: small;
 }
-
 .envio i{
     font-size: smaller;
 }
@@ -114,19 +119,9 @@ h3{
     color: white;
 }
 
-.descuento div{
-    padding: 5px 5px 5px 5px;
-    background-color: var(--celeste);
-}
-
-.descuento a{
-    font-size: 12px;
-    color: white;
-}
-
 .descuento i{
     font-size: smaller;
-    color: var(--amarillo);
+    color: black;
 }
 
 .descuento input{
@@ -135,11 +130,6 @@ h3{
     border: none;
     color: antiquewhite;
     width: 55%;
-}
-
-.finalizar div{
-    padding: 5px 5px 5px 5px;
-    background-color: #000;
 }
 
 .finalizar a{

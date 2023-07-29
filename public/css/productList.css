@@ -17,6 +17,10 @@
     width: 50%;
 }
 
+.main-rutas{
+    padding: 5px 5px;
+}
+
 .productos{
     display: flex;
     flex-wrap: wrap;
@@ -25,26 +29,50 @@
 
 .productos article{
     width: 45%;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+
+.productos article:hover{
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.productos-img{
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid #c2c1be;
+    padding: 5px;
 }
 
 .productos-img img{
     width: 100%;
 }
 
-.productos-flechas{
-    position: relative;
+.productos-img .fa-chevron-left{
+    position: absolute;
+    left: 3%;
+    top: 50%;
 }
 
-.productos-flechas .fa-chevron-left{
+.productos-img .fa-chevron-right{
     position: absolute;
-    left: 20px;
-    top: 20px;
+    right: 3%;
+    top: 50%;
 }
 
-.productos-flechas .fa-chevron-right{
+.productos-img .fa-heart{
     position: absolute;
+    right: 5px;
+    top: 5px;
 }
 
-.productos-flechas .fa-heart{
-    position: absolute;
+.productos-detalles{
+    padding: 5px;
+}
+
+.productos-detalles a{
+    color: #000;
+    text-decoration: none;
 }

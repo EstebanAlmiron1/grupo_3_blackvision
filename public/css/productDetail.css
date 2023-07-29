@@ -1,0 +1,24 @@
+.section1{
+    display: flex;
+     align-items: center;     
+}
+.img-caja{
+   display: flex;
+}
+.img-selector{
+    width: 10%;    
+    
+}
+.img-selector img{
+    width: 100%;
+    
+}
+.img-detail{
+    width: 50%;    
+}
+.img-detail img{
+    width: 100%;
+}
+.product-detail{
+    display: flex;    
+}

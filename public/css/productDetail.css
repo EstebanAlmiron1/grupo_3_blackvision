@@ -1,6 +1,6 @@
 .section1{
     display: flex;
-     align-items: center;     
+    align-items: center;
 }
 .img-caja{
    display: flex;
@@ -18,7 +18,4 @@
 }
 .img-detail img{
     width: 100%;
-}
-.product-detail{
-    display: flex;    
 }

@@ -1,21 +1,93 @@
-.section1{
-    display: flex;
-    align-items: center;
-}
-.img-caja{
-   display: flex;
-}
-.img-selector{
-    width: 10%;    
-    
-}
-.img-selector img{
+
+.descrip-detail{
     width: 100%;
-    
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+.imagenes1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;    
+    width: 100%;
+    justify-content: center;
 }
 .img-detail{
-    width: 50%;    
+    display: flex;    
+    width: 100%;    
 }
 .img-detail img{
     width: 100%;
 }
+.img-selector{
+    display: flex;    
+    width: 40%;    
+    flex-direction: row;
+    align-items: center;   
+}
+.img-selector img{
+    width: 100%;    
+}
+.product-detail{
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+.precio-descuento{
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+.precio-detail{
+    font-size: 35px;
+    
+}
+.descuento-detail{
+    font-size: 20px;    
+}
+
+.descuento-detail{
+    color: green;
+}
+.envios-detail i{
+    color: green;    
+}
+.boton-detail{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.compra-detail{
+    font-size: 20px;
+}
+.aniadir-detail{
+    font-size: 20px;
+}
+
+.caracte-detail i{
+    color: green;
+    font-size: 20px;
+}
+.caracte-detail p{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.caracte-vulk{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+.detalle-detail{
+    padding-bottom: 10px;    
+}
+.descrip-detalle{
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+

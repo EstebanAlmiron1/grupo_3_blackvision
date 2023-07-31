@@ -47,7 +47,19 @@ h3{
     display: flex;
     width: 100%;
     padding: 10px 0px 10px 0px;
+}
 
+.cant-prec i{
+    font-size: 50%;
+    position: relative;
+    right: 1px;
+    bottom: 2px;
+}
+
+.column-precio{
+    font-size: 110%;
+    position: relative;
+    right: -5px;
 }
 
 .resumen{
@@ -119,35 +131,43 @@ h3{
 .pasoFinal .finalizar button:hover{
     background: firebrick;
     color: #fff;
+    font-size: 110%;
 }
 
 .pasoFinal input {
     text-align: center;
     border: none;
     padding: 5px;
-    border: none;
     font-size: small;
 }
+
+.pasoFinal input[type="text"]:focus {
+    transform: scale(1.1); /* Aumenta el tamaño al enfocar */
+    background: var(--negro);
+    color: white;
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+    
+}
+
+.pasoFinal .descuento i {
+    font-size: smaller;
+    color: black;
+    position: relative;
+    right: 23px;
+    transition: transform 0.3s ease;
+}
+  
+  /* Estilos para el ícono al hacer clic en el campo */
+.pasoFinal input:focus ~ i {
+    transform: translateX(50px) rotate(360deg); /* Mueve y rota el ícono al hacer clic */
+}
+
 .envio i{
     font-size: smaller;
 }
 
 .envio a{
     color: white;
-}
-
-.descuento i{
-    font-size: smaller;
-    color: black;
-    position: relative;
-    right: 23px;
-}
-
-.descuento input{
-    text-align: center;
-    background-color: transparent;
-    border:transparent;
-    color: antiquewhite;
 }
 
 .finalizar a{

@@ -36,6 +36,7 @@
 }
 
 .productos article:hover{
+    
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -51,21 +52,33 @@
 }
 
 .productos-img .fa-chevron-left{
+    display: none;
     position: absolute;
     left: 3%;
     top: 50%;
 }
 
 .productos-img .fa-chevron-right{
+    display: none;
     position: absolute;
     right: 3%;
     top: 50%;
+
+}
+
+.productos-img:hover :where(.fa-chevron-left, .fa-chevron-right){
+    display: block;
 }
 
 .productos-img .fa-heart{
+    display: none;
     position: absolute;
     right: 5px;
     top: 5px;
+}
+
+.productos article:hover .fa-heart{
+    display: block;
 }
 
 .productos-detalles{

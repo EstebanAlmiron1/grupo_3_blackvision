@@ -171,8 +171,16 @@ header div div{
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    
 }
-
+.flechas-carrousel i{
+    opacity: 0.5;
+    transition: all 0.2s ease-out;;
+}
+.flechas-carrousel i:hover{
+    opacity: 1;
+    transform:scale(1.1);
+}
 
 .publicidad-home{
     width: 100%;

@@ -173,3 +173,21 @@ h3{
 .finalizar a{
     color: white;
 }
+
+.seleccionados h3{
+    display: none;
+}
+
+@media(min-width: 768px){
+    .seleccionados h3{
+        display: flex;
+    }
+    .seleccionados article div{
+        display: flex;
+        align-items: center;
+    }
+    .seleccionados article div div{
+        flex-wrap: wrap;
+        padding: 10px 30px;
+    }
+}

@@ -132,10 +132,10 @@ header{
     border-radius: 100%;    
     margin-top: 10px;
     margin-bottom: 5px;
-    transition: all 500ms;
+    transition: all 500ms ease;
 }
 .imglogo:hover{
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
 header div div{
     display: flex;

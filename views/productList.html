@@ -28,20 +28,72 @@
             <div class="header-micuenta"><a href="/perfil"><i class="far fa-user"></i></a></div>
         </div>
     </header>
-    <main>
-        <div class="main-botones">
-            <div class="boton-filtrar">
+    <main class="main-list">
+        <section class="main-botones">
+            <article class="boton-filtrar">
                 <a href="#"><i class="fas fa-sliders-h"></i> Filtrar</a>
-            </div>
-            <div class="boton-ordenar">
+            </article>
+            <article class="boton-ordenar">
                 <a href="#"><i class="fas fa-sort-alpha-down"></i> Ordenar</a>
-            </div>
-        </div>
-        <div class="main-rutas">
-            <a href="#">Lentes</a>
-            <i class="fas fa-chevron-right"></i>
-            <a href="#">Para el sol</a>
-        </div>
+            </article>
+        </section>
+        <section class="main-botones-bottom">
+            <article class="rutas">
+                <a href="#">Lentes</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="#">Para el sol</a>
+            </article>
+            <article class="ordenar">
+                <p> Ordernar por </p>
+                <form action="/" method="GET">
+                    <button type="submit"> Más relevantes <i class="fas fa-chevron-down"></i></button>
+                </form>
+            </article>
+        </section>
+        <section class="barra-filtros">
+            <article class="barra-categorias">
+                <h4> Categorías </h4>
+                <ul class="lista-categorias">
+                    <li><a href="#"> Anteojos de Sol </a></li>
+                    <li><a href="#"> Anteojos con Aumento </a></li>
+                    <li><a href="#"> Anteojos con Filtro Luz Azul </a></li>
+                    <li><a href="#"> Estuches </a></li>
+                    <li><a href="#"> Cristales de Repuesto </a></li>
+                    <li><a href="#"> Otros </a></li>
+                </ul>
+            </article>
+            <article class="barra-marca">
+                <h4> Marca </h4>
+                <ul class="lista-marcas">
+                    <li><a href="#"> Vulk </a></li>
+                    <li><a href="#"> Ray-Ban </a></li>
+                    <li><a href="#"> Rusty </a></li>
+                    <li><a href="#"> Infinit </a></li>
+                </ul>
+            </article>
+            <article class="precio">
+                <h4> Precio </h4>
+                <ul class="lista-precios">
+                    <li><a href="#"> Hasta $ 20.000 </a></li>
+                    <li><a href="#"> $20.000 a $35.000 </a></li>
+                    <li><a href="#"> Más de $35.000 </a></li>
+                </ul>
+                <form class="form-precio" action="/" method="GET">
+                    <div class="input-min">
+                        <label for="minimo"></label>
+                        <input type="number" name="min" id="minimo" placeholder="Mínimo">
+                    </div>
+                    <p> - </p>
+                    <div class="input-max">
+                        <label for="maximo"></label>
+                        <input type="number" name="max" id="maximo" placeholder="Máximo">
+                    </div>
+                    <div class="boton-enviar">
+                        <button type="submit"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </form>
+            </article>
+        </section>
         <section class="productos">
             <article>
                 <div class="productos-img">

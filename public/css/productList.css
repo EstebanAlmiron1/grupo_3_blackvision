@@ -17,8 +17,16 @@
     width: 50%;
 }
 
-.main-rutas{
+.rutas{
     padding: 5px 5px;
+}
+
+.ordenar{
+    display: none;
+}
+
+.barra-filtros{
+    display: none;
 }
 
 .productos{
@@ -88,4 +96,128 @@
 .productos-detalles a{
     color: #000;
     text-decoration: none;
+}
+
+@media (min-width: 426px){
+    .productos article{
+        width: 30%;
+    }
+
+    .productos-img .fa-heart{
+        font-size: 120%;
+        right: 7px;
+        top: 7px;
+    }
+}
+
+@media (min-width: 769px){
+    .main-list{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-botones{
+        display: none;
+    }
+
+    .main-botones-bottom{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    .ordenar{
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5px 0px;
+    }
+
+    .ordenar button{
+        font-size: 15px;
+        padding: 0px 10px;
+        margin: 0px 15px;
+        background-color: #fff;
+        border: none;
+        transition: 0.5 all;
+    }
+
+    .ordenar button:hover{
+        color: var(--celeste);
+    }
+
+    .barra-filtros{
+        display: block;
+        width: 20%;
+        padding-left: 10px;
+    }
+
+    .barra-filtros article{
+        padding-bottom: 10px;
+    }
+
+    .barra-filtros h4{
+        padding-bottom: 10px;
+    }
+
+    .barra-filtros ul li{
+        padding-bottom: 5px;
+    }
+
+    .barra-filtros a{
+        text-decoration: none;
+        color: grey;
+        transition: 0.5 all;
+    }
+
+    .barra-filtros a:hover{
+        color: #000;
+    }
+
+    .form-precio{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .form-precio :where(.input-min, .input-max){
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-precio div input{
+        width: 100%;
+    }
+
+    .boton-enviar{
+        display: flex;
+        justify-content: center;
+        width: 10%;
+    }
+
+    .form-precio p{
+        display: flex;
+        justify-content: center;
+        width: 10%;
+    }
+
+    .productos{
+        width: 80%;
+    }
+
+    .productos-img .fa-heart{
+        font-size: 150%;
+        right: 10px;
+        top: 10px;
+    }
 }

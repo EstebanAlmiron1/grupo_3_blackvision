@@ -50,12 +50,10 @@
     
 }
 .descuento-detail{
-    font-size: 20px;    
+    font-size: 20px;
+    color: green;    
 }
 
-.descuento-detail{
-    color: green;
-}
 .envios-detail i{
     color: green;    
 }
@@ -107,35 +105,64 @@
         font-size: 30px;
     }
     .imagenes1{
-        padding-left: 100px;
+        flex-direction: row;
+        width: 100%;
+        
     }
     .img-detail{
         width: 50%;
     }
     .img-selector{
-       width: 25%;
+       width: 45%;
+       flex-direction: column;       
+    }
+    .img-selector img{
+        transition: all 0.4s;
+        
+    }
+    .img-selector img:hover{
+        box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .product-detail{ 
         padding-top: 30px;  
-        justify-content: unset;        
+        justify-content: center;        
         width: 100%;
         padding-left: 20px;
         padding-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
     }
     .precio-descuento{
-        width: 25%;
+        width: 60%;
         padding-right: 50px;
+        justify-content: center;
     }
-    .boton-detail{
-        justify-content: unset;
-        padding-left: 10px;
+    .precio-detail{
+        width: 30%;
+    }
+    .descuento-detail{
+        width: 30%;
+        
+    }
+    .envios-detail{
+        width: 30%;
+    }
+    
+    .boton-detail{        
+        justify-content: center;
+        padding-left: 10px;        
     }
     .boton-detail button{
-        margin: 0px 15px;        
+        margin: 0px 50px;
+        padding: 10px;        
 
     }
     .caracte-detail{
         padding-left: 10px;
+    }
+    .caracte-detail p{
+        padding-left: 30px;
+        
     }
     .descrip-detalle{
         width: 100%;

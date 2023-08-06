@@ -190,4 +190,126 @@ h3{
         flex-wrap: wrap;
         padding: 10px 30px;
     }
+    .cant-prec{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 10px 30px;
+        width: 60%;
+    }
+    .column-precio{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: 20px;
+    }
+    .column-precio p{
+        padding-top: 20px;
+    }
+    .column-cantidad{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: 20px;
+    }
+    .column-cantidad p{
+        padding-top: 20px;
+    }
+    .column-product{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .fotocaja{
+        width: 20%;
+        margin-left: 10px;
+    }
+    .detalle-product{
+        width: 75%;
+        align-items:flex-start;
+    }
+    .column-product{
+        width: 30%;
+        flex-direction: column;
+    }
+    .pasoFinal .descuento i {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .ruta{
+        font-size: 16px;
+    }
+
+    .carrito{
+        font-size: 20px;
+    }
+    
+    .seleccionados article {
+        padding: 20px;
+    }
+
+    .fotocaja {
+        width: 25%;
+        margin-left: 20px;
+    }
+
+    .detalle-product {
+        width: 50%;
+        align-items: center;
+    }
+
+    .cant-prec {
+        padding: 20px 0;
+    }
+
+    .column-precio,
+    .column-cantidad,
+    .column-product h3{
+        font-size: 20px;
+    }
+
+    .column-precio,
+    .column-cantidad,
+    .column-product p{
+        font-size: 16px;
+    }
+
+    .resumen{
+        padding: 5% 30% 10% 5%
+
+    }
+
+    .pasoFinal ul{
+        padding-top: 10%;
+    }
+
+    .resumen h4 {
+        font-size: 20px;
+        background-color: var(--negro);
+        color: white;
+    }
+
+    .subtotal,
+    .total {
+        font-size: 18px;
+        color:black;
+        font-weight: bold;
+        justify-content: space-around;
+    }
+
+    .pasoFinal button {
+        font-size: 18px;
+        padding: 15px 25px;
+    }
+
+    .pasoFinal input {
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    .resumen {
+        font-size: 14px;
+    }
 }

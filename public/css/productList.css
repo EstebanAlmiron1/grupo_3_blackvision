@@ -1,24 +1,49 @@
+.main-list{
+    background-color: #e0e0e0;
+}
+
 .main-botones{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
     border-bottom: 1px solid #000;
+    background-color: #fff;
+}
+
+.main-botones a{
+    color: #000;
+    transition: all 0.5s;
+}
+
+.main-botones a:hover{
+    color: var(--celeste);
 }
 
 .boton-filtrar{
     padding: 5px 20px;
     width: 50%;
     border-right: 1.5px solid #c2c1be;
+    text-decoration: none;
 }
 
 .boton-ordenar{
     padding: 5px 20px;
     width: 50%;
+    text-decoration: none;
 }
 
 .rutas{
     padding: 5px 5px;
+}
+
+.rutas a{
+    color: var(--negro);
+    transition: all 0.5s;
+}
+
+.rutas a:hover{
+    color: var(--celeste);
 }
 
 .ordenar{
@@ -33,6 +58,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-top: 10px;
 }
 
 .productos article{
@@ -53,6 +79,7 @@
     box-sizing: border-box;
     border-bottom: 1px solid #c2c1be;
     padding: 5px;
+    background-color: #fff;
 }
 
 .productos-img img{
@@ -89,13 +116,26 @@
     display: block;
 }
 
+.fa-heart{
+    transition: all 0.5s;
+}
+
+.fa-heart:hover{
+    color: red;
+}
+
 .productos-detalles{
     padding: 5px;
+    background-color: #fff;
 }
 
 .productos-detalles a{
-    color: #000;
+    color: var(--negro);
     text-decoration: none;
+}
+
+.envios-producto{
+    color: #00a650;
 }
 
 @media (min-width: 426px){
@@ -146,7 +186,9 @@
         margin: 0px 15px;
         background-color: #fff;
         border: none;
-        transition: 0.5 all;
+        transition: 0.5s all;
+        border: #000 1px solid;
+        border-radius: 5px;
     }
 
     .ordenar button:hover{
@@ -173,7 +215,7 @@
 
     .barra-filtros a{
         text-decoration: none;
-        color: grey;
+        color: #474747;
         transition: 0.5 all;
     }
 

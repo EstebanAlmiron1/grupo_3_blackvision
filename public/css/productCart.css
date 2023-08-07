@@ -258,6 +258,8 @@ h3{
     .detalle-product {
         width: 50%;
         align-items: center;
+        border-left: 2px solid var(--marron);
+        border-right: 2px solid var(--marron);
     }
 
     .cant-prec {
@@ -281,6 +283,10 @@ h3{
 
     }
 
+    .pasoFinal{
+        border-top: 4px solid var(--marron);
+    }
+
     .pasoFinal ul{
         padding-top: 10%;
     }
@@ -294,7 +300,6 @@ h3{
     .subtotal,
     .total {
         font-size: 18px;
-        color:black;
         font-weight: bold;
         justify-content: space-around;
     }
@@ -311,5 +316,8 @@ h3{
 
     .resumen {
         font-size: 14px;
+    }
+    .resumen i{
+        color: var(--amarillo);
     }
 }

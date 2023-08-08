@@ -1,8 +1,9 @@
-
+.detail-main{
+    background-color: var(--rosa);
+}
 .descrip-detail{
     width: 100%;
-    padding-top: 20px;
-    padding-left: 10px;
+    padding: 20px 0px 20px 50px;
     font-size: 25px;
 }
 .imagenes1{
@@ -14,21 +15,25 @@
 }
 .img-detail{
     display: flex;    
-    width: 100%;    
+    width: 100%;
+    padding-bottom: 10px;
 }
 .img-detail img{
     width: 100%;
+    background-color: #fff;
+    border: 1px solid grey;
 }
 .img-selector{
     display: flex;    
     width: 100%;    
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;   
+    justify-content: space-around;
 }
 .img-selector img{    
     width: 40%;
-    border: 1px solid grey;        
+    border: 1px solid grey;
+    background-color: #fff;    
 }
 .product-detail{
     display: flex;
@@ -51,11 +56,11 @@
 }
 .descuento-detail{
     font-size: 20px;
-    color: green;    
+    color: #00a650;    
 }
 
 .envios-detail i{
-    color: green;    
+    color: #00a650;    
 }
 .boton-detail{
     display: flex;
@@ -65,11 +70,12 @@
 }
 .compra-detail{
     font-size: 20px;
-    background-color: #ADE4DB;
+    background-color: var(--azul);
+    padding: 10px;
     color: #000;
     border-radius: 5px;
     transition: all 0.5s;
-    border: 1px solid #000;
+    border: 1px solid transparent;
 }
 .compra-detail:hover{
     background-color: #00a650;
@@ -77,20 +83,20 @@
 }
 .aniadir-detail{
     font-size: 20px;
-    background-color: #ADE4DB;
+    background-color: var(--azul);
     color: #000;
     border-radius: 5px;
+    padding: 10px;
     transition: all 0.5s;
-    border: 1px solid #000;       
+    border: 1px solid transparent;       
 }
 .aniadir-detail:hover{
     background-color: #00a650;
     box-shadow: inset 300px 0 0 0 #00a650;
-
 }
 
 .caracte-detail i{
-    color: green;
+    color: #00a650;
     font-size: 20px;
 }
 .caracte-detail p{
@@ -114,10 +120,7 @@
 }
 @media (min-width: 426px){
 
-
-
 }
-
 
 @media (min-width: 769px){
     .descrip-detail{
@@ -132,8 +135,8 @@
         width: 50%;
     }
     .img-selector{
-       width: 45%;
-       flex-direction: column;       
+    width: 45%;
+    flex-direction: column;       
     }
     .img-selector img{
         transition: all 0.4s;
@@ -170,12 +173,10 @@
     .boton-detail{        
         justify-content: center;
         padding-left: 10px;
-               
     }
     .boton-detail button{
         margin: 0px 50px;
-        padding: 10px;        
-
+        padding: 10px;
     }
     .caracte-detail{
         padding-left: 10px;
@@ -199,7 +200,5 @@
         padding-left: 10px;
         width: 80%;
     }
-    
-
 }
 

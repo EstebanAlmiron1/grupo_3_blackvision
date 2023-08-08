@@ -12,7 +12,7 @@
     font-size: 12px;
     padding: 10px;
     margin-left: -5px;
-    border-top: 2px solid var(--negro);
+    border-top: 2px solid black;
 }
 
 .ruta p{
@@ -76,7 +76,7 @@ h3{
 
 .resumen h4{
     padding: 10px;
-    background-color: var(--negro);
+    background-color: black;
     color: white;
     font-size: 13px;
     font-weight: lighter;
@@ -125,7 +125,7 @@ h3{
 }
 
 .pasoFinal .envio button:hover{
-    background: var(--negro);
+    background: black;
 }
 
 .pasoFinal .finalizar button{
@@ -135,7 +135,7 @@ h3{
 }
 
 .pasoFinal .finalizar button:hover{
-    background: var(--negro);
+    background: black;
     color: #fff;
     font-size: 110%;
 }
@@ -149,7 +149,7 @@ h3{
 
 .pasoFinal input[type="text"]:focus {
     transform: scale(1.1); /* Aumenta el tamaño al enfocar */
-    background: var(--negro);
+    background: black;
     color: white;
     transition: transform 0.3s ease; /* Agrega una transición suave */
     
@@ -264,8 +264,8 @@ h3{
     .detalle-product {
         width: 50%;
         align-items: center;
-        border-left: 2px solid var(--negro);
-        border-right: 2px solid var(--negro);
+        border-left: 2px solid black;
+        border-right: 2px solid black;
     }
 
     .cant-prec {
@@ -291,7 +291,7 @@ h3{
     }
 
     .pasoFinal{
-        border-top: 4px solid var(--marron);
+        border-top: 4px solid black;
     }
 
     .pasoFinal ul{

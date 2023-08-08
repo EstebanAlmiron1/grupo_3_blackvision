@@ -49,3 +49,10 @@
 .register-box button:hover{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
+
+@media (min-width: 426px){
+    
+}
+@media (min-width: 769px){
+    
+}

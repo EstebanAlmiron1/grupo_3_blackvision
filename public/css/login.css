@@ -70,6 +70,10 @@ root{
     color: white;
     text-align: center;
     align-items: center;
+    transition: all 0.5s;
+}
+.login-box button:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 .bv-end{
     font-size: large;
@@ -108,5 +112,14 @@ root{
 
 }
 @media (min-width: 769px){
-    
+    .login-main{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+    .login-left{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
 }

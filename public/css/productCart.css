@@ -1,16 +1,22 @@
 :root{
-    --celeste: #4592AF;
+    --marron: #F6BA6F;
+    --rosa: #FFEBEB;
+    --azul: #6DA9E4;
+    --celeste: #ADE4DB;
     --amarillo: #F0FF42;
-    --marron: #AA8B56;
-    --negro: #000;
 }
 
 .ruta{
-    color: var(--celeste);
+    color: var(--azul);
     font-weight: 500;
     font-size: 12px;
     padding: 10px;
     margin-left: -5px;
+    border-top: 2px solid var(--negro);
+}
+
+.ruta p{
+    color: var(--azul);
 }
 
 h3{
@@ -70,7 +76,7 @@ h3{
 
 .resumen h4{
     padding: 10px;
-    background-color: var(--marron);
+    background-color: var(--negro);
     color: white;
     font-size: 13px;
     font-weight: lighter;
@@ -109,7 +115,7 @@ h3{
 }
 
 .pasoFinal button {
-    background-color: var(--celeste);
+    background-color: var(--azul);
     border: none;
     color: white;
     padding: 8px 16px;
@@ -119,17 +125,17 @@ h3{
 }
 
 .pasoFinal .envio button:hover{
-    background: var(--marron);
+    background: var(--negro);
 }
 
 .pasoFinal .finalizar button{
-    background: var(--marron);
-    transition: all 1s ease-in-out;
+    background: var(--azul);
+    transition: all 0.5s ease-in-out;
     border-radius: 3px;
 }
 
 .pasoFinal .finalizar button:hover{
-    background: firebrick;
+    background: var(--negro);
     color: #fff;
     font-size: 110%;
 }
@@ -258,8 +264,8 @@ h3{
     .detalle-product {
         width: 50%;
         align-items: center;
-        border-left: 2px solid var(--marron);
-        border-right: 2px solid var(--marron);
+        border-left: 2px solid var(--negro);
+        border-right: 2px solid var(--negro);
     }
 
     .cant-prec {
@@ -294,7 +300,7 @@ h3{
 
     .resumen h4 {
         font-size: 20px;
-        background-color: var(--negro);
+        background-color: var(--azul);
         color: white;
     }
 
@@ -322,6 +328,6 @@ h3{
         color: var(--marron);
     }
     .pasoFinal i{
-        color: white;
+        color: var(--marron);
     }
 }

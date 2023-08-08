@@ -238,6 +238,7 @@ footer{
     align-items: center;
     justify-content:center;
     text-align: center;
+    align-self: flex-end;
 }
 .redes-titulo{
     width: 100%;   

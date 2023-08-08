@@ -231,12 +231,18 @@
 
     .form-precio div input{
         width: 100%;
+        border: 1px solid var(--azul);
     }
 
     .boton-enviar{
         display: flex;
         justify-content: center;
         width: 10%;
+    }
+
+    .boton-enviar button{
+        border: 1px solid var(--azul);
+        padding: 0px 5px;
     }
 
     .form-precio p{

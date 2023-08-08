@@ -113,7 +113,7 @@ header{
     position: absolute;
     right: 0;
     top: 0;
-    background: #2a3a4c;
+    background: var(--marron);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -144,10 +144,10 @@ header div div{
 }
 #contenedorItemsCarrousel{
     height: 20vh;
-    background-color: #f5a524;
+    
     background-size: cover;
     overflow: hidden;
-    background-color: #f5a524;
+    background-color: #ADE4DB;
     
 }
 .item-carrousel{
@@ -183,10 +183,14 @@ header div div{
     opacity: 1;
     transform:scale(1.1);
 }
+.flechas-carrousel a{
+     
+    color:#F6BA6F;
 
+}
 .publicidad-home{
     width: 100%;
-    border: 2px solid black;
+    
     
 }
 .publicidad-home img{
@@ -213,7 +217,7 @@ h2.titulo{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: white;
+    
     color: var(--negro);
 }
 .link-publi{
@@ -280,16 +284,16 @@ footer div a i{
 footer div{
     padding: 5px;
 }
-
-#colorheader{
-    background-color: #2a3a4c;
+footer h4{
+    color: black;
 }
-#linkmainlogo{
-    color: #5b94b3;
-
+footer a{
+    color: grey;
+    transition: all 0.5s;
 }
-#color-footer{
-    background-color: #2a3a4c;
+footer a:hover{
+    color: black;
+    
 }
 
 @media (min-width: 426px){    

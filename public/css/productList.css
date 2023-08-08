@@ -1,5 +1,5 @@
 .main-list{
-    background-color: #e0e0e0;
+    background-color: var(--rosa);
 }
 
 .main-botones{
@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--azul);
     background-color: #fff;
 }
 
@@ -23,7 +23,7 @@
 .boton-filtrar{
     padding: 5px 20px;
     width: 50%;
-    border-right: 1.5px solid #c2c1be;
+    border-right: 1.5px solid var(--celeste);
     text-decoration: none;
 }
 
@@ -34,16 +34,11 @@
 }
 
 .rutas{
-    padding: 5px 5px;
+    padding: 10px 10px;
 }
 
 .rutas a{
-    color: var(--negro);
-    transition: all 0.5s;
-}
-
-.rutas a:hover{
-    color: var(--celeste);
+    color: #000;
 }
 
 .ordenar{
@@ -63,21 +58,22 @@
 
 .productos article{
     width: 45%;
-    border: 1px solid #000;
     margin-bottom: 10px;
+    border: 1px solid var(--azul);
     border-radius: 5px;
     transition: all 0.4s;
 }
 
 .productos article:hover{
-    
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .productos-img{
     position: relative;
     box-sizing: border-box;
-    border-bottom: 1px solid #c2c1be;
+    border-bottom: 1px solid var(--celeste);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     padding: 5px;
     background-color: #fff;
 }
@@ -127,15 +123,17 @@
 .productos-detalles{
     padding: 5px;
     background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .productos-detalles a{
-    color: var(--negro);
+    color: #000;
     text-decoration: none;
 }
 
 .envios-producto{
-    color: #00a650;
+    color: #11ad3b;
 }
 
 @media (min-width: 426px){
@@ -177,7 +175,7 @@
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
-        padding: 5px 0px;
+        padding: 10px 0px;
     }
 
     .ordenar button{
@@ -185,14 +183,8 @@
         padding: 0px 10px;
         margin: 0px 15px;
         background-color: #fff;
-        border: none;
-        transition: 0.5s all;
         border: #000 1px solid;
         border-radius: 5px;
-    }
-
-    .ordenar button:hover{
-        color: var(--celeste);
     }
 
     .barra-filtros{

@@ -1,8 +1,5 @@
-root{
-    --celeste: #4592AF;
-    --amarillo: #F0FF42;
-    --marron: #AA8B56;
-    --negro: #000;
+.login-main{
+    background-color: var(--rosa);
 }
 .contenedor-loguinbox{
     display: flex;
@@ -11,102 +8,84 @@ root{
 }
 .login-box{
     width: 70%;
-    
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    padding: 23px;
+    text-align: center;
+    padding: 20px;
     box-sizing:border-box;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: var(--celeste);
-    border: 1px solid var(--marron);
+    margin: 30px 0px 15px 0px;
+    background-color: var(--azul);
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 .bienvenido{
-    background-color: var(--marron);
     width: 90%;
-    text-align: center;
-    padding: 10px;
 }
 .contenedor-form{
     width: 90%;
 }
-.contenedor-form A{
-    color: black;
-    font-size: small;
-    margin-top: 10px;
-    font-style: italic;
-    }
-.olvide{
-    margin-top: 15px;
-}
-.contenedor-form form{
-    text-align: center;
-}
 .login-box label{
     display: flex;
-    align-items: center;
-    padding: 10px;
+    padding: 10px 0px;
 }
 .login-box input{
-    display: flex;
-    flex-direction: column;
-    border-color: #000;
-    padding: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 15px;
     width:100%;
 }
 .login-box button{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    border-color :transparent;
-    padding: 20px;
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
     width:100%;
-    background-color: #AA8B56;
-    color: white;
-    text-align: center;
-    align-items: center;
+    background-color: var(--celeste);
+    margin-top: 15px;
     transition: all 0.5s;
 }
 .login-box button:hover{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-.bv-end{
-    font-size: large;
+.contenedor-form a{
+    color: #000;
+    font-size: 14px;
+}
+.olvide{
+    margin-top: 15px;
+}
+.texto-bot{
+    padding-top: 15px;
+    font-size: 24px;
     width: 100%;
-    
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    align-items: center;
-    padding: 0px;
-    position: relative;
-
-}
-.login-boton{
-    font-size: 25px;        
-    display: flex;    
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
-    padding: 0px;
-    margin: 10px;
     text-align: center;
 }
-#div-loguin-boton{
+.login-ofertas{
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-top: 30px;
+}
+#contenedor-oferta{
     width: 60%;
     text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-wrap: column;
     align-items: center;
+    justify-content: space-around;
+    padding-bottom: 15px;
 }
-#div-loguin-boton i{
-    font-size: 1.5em;
+#contenedor-oferta i{
+    font-size: 2em;
+    padding: 0px 10px;
+}
+.camion-1{
+    display: none;
 }
 @media (min-width: 426px){
 
@@ -117,9 +96,38 @@ root{
         flex-direction: row-reverse;
         width: 100%;
     }
-    .login-left{
+    .login-textos{
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 60%;
+    }
+    .texto-bot{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 150px;
+        font-size: 40px;
+        height: 400px;
+        justify-content: space-around;
+    }
+    .texto-bot h4{
+        text-align: left;
+        width: 55%;
+    }
+    #contenedor-oferta{
+        width: 20%;
+        text-align: left;
+        padding-top: 80px;
+    }
+    .camion-1{
+        display: block;
+    }
+    .camion-2{
+        display: none;
+    }
+    .contenedor-loguinbox{
+        padding-top: 80px;
+        width: 40%;
+        height: 100px;
     }
 }

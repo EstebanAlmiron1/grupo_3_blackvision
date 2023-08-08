@@ -9,7 +9,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <title>BLACKVISION</title>
 </head>
-
 <body>
     <header>
         <div class="header-izq">
@@ -31,34 +30,39 @@
         </div>
     </header>
     <main class="login-main">
-        <div class="contenedor-loguinbox">
-            <section class="login-box">
-                <div class="bienvenido">
-                    <h2>BIENVENIDO!</h2>
-                </div>
-                <div class="contenedor-form">
-                    <form action="/" method="get">
-                        <label for="E-mail"></label>
-                        <input type="text" placeholder="Correo Electronico" id="email">
-
+        <section class="contenedor-loguinbox">
+            <article class="login-box">
+                <h2 class="bienvenido">BIENVENIDO!</h2>
+                <form class="contenedor-form" action="/register" method="get">
+                    <div>
+                        <label for="email"></label>
+                        <input type="text" name="mail" id="email" placeholder="Correo Electronico">
+                    </div>
+                    <div>
                         <label for="password"></label>
-                        <input type="password" placeholder="Contraseña" id="password">
-
-                        <button type="submit">INGRESAR</button>
-                        <div class="olvide"><a href="#">OLVIDÉ MI CLAVE</a></div>
-                </div>
+                        <input type="password" name="pass" id="password" placeholder="Contraseña">
+                    </div>
+                    <div>
+                        <button type="submit">Ingresar</button>
+                    </div>
+                    <div>
+                        <button type="submit">Registrarse</button>
+                    </div>
+                    <div class="olvide">
+                        <a href="#">Olvidé mi contraseña</a>
+                    </div>
                 </form>
-            </section>
-        </div> 
-        <div class="login-left">
-            <div class="bv-end">
-                <h1>DISFRUTÁ</h1>
-                <h1>DE LA COMUNIDAD</h1>
-                <h1>BLACKVISION </h1>
-                <h1>ESTÉS DONDE ESTÉS</h1>
-            </div>
-            <div class="login-boton">
-                <div id="div-loguin-boton">
+            </article>
+        </section> 
+        <section class="login-textos">
+            <article class="texto-bot">
+                <h4>DISFRUTÁ DE</h4>
+                <h4>LA COMUNIDAD</h4>
+                <h4>BLACKVISION </h4>
+                <h4>ESTÉS DONDE ESTÉS</h4>
+            </article>
+            <article class="login-ofertas">
+                <div id="contenedor-oferta">
                     <div>
                         <i class="far fa-laugh-wink"></i>
                     </div>
@@ -67,24 +71,29 @@
                         <p>especiales</p>
                     </div>
                 </div>
-                <div id="div-loguin-boton">                
+                <div id="contenedor-oferta">
+                    <div class="camion-1">
+                        <i class="fas fa-truck"></i>
+                    </div>
                     <div>
                         <p>Envios</p>
                         <p>gratis</p>
                     </div>
-                    <div>
+                    <div class="camion-2">
                         <i class="fas fa-truck"></i>
                     </div>
                 </div>
-                <div id="div-loguin-boton">
-                    <div><i class="fas fa-concierge-bell"></i></div>
+                <div id="contenedor-oferta">
+                    <div>
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
                     <div>
                         <p>Modelos</p>
                         <p>unicos</p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
     </main>
     <footer>
         <div class="redes">

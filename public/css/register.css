@@ -1,8 +1,14 @@
 :root{
-    --celeste: #4592AF;
-    --amarillo: #F0FF42;
-    --marron: #AA8B56;
-    --negro: #000;
+    --blanco: #FFEBEB;
+    --verde: #ADE4DB;
+    --celeste:#6DA9E4;
+    --naranja: #F6BA6F;
+}
+body{
+    background-color: var(--blanco);
+}
+header div {
+    background-color: #F6BA6F;
 }
 .register-box h2{
     color: var(--negro);
@@ -41,7 +47,7 @@
     border-color :transparent;
     padding: 20px;
     width:100%;
-    background-color: #AA8B56;
+    background-color: var(--celeste);
     color: white;
     text-align: center;
     align-items: center;

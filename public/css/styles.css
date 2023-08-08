@@ -33,6 +33,9 @@ header{
     justify-content: space-between;
     
 }
+header a {
+    color: #474747;
+}
 .header-izq{
     width: 45%;
     display: flex;
@@ -288,11 +291,11 @@ footer h4{
     color: black;
 }
 footer a{
-    color: grey;
+    color: #474747;
     transition: all 0.5s;
 }
 footer a:hover{
-    color: black;
+    color: #000;
     
 }
 

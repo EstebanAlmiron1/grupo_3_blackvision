@@ -270,6 +270,7 @@ h3{
     .column-cantidad,
     .column-product h3{
         font-size: 20px;
+        padding-bottom: 2px;
     }
 
     .column-precio,
@@ -318,6 +319,9 @@ h3{
         font-size: 14px;
     }
     .resumen i{
-        color: var(--amarillo);
+        color: var(--marron);
+    }
+    .pasoFinal i{
+        color: white;
     }
 }

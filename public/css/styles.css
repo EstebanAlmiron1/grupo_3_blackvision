@@ -91,7 +91,7 @@ header a {
     transform: scale(1.2);
 }
 .header-izq i{
-    color: var(--celeste);
+    color: #474747;
     font-size:larger;
     margin: 10px;
     padding-left: 10px;   

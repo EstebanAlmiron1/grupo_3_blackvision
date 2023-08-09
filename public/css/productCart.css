@@ -16,7 +16,7 @@
 }
 
 .ruta p{
-    color: var(--azul);
+    color: black;
 }
 
 h3{
@@ -84,6 +84,13 @@ h3{
     text-align: center;
 }
 
+.resumen i{
+    color: #00a650;
+}
+.pasoFinal i{
+    color: #00a650;
+}
+
 .subtotal{
     padding-top: 8px;
     padding-bottom: 15px;
@@ -118,9 +125,9 @@ h3{
     background-color: var(--azul);
     border: none;
     color: white;
-    padding: 8px 16px;
+    padding: 6px 16px;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: all 0.5s ease-in;
 }
 
@@ -131,7 +138,7 @@ h3{
 .pasoFinal .finalizar button{
     background: var(--azul);
     transition: all 0.5s ease-in-out;
-    border-radius: 3px;
+    border-radius: 8px;
 }
 
 .pasoFinal .finalizar button:hover{
@@ -143,11 +150,14 @@ h3{
 .pasoFinal input {
     text-align: center;
     border: none;
-    padding: 5px;
+    padding: 6px;
     font-size: small;
+    position: relative;
+    left: 6px;
+    border-radius: 8px;
 }
 
-.pasoFinal input[type="text"]:focus {
+.pasoFinal input:focus {
     transform: scale(1.1); /* Aumenta el tamaño al enfocar */
     background: black;
     color: white;
@@ -237,9 +247,6 @@ h3{
         width: 30%;
         flex-direction: column;
     }
-    .pasoFinal .descuento i {
-        font-size: 20px;
-    }
 }
 
 @media (min-width: 1025px) {
@@ -264,8 +271,8 @@ h3{
     .detalle-product {
         width: 50%;
         align-items: center;
-        border-left: 2px solid black;
-        border-right: 2px solid black;
+        border-left: 2px solid var(--marron);
+        border-right: 2px solid var(--marron);
     }
 
     .cant-prec {
@@ -318,16 +325,13 @@ h3{
 
     .pasoFinal input {
         font-size: 18px;
-        padding: 16px;
+        padding: 10px;
+        position: relative;
+        left: 8px;
+        border-radius: 12px;
     }
 
     .resumen {
         font-size: 14px;
-    }
-    .resumen i{
-        color: var(--marron);
-    }
-    .pasoFinal i{
-        color: var(--marron);
     }
 }

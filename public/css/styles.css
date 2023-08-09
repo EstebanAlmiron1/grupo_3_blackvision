@@ -229,7 +229,16 @@ h2.titulo{
     font-size: smaller;
     text-align: start;
     margin-bottom: 15px;
+    color: #474747;
+    transition: all 0.5s;
+
 }
+.link-publi:hover{
+    color: #000;
+    
+}
+
+
 #publi-img2{
     margin-bottom: -5px;
 }

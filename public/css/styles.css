@@ -215,6 +215,7 @@ h2.titulo{
 .publicidad-texto p{
     padding: 5px;
     text-align: center;
+    line-height: 27px;
 }
 .publicidad-texto{
     display: flex;
@@ -227,6 +228,10 @@ h2.titulo{
 .link-publi{
     font-size: smaller;
     text-align: start;
+    margin-bottom: 15px;
+}
+#publi-img2{
+    margin-bottom: -5px;
 }
 footer{
     

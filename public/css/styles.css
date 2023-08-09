@@ -242,6 +242,7 @@ footer{
     align-items: center;
     justify-content:center;
     text-align: center;
+    margin-top: auto;
     align-self: flex-end;
 }
 .redes-titulo{

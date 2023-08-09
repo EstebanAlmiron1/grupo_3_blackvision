@@ -20,10 +20,10 @@
 }
 
 body{
-    
     font-family: 'Roboto', sans-serif;
-    position: relative;    
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 header{
     background-color: var(--marron);
@@ -229,7 +229,6 @@ h2.titulo{
     text-align: start;
 }
 footer{
-    
     width: 100%;
     background-color: var(--marron);
     display: flex;
@@ -313,7 +312,7 @@ footer a:hover{
         flex-direction:row;
         align-items: top;
         justify-content:center;
-        position: relative;
+        align-self: flex-end;
         bottom: 0;
     }
     .redes{
@@ -368,5 +367,9 @@ footer a:hover{
         width:100%;
         order: 1;
       }
+
+    footer{
+        margin-top: auto;
+    }
 }
 

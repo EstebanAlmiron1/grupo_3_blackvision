@@ -202,10 +202,6 @@ h3{
         display: flex;
         align-items: center;
     }
-    .seleccionados article div div{
-        flex-wrap: wrap;
-        padding: 10px 30px;
-    }
     .cant-prec{
         justify-content: space-around;
         flex-wrap: wrap;

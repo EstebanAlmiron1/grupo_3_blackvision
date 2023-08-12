@@ -2,16 +2,16 @@ const path=require('path')
 
 const controller ={
     login:(req,res)=>{
-        res.sendFile(path.join(__dirname,"../views/login.html"))
+        res.render(path.join(__dirname,"../views/login.ejs"))
     },
     register:(req,res)=>{
-        res.sendFile(path.join(__dirname,"../views/register.html"))
+        res.render(path.join(__dirname,"../views/register.ejs"))
     },
     perfil:(req,res)=>{
-        res.sendFile(path.join(__dirname,"../views/perfil.html"))
+        res.render(path.join(__dirname,"../views/perfil.ejs"))
     },
     cart:(req,res)=>{
-        res.sendFile(path.join(__dirname,"../views/productCart.html"))
+        res.render(path.join(__dirname,"../views/productCart.ejs"))
     }
 }
 

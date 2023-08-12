@@ -2,10 +2,10 @@ const path=require('path')
 
 const controller ={
     list:(req,res)=>{
-        res.sendFile(path.join(__dirname,"../views/productList.html"))
+        res.render(path.join(__dirname,"../views/productList.ejs"))
     },
     detail:(req,res)=>{
-        res.sendFile(path.join(__dirname,"../views/productDetail.html"))
+        res.render(path.join(__dirname,"../views/productDetail.ejs"))
     },
 }
 

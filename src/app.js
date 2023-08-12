@@ -9,6 +9,9 @@ const userRouter=require("./routers/userRouter")
 
 app.use(express.static("public"))
 
+app.set("views",path.join(__dirname,"views"))
+app.set("view engine","ejs")
+
 app.listen(3000,()=>{
     console.log("BlackVision activado")
 })
@@ -17,6 +20,5 @@ app.use("/",mainRouter)
 app.use("/product",productRouter)
 app.use("/user",userRouter)
 
-//app.set("views",path.join(__dirname,"views"))//
-//app.set("view engine","ejs")//
+
 

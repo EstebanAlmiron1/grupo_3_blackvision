@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs')%>
+<body>
+    <%- include('partials/header.ejs')%>
+    <main>
+        <section class="inicio-ruta">
+            <div class="ruta">
+                <p>Inicio > Carrito de compras</p>
+            </div>
+        </section>
+        <h3 class="carrito">CARRITO DE COMPRAS</h3>
+        <section class="seleccionados">
+            <article>
+                <div class="fotocaja">
+                    <img id="foto-producto" src="/img/lentesHome1.png" alt="">
+                </div>
+                <div class="detalle-product">
+                    
+                    <div class="column-product">
+                        <h3>PRODUCTO</h3>
+                            <P>Producto</P>
+                            <p>Color</p>
+                            <p>Caracteristica</p>
+                            <p>#0001</p>
+                    </div>
+                    <div class="cant-prec">
+                        
+                        <div class="column-cantidad">
+                            <h3>CANTIDAD</h3>
+                            <p> <i class="fas fa-plus"></i> 1 <i class="fas fa-minus"></i> </p>
+                        </div>
+                     <div class="column-precio">
+                        <h3>PRECIO</h3>
+                            <P>$1000,00</P>
+                    </div>
+                </div>
+                </div>
+            </article>    
+        </section>
+        <section class="resumen">
+            <h4> <i class="fas fa-store"></i> RESUMEN DE COMPRA</h4>
+            <div class="subtotal">
+                <P>Subtotal</P>
+                <p>$1000.00</p>
+            </div>
+            <div class="total">
+                <p>Total</p>
+                <P>$1000.00</P>
+            </div>
+            <div class="pasoFinal">
+                <ul>
+                    <li class="envio">
+                        <div>
+                            <button type="submit">CALCULAR ENVIO <i class="fas fa-shipping-fast"></i> </button>
+                        </div>
+                    </li>
+                    <li class="descuento">
+                        <div class="boton-desc">    
+                            <input type="text" id="cupon" placeholder="Ingresar descuento "><i class="fas fa-tag"></i>
+                            <label for="cupon"></label>
+                        </div>
+                    </li>
+                    <li class="finalizar">
+                        <div>
+                            <button type="submit">FINALIZAR COMPRA</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer.ejs')%>
+</body>
+</html>

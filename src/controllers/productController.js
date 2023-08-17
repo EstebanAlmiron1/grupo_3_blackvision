@@ -15,15 +15,17 @@ const controller ={
     crearProcess:(req,res) =>{
         let newProduct = {
             "id": listaProductos.length +1,
+            "nombre": req.body.nombre,
             "descripcion": req.body.descripcion,
             "color": req.body.color,
             "talle": req.body.talle,
-            "precio": req.body.precio,
-                        
+            "precio": req.body.precio,                        
             }
             listaProductos.push(newProduct)
+            
             fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(listaProductos,null,2),'utf-8')
             res.redirect('/')
+            
         }
     }
 

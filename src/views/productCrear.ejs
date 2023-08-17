@@ -8,29 +8,21 @@
         <section class="register-box">
             <h2>Cargar producto para vender</h2>
             <h3> Agregue la informacion del producto</h3>
-            <form action="/product/crear" method="post" enctype="multipart/form-data">
-                <label for="nombre"></label>
-                <input type="text" placeholder="Nombre del producto" id="nombre" name="nombre">
 
-                <label for="Descripción"></label>
-                <input type="text" placeholder="Descripción" id="Descripción" name="descripcion">
-
-                <label for="color"></label>
-                <input type="text" placeholder="Color" id="color" name="color">
-
+            <form action="/product/crear" method="post">
+                
+                <input type="text" placeholder="Nombre del producto" name="nombre">
+                <input type="text" placeholder="Descripción" name="descripcion">
+                <input type="text" placeholder="Color" name="color">
                 <label for="talle">Talle: </label>
                 <select  id="talle" name="talle">
                     <option value="small">Small</option>
                     <option value="medium">Medium</option>
                     <option value="large">Large</option>
-                </select>
-
-                <label for="precio"></label>
+                </select>                
                 <input type="number" placeholder="precio" id="precio" name="precio">
-
-                <label for="imagen"></label>
-                <input type="file" placeholder="Carga la imagen" id="imagen" name="imagen">
-                
+                <label for="imagen">Carga la imagen de tu producto</label>
+                <input type="file" placeholder="Carga la imagen" id="imagen" name="imagen">                
                 <button type="submit">Cargar producto</button>
             </form>
         </section>

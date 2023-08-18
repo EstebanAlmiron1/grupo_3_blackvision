@@ -1,4 +1,7 @@
 const path=require('path')
+const fs = require('fs')
+const { log } = require('console')
+let listaProductos = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/productData.json'),'utf-8'))
 
 const controller ={
     login:(req,res)=>{
@@ -12,6 +15,20 @@ const controller ={
     },
     profile:(req,res)=>{
         res.render(path.join(__dirname,"../views/vistaPerfil.ejs"))
+    },
+    search: (req,res)=>{
+        let busqueda = req.query.search        
+        for (let i = 0; i < listaProductos.length; i++) {
+            let resultadoBusqueda = []
+            if(listaProductos[i].nombre.includes(busqueda)){
+                resultadoBusqueda.push(listaProductos[i])
+            };
+            console.log(resultadoBusqueda);
+            res.render('resultadobusqueda',{resultadoBusqueda:resultadoBusqueda})
+            
+            
+        };
+       
     }
 }
 

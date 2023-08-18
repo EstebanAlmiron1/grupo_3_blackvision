@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs')%>
+
+<body>
+    <%- include('partials/header.ejs')%>
+    <main>
+        <section class="register-box">
+         
+            
+            <h1>tu busqueda coincide este anteojo:</h1>
+            <ul>
+                <% for( let i = 0; i < resultadoBusqueda.length; i++ ) { %>
+                    <li>
+                        <p><%= resultadoBusqueda[i].nombre %></p>
+                        <%= resultadoBusqueda[i].descripcion %>
+                        <%= resultadoBusqueda[i].color %>
+                        <%= resultadoBusqueda[i].talle %>
+                        <%= resultadoBusqueda[i].precio %>
+                    </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>  
+    <%- include('partials/footer.ejs')%>
+</body>
+</html>

@@ -7,8 +7,12 @@
         <i class="fas fa-bars"></i>
     </div>
     <div class="header-der">
+
         <div class="header-search">
-            <input type="text" placeholder="Buscar" class="boton-busar">
+            <form action="/user/userResults" method="get">
+                <input type="text" placeholder="Buscar" class="boton-busar" name="search">
+                <input type="submit"class="boton-busar" hidden />
+            </form>
             <div class="btn">
                 <i class="fas fa-search" for="serch"></i>
             </div>

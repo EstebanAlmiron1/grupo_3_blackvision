@@ -22,7 +22,6 @@
     text-align: left;
 }
 
-/* Alineación del contenido en cada div */
 .datos h2, .compras h2, .ajustes h2, h3, p {
     margin: 10px 0;
 }
@@ -56,5 +55,4 @@
         margin: 10px;
     }
 
-    
 }

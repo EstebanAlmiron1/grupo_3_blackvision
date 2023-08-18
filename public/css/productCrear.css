@@ -1,0 +1,19 @@
+:root{
+    --marron: #F6BA6F;
+    --rosa: #FFEBEB;
+    --azul: #6DA9E4;
+    --celeste: #ADE4DB;
+    --amarillo: #F0FF42;
+}
+
+.formtalle{    
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.formtalle select{
+    width: 70%;
+}
+.formtalle label{
+    width: 20%;
+}

@@ -14,14 +14,16 @@
                 <input type="text" placeholder="Nombre del producto" name="nombre">
                 <input type="text" placeholder="Descripción" name="descripcion">
                 <input type="text" placeholder="Color" name="color">
-                <label for="talle">Talle: </label>
-                <select  id="talle" name="talle">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>                
                 <input type="number" placeholder="precio" id="precio" name="precio">
-                <label for="imagen">Carga la imagen de tu producto</label>
+                <div class="formtalle">
+                    <label for="talle">Talle: </label>
+                    <select name="talle">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <label >Carga la imagen de tu producto</label>
                 <input type="file" placeholder="Carga la imagen" id="imagen" name="imagen">                
                 <button type="submit">Cargar producto</button>
             </form>

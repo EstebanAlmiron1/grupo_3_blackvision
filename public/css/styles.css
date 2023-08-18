@@ -4,6 +4,7 @@
 @import "register.css";
 @import "perfil.css";
 @import "productList.css";
+@import "productCrear.css";
 
 :root{
     --marron: #F6BA6F;

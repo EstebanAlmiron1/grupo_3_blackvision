@@ -7,11 +7,11 @@ const controller ={
     register:(req,res)=>{
         res.render(path.join(__dirname,"../views/register.ejs"))
     },
-    perfil:(req,res)=>{
-        res.render(path.join(__dirname,"../views/perfil.ejs"))
-    },
     cart:(req,res)=>{
         res.render(path.join(__dirname,"../views/productCart.ejs"))
+    },
+    profile:(req,res)=>{
+        res.render(path.join(__dirname,"../views/vistaPerfil.ejs"))
     }
 }
 

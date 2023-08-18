@@ -1,0 +1,60 @@
+:root{
+    --marron: #F6BA6F;
+    --rosa: #FFEBEB;
+    --azul: #6DA9E4;
+    --celeste: #ADE4DB;
+    --amarillo: #F0FF42;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--rosa);
+    font-size: smaller;
+}
+
+/* Estilos para los divs dentro del container */
+.datos, .compras, .ajustes {
+    background-color: #f0f0f0;
+    border: 1px solid;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+}
+
+/* Alineación del contenido en cada div */
+.datos h2, .compras h2, .ajustes h2, h3, p {
+    margin: 10px 0;
+}
+
+.eliminar button{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media (min-width: 1025px){
+
+    .brand{
+        display: none;
+    }
+    .container {
+        position: relative;
+        font-size: larger;
+    }
+
+    .container div{
+        justify-content: center;
+    }
+    
+    .datos, .compras, .ajustes{
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    
+}

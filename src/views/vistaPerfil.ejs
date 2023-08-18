@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs')%>
+
+    <body>
+        <%- include('partials/header.ejs')%>
+         <div class="container">
+            <div class="datos">
+                <h2>Cuenta</h2>
+                <form action="editar" method="post">
+                    <h3>Detalles de cuenta</h3>
+                    <p>Email registrado: usuario@example.com</p>
+                    <p>Contraseña: ********</p>
+                </form>
+            </div>
+            <div class="compras">
+                <h2>Mis Compras</h2>
+                <div class="listado">
+                    <ul>
+                        <li>Compra1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ajustes">
+                <h2>Ajustes</h2>
+                <form action="editar" method="post">
+                    <h3>Dirección</h3>
+                    <p>Nombre de la calle, Ciudad, País</p>
+                </form>
+                <div class="telefono">
+                    <h3>Número de Teléfono</h3>
+                    <p>+541151112238</p>
+                </div>
+                <div class="eliminar">
+                    <button>Eliminar cuenta</button>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer.ejs')%>
+    </body>
+</html>

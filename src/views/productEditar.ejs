@@ -6,24 +6,27 @@
     <%- include('partials/header.ejs')%>
     <main>
         <section class="register-box">
-            <h2>Cargar producto para vender</h2>
-            <h3> Agregue la informacion del producto</h3>
+            <h1>Edición de producto</h1>
 
-            <form action="/product/crear" method="post">
-                
-                <input type="text" placeholder="Nombre del producto" name="nombre">
-                <input type="text" placeholder="Descripción" name="descripcion">
-                <input type="text" placeholder="Color" name="color">
-                <label for="talle">Talle: </label>
-                <select  id="talle" name="talle">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>                
-                <input type="number" placeholder="precio" id="precio" name="precio">
+            <form action="/product/edit" method="post">
+                <p class="nomP">Nombre del producto</p>
+                <input type="text" value="anteojo" name="nombre">
+                <p class="nomP">Descripcion</p>
+                <input type="text" value="grandes" name="descripcion">
+                <p class="nomP">Color</p>
+                <input type="text" value="rosa" name="color">
+                <div class="talleedit"> <label for="talle">Talle: </label>
+                    <select  id="talle" name="talle">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>      
+                <p class="nomP">Actualizar precio</p>        
+                <input type="number" value="1000" placeholder="precio" id="precio" name="precio">
                 <label for="imagen">Carga la imagen de tu producto</label>
                 <input type="file" placeholder="Carga la imagen" id="imagen" name="imagen">                
-                <button type="submit">Cargar producto</button>
+                <button type="submit">Editar producto</button>
             </form>
         </section>
     </main>  

@@ -17,7 +17,20 @@
 .formtalle label{
     width: 20%;
 }
-
+.nomP{
+    color:#474747;;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+}
+.talleedit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.talleedit select{
+    width: 50%;
+}
 #imagencrear{
     display: none;
 }

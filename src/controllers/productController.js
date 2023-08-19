@@ -26,6 +26,15 @@ const controller ={
             fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(listaProductos,null,2),'utf-8')
             res.redirect('/')
             
+        },
+        edit:(req,res)=>{
+            res.render(path.join(__dirname,"../views/productEditar.ejs"))
+        },
+        editProcess:(req,res)=>{
+
+            fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(listaProductos,null,2),'utf-8')
+            res.redirect('/')
+
         }
     }
 

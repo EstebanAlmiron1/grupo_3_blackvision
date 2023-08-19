@@ -6,5 +6,5 @@ router.get("/",controller.list)
 router.get("/detail",controller.detail)
 router.get("/crear",controller.crear)
 router.post("/crear",controller.crearProcess)
-
+router.get("/edit",controller.edit)
 module.exports=router

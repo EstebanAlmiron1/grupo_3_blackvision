@@ -16,7 +16,7 @@
 /* Estilos para los divs dentro del container */
 .datos, .compras, .ajustes {
     background-color: #f0f0f0;
-    border: 1px solid;
+    border-bottom: 1px solid var(--celeste);
     padding: 20px;
     margin: 10px;
     text-align: left;
@@ -26,33 +26,55 @@
     margin: 10px 0;
 }
 
+h2{
+    border-bottom: 1px solid var(--marron);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    font-weight: lighter;
+}
+
+.editar button, .ajustes button, .compras button{
+    border: none;
+    color: var(--azul);
+}
+.editar i, .ajustes i{
+    position: relative;
+    top: 1px;
+}
+
+.compras div{
+    font-weight: bold;
+    color: grey;
+}
+
 .eliminar button{
-    background-color: black;
+    background-color: var(--azul);
     color: white;
     font-weight: bold;
-    padding: 5px;
+    padding: 8px;
     border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+}
+.eliminar button:hover{
+    background: var(--marron);
 }
 
 @media (min-width: 1025px){
-
-    .brand{
-        display: none;
-    }
-    .container {
-        position: relative;
+    .container{
         font-size: larger;
     }
 
-    .container div{
-        justify-content: center;
-    }
-    
     .datos, .compras, .ajustes{
-        background-color: #f0f0f0;
-        border: 1px solid #ddd;
+        border: 1px solid #ddd; 
         padding: 20px;
         margin: 10px;
     }
 
+    .editar button, .ajustes button, .compras button{
+        font-size: 100%;
+    }
+    .editar i, .ajustes i{
+        font-size: 100%;
+    }
 }

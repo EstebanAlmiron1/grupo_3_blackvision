@@ -34,6 +34,10 @@ h2{
     font-weight: lighter;
 }
 
+h3{
+    text-transform: uppercase;
+}
+
 .editar button, .ajustes button, .compras button{
     border: none;
     color: var(--azul);

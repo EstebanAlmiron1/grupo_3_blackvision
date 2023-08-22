@@ -7,18 +7,18 @@
          <div class="container">
             <div class="datos">
                 <h2>Información de la cuenta</h2>
-                <form action="editar" method="post">
+                <form action="/" method="get">
                     <h3>DETALLES DE CONTACTO</h3>
                     <p>NOMBRE Y APELLIDO</p>
                     <p>usuario@example.com</p>
                     <div class="editar">
-                        <button>Editar <i class="fas fa-angle-right"></i></button>
-                        <button>Cambiar contraseña <i class="fas fa-angle-right"></i></button>
+                        <button type="submit">Editar <i class="fas fa-angle-right"></i></button>
+                        <button type="submit">Cambiar contraseña <i class="fas fa-angle-right"></i></button>
                     </div>
                     <h3>NEWSLETTER</h3>
                     <p>No está suscripto a nuestro newsletter.</p>
                     <div class="editar">
-                        <button>Editar <i class="fas fa-angle-right"></i></button>
+                        <button type="submit">Editar <i class="fas fa-angle-right"></i></button>
                     </div>
                 </form>
             </div>
@@ -31,19 +31,19 @@
                         <p>Enviar a:</p>
                         <p>Total:</p>
                         <p>Estado:</p>
-                        <button>Seguimiento</button></p>
+                        <button type="submit">Seguimiento</button></p>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="ajustes">
                 <h2>Libreta de direcciones</h2>
-                <form action="editar" method="post">
+                <form action="/" method="get">
                     <h3>Dirección de facturación predeterminada</h3>
                     <p>No ha establecido una dirección de facturación predeterminada.</p>
-                    <button class="editar-direccion">Editar dirección <i class="fas fa-angle-right"></i></button>
+                    <button class="editar-direccion" type="submit">Editar dirección <i class="fas fa-angle-right"></i></button>
                 </form>
-                <form action="editar" method="post">
+                <form action="/" method="get">
                     <h3>Dirección de envío predeterminada</h3>
                     <p>Nombre y Apellido</p>
                     <p>Calle, N°</p> 
@@ -51,11 +51,11 @@
                     <p>Pais</p>
                     <p>Tel:</p>
                     <p>DNI:</p>
-                    <button class="editar-direccion">Editar dirección <i class="fas fa-angle-right"></i></button>
+                    <button class="editar-direccion" type="submit">Editar dirección <i class="fas fa-angle-right"></i></button>
                 </form>
-                <div class="eliminar">
-                    <button>Eliminar cuenta</button>
-                </div>
+                <form class="eliminar" action="/" method="get">
+                    <button type="submit">Eliminar cuenta</button>
+                </form>
             </div>
         </div>
         <%- include('partials/footer.ejs')%>

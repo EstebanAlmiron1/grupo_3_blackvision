@@ -5,26 +5,26 @@
     <body>
         <%- include('partials/header.ejs')%>
          <div class="container">
-            <div class="datos">
-                <h2>Información de la cuenta</h2>
+            <div class="data">
+                <h2 class="title">Información de la cuenta</h2>
                 <form action="/" method="get">
-                    <h3>DETALLES DE CONTACTO</h3>
+                    <h3 class="sub-title">DETALLES DE CONTACTO</h3>
                     <p>NOMBRE Y APELLIDO</p>
                     <p>usuario@example.com</p>
-                    <div class="editar">
+                    <div class="edit">
                         <button type="submit">Editar <i class="fas fa-angle-right"></i></button>
                         <button type="submit">Cambiar contraseña <i class="fas fa-angle-right"></i></button>
                     </div>
-                    <h3>NEWSLETTER</h3>
+                    <h3 class="sub-title">NEWSLETTER</h3>
                     <p>No está suscripto a nuestro newsletter.</p>
-                    <div class="editar">
+                    <div class="edit">
                         <button type="submit">Editar <i class="fas fa-angle-right"></i></button>
                     </div>
                 </form>
             </div>
-            <div class="compras">
-                <h2>Pedidos Recientes</h2>
-                <div class="listado">
+            <div class="shopping">
+                <h2 class="title">Pedidos Recientes</h2>
+                <div class="list">
                     <ul>
                         <li>Pedido #:
                         <p>Fecha:</p>
@@ -36,24 +36,24 @@
                     </ul>
                 </div>
             </div>
-            <div class="ajustes">
-                <h2>Libreta de direcciones</h2>
+            <div class="settings">
+                <h2 class="title">Libreta de direcciones</h2>
                 <form action="/" method="get">
-                    <h3>Dirección de facturación predeterminada</h3>
+                    <h3 class="sub-title">Dirección de facturación predeterminada</h3>
                     <p>No ha establecido una dirección de facturación predeterminada.</p>
-                    <button class="editar-direccion" type="submit">Editar dirección <i class="fas fa-angle-right"></i></button>
+                    <button class="adress-edit" type="submit">Editar dirección <i class="fas fa-angle-right"></i></button>
                 </form>
                 <form action="/" method="get">
-                    <h3>Dirección de envío predeterminada</h3>
+                    <h3 class="sub-title">Dirección de envío predeterminada</h3>
                     <p>Nombre y Apellido</p>
                     <p>Calle, N°</p> 
                     <p>Ciudad, provincia, codigo postal</p>
                     <p>Pais</p>
                     <p>Tel:</p>
                     <p>DNI:</p>
-                    <button class="editar-direccion" type="submit">Editar dirección <i class="fas fa-angle-right"></i></button>
+                    <button class="adress-edit" type="submit">Editar dirección <i class="fas fa-angle-right"></i></button>
                 </form>
-                <form class="eliminar" action="/" method="get">
+                <form class="delete" action="/" method="get">
                     <button type="submit">Eliminar cuenta</button>
                 </form>
             </div>

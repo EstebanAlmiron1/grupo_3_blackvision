@@ -6,7 +6,7 @@
     --amarillo: #F0FF42;
 }
 
-.ruta{
+.route{
     color: var(--azul);
     font-weight: 500;
     font-size: 12px;
@@ -15,21 +15,21 @@
     border-top: 2px solid black;
 }
 
-.ruta p{
+.route p{
     color: black;
 }
 
-h3{
+.cart{
     margin-left: 5px;
 }
 
-.seleccionados{
+.selected{
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 10px;
 }
 
-.seleccionados article{
+.selected article{
     padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -37,44 +37,44 @@ h3{
     align-items: center;
 }
 
-.fotocaja{
+.photobox{
     width: 30%;
 }
 
-#foto-producto{
+#photo-product{
     width: 100%;
 }
 
-.detalle-product{
+.detail-product{
     width: 40%;
 }
 
-.cant-prec{
+.cant-price{
     display: flex;
     width: 100%;
     padding: 10px 0px 10px 0px;
 }
 
-.cant-prec i{
+.cant-price i{
     font-size: 50%;
     position: relative;
     right: 1px;
     bottom: 2px;
 }
 
-.column-precio{
+.column-price{
     font-size: 110%;
     position: relative;
     right: -5px;
 }
 
-.resumen{
+.resume{
     padding: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.resumen h4{
+.resume h4{
     padding: 10px;
     background-color: black;
     color: white;
@@ -84,10 +84,10 @@ h3{
     text-align: center;
 }
 
-.resumen i{
+.resume i{
     color: #00a650;
 }
-.pasoFinal i{
+.lastStep i{
     color: #00a650;
 }
 
@@ -108,7 +108,7 @@ h3{
     border-top: 1px solid;
 }
 
-.pasoFinal ul{
+.lastStep ul{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,11 +117,11 @@ h3{
     text-align: center;
 }
 
-.pasoFinal ul li{
+.lastStep ul li{
     width: 80%;
 }
 
-.pasoFinal button {
+.lastStep button {
     background-color: var(--azul);
     border: none;
     color: white;
@@ -131,23 +131,23 @@ h3{
     transition: all 0.5s ease-in;
 }
 
-.pasoFinal .envio button:hover{
+.lastStep .shipping button:hover{
     background: black;
 }
 
-.pasoFinal .finalizar button{
+.lastStep .finalize button{
     background: var(--azul);
     transition: all 0.5s ease-in-out;
     border-radius: 8px;
 }
 
-.pasoFinal .finalizar button:hover{
+.lastStep .finalize button:hover{
     background: black;
     color: #fff;
     font-size: 110%;
 }
 
-.pasoFinal input {
+.lastStep input {
     text-align: center;
     border: none;
     padding: 6px;
@@ -157,7 +157,7 @@ h3{
     border-radius: 8px;
 }
 
-.pasoFinal input:focus {
+.lastStep input:focus {
     transform: scale(1.1); /* Aumenta el tamaño al enfocar */
     background: black;
     color: white;
@@ -165,7 +165,7 @@ h3{
     
 }
 
-.pasoFinal .descuento i {
+.lastStep .discount i {
     font-size: smaller;
     color: black;
     position: relative;
@@ -174,56 +174,56 @@ h3{
 }
   
   /* Estilos para el ícono al hacer clic en el campo */
-.pasoFinal input:focus ~ i {
+.lastStep input:focus ~ i {
     transform: translateX(50px) rotate(360deg); /* Mueve y rota el ícono al hacer clic */
 }
 
-.envio i{
+.shipping i{
     font-size: smaller;
 }
 
-.envio a{
+.shipping a{
     color: white;
 }
 
-.finalizar a{
+.finalize a{
     color: white;
 }
 
-.seleccionados h3{
+.selected h3{
     display: none;
 }
 
 @media(min-width: 768px){
-    .seleccionados h3{
+    .selected h3{
         display: flex;
     }
-    .seleccionados article div{
+    .selected article div{
         display: flex;
         align-items: center;
     }
-    .cant-prec{
+    .cant-price{
         justify-content: space-around;
         flex-wrap: wrap;
         padding: 10px 30px;
         width: 60%;
     }
-    .column-precio{
+    .column-price{
         display: flex;
         flex-direction: column;
         position: relative;
         bottom: 20px;
     }
-    .column-precio p{
+    .column-price p{
         padding-top: 20px;
     }
-    .column-cantidad{
+    .column-amount{
         display: flex;
         flex-direction: column;
         position: relative;
         bottom: 20px;
     }
-    .column-cantidad p{
+    .column-amount p{
         padding-top: 20px;
     }
     .column-product{
@@ -231,11 +231,11 @@ h3{
         flex-direction: column;
     
     }
-    .fotocaja{
+    .photobox{
         width: 20%;
         margin-left: 10px;
     }
-    .detalle-product{
+    .detail-product{
         width: 75%;
         align-items:flex-start;
     }
@@ -247,61 +247,61 @@ h3{
 
 @media (min-width: 1025px) {
 
-    .ruta{
+    .route{
         font-size: 16px;
     }
 
-    .carrito{
+    .cart{
         font-size: 20px;
     }
     
-    .seleccionados article {
+    .selected article {
         padding: 20px;
     }
 
-    .fotocaja {
+    .photobox {
         width: 25%;
         margin-left: 20px;
     }
 
-    .detalle-product {
+    .detail-product {
         width: 50%;
         align-items: center;
         border-left: 2px solid var(--marron);
         border-right: 2px solid var(--marron);
     }
 
-    .cant-prec {
+    .cant-price {
         padding: 20px 0;
     }
 
-    .column-precio,
-    .column-cantidad,
+    .column-price,
+    .column-amount,
     .column-product h3{
         font-size: 20px;
         padding-bottom: 2px;
     }
 
-    .column-precio,
-    .column-cantidad,
+    .column-price,
+    .column-amount,
     .column-product p{
         font-size: 16px;
     }
 
-    .resumen{
+    .resume{
         padding: 5% 30% 10% 5%
 
     }
 
-    .pasoFinal{
+    .lastStep{
         border-top: 4px solid black;
     }
 
-    .pasoFinal ul{
+    .lastStep ul{
         padding-top: 10%;
     }
 
-    .resumen h4 {
+    .resume h4 {
         font-size: 20px;
         background-color: var(--azul);
         color: white;
@@ -314,12 +314,12 @@ h3{
         justify-content: space-around;
     }
 
-    .pasoFinal button {
+    .lastStep button {
         font-size: 18px;
         padding: 15px 25px;
     }
 
-    .pasoFinal input {
+    .lastStep input {
         font-size: 18px;
         padding: 10px;
         position: relative;
@@ -327,7 +327,7 @@ h3{
         border-radius: 12px;
     }
 
-    .resumen {
+    .resume {
         font-size: 14px;
     }
 }

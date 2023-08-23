@@ -14,7 +14,7 @@
 }
 
 /* Estilos para los divs dentro del container */
-.datos, .compras, .ajustes {
+.data, .shopping, .settings {
     background-color: #f0f0f0;
     border-bottom: 1px solid var(--celeste);
     padding: 20px;
@@ -22,11 +22,11 @@
     text-align: left;
 }
 
-.datos h2, .compras h2, .ajustes h2, h3, p {
+.data h2, .shopping h2, .settings h2, h3, p {
     margin: 10px 0;
 }
 
-h2{
+.title{
     border-bottom: 1px solid var(--marron);
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -34,25 +34,25 @@ h2{
     font-weight: lighter;
 }
 
-h3{
+.sub-title{
     text-transform: uppercase;
 }
 
-.editar button, .ajustes button, .compras button{
+.edit button, .settings button, .shopping button{
     border: none;
     color: var(--azul);
 }
-.editar i, .ajustes i{
+.edit i, .settings i{
     position: relative;
     top: 1px;
 }
 
-.compras div{
+.shopping div{
     font-weight: bold;
     color: grey;
 }
 
-.eliminar button{
+.delete button{
     background-color: var(--azul);
     color: white;
     font-weight: bold;
@@ -60,7 +60,7 @@ h3{
     border-radius: 5px;
     transition: all 0.4s ease-in-out;
 }
-.eliminar button:hover{
+.delete button:hover{
     background: var(--marron);
 }
 
@@ -69,16 +69,16 @@ h3{
         font-size: larger;
     }
 
-    .datos, .compras, .ajustes{
+    .data, .shopping, .settings{
         border: 1px solid #ddd; 
         padding: 20px;
         margin: 10px;
     }
 
-    .editar button, .ajustes button, .compras button{
+    .edit button, .settings button, .shopping button{
         font-size: 100%;
     }
-    .editar i, .ajustes i{
+    .edit i, .settings i{
         font-size: 100%;
     }
 }

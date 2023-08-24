@@ -9,23 +9,25 @@
             <h1>Edición de producto</h1>
 
             <form action="/product/edit" method="post">
-                <p class="nomP">Nombre del producto</p>
-                <input type="text" value="anteojo" name="nombre">
-                <p class="nomP">Descripcion</p>
-                <input type="text" value="grandes" name="descripcion">
-                <p class="nomP">Color</p>
-                <input type="text" value="rosa" name="color">
-                <div class="talleedit"> <label for="talle">Talle: </label>
-                    <select  id="talle" name="talle">
+
+
+                <p class="input-Product">Nombre del producto</p>
+                <input type="text" value="anteojo" name="name-Product">
+                <p class="input-Product">Descripcion</p>
+                <input type="text" value="grandes" name="description-Product">
+                <p class="input-Product">Color</p>
+                <input type="text" value="rosa" name="color-Product">
+                <div class="size-edit"> <label for="size">Talle: </label>
+                    <select  id="size" name="size">
                         <option value="small">Small</option>
                         <option value="medium">Medium</option>
                         <option value="large">Large</option>
                     </select>
                 </div>      
-                <p class="nomP">Actualizar precio</p>        
-                <input type="number" value="1000" placeholder="precio" id="precio" name="precio">
-                <label for="imagen">Carga la imagen de tu producto</label>
-                <input type="file" placeholder="Carga la imagen" id="imagen" name="imagen">                
+                <p class="input-Product">Actualizar precio</p>        
+                <input type="number" value="1000" placeholder="precio" id="price" name="price">
+                <label for="image-edit" class="label-edit"><i class="fas fa-upload"></i>Carga la imagen</label>
+                <input type="file" placeholder="Carga la imagen" id="image-edit" name="image">                
                 <button type="submit">Editar producto</button>
             </form>
         </section>

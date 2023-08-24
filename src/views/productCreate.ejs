@@ -11,20 +11,20 @@
 
             <form action="/product/crear" method="post">
                 
-                <input type="text" placeholder="Nombre del producto" name="nombre">
-                <input type="text" placeholder="Descripción" name="descripcion">
-                <input type="text" placeholder="Color" name="color">
-                <input type="number" placeholder="precio" id="precio" name="precio">
-                <div class="formtalle">
-                    <label for="talle">Talle: </label>
-                    <select name="talle">
+                <input type="text" placeholder="Nombre del producto" name="name-Product">
+                <input type="text" placeholder="Descripción" name="description-Product">
+                <input type="text" placeholder="Color" name="color-Product">
+                <input type="number" placeholder="precio" id="price" name="price">
+                <div class="form-size">
+                    <label for="size">Talle: </label>
+                    <select name="size">
                         <option value="small">Small</option>
                         <option value="medium">Medium</option>
                         <option value="large">Large</option>
                     </select>
                 </div>
-                <label for="imagencrear" class="labelcrear"><i class="fas fa-upload"></i>Carga la imagen</label>
-                <input type="file" placeholder="Carga la imagen" id="imagencrear" name="imagen">                
+                <label for="image-create" class="label-create"><i class="fas fa-upload"></i>Carga la imagen</label>
+                <input type="file" placeholder="Carga la imagen" id="image-create" name="image">                
                 <button type="submit">Cargar producto</button>
             </form>
         </section>

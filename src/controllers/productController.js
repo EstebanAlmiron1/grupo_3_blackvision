@@ -10,7 +10,7 @@ const controller ={
         res.render(path.join(__dirname,"../views/productDetail.ejs"))
     },
     crear: (req,res) =>{
-        res.render(path.join(__dirname,"../views/productCrear.ejs"))
+        res.render(path.join(__dirname,"../views/productCreate.ejs"))
     },
     crearProcess:(req,res) =>{
         let newProduct = {

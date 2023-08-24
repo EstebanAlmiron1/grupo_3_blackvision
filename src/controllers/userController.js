@@ -20,16 +20,9 @@ const controller ={
         let busqueda = req.query.search ; 
         let resultadoBusqueda = []      
         for (let i = 0; i < listaProductos.length; i++) {
-            
             if(listaProductos[i].nombre.includes(busqueda)){
                 resultadoBusqueda.push(listaProductos[i])
-                
             }
-           
-            console.log(resultadoBusqueda);
-            
-            
-            
         };
         res.render('resultadobusqueda',{resultadoBusqueda:resultadoBusqueda})
        

@@ -2,13 +2,13 @@
 <html lang="en">
 
 <%- include('partials/head.ejs')%>
-<body>
+<body class="body-index">
     <%- include('partials/header.ejs')%>
     <main>
-        <div id="contenedorItemsCarrousel">
+        <div id="carrouselItemsConteiner">
             <div class="item-carrousel" id="item-carrousel1">
                 <div class="img-carrousel" id="img-carrousel1"><img src="/img/lentesHome1.png" alt="imagenHome1"></div>
-                <div class="flechas-carrousel">
+                <div class="arrows-carrousel">
                     <a href="#item-carrousel5">
                         <i class="fas fa-angle-double-left"></i>
                     </a>
@@ -19,7 +19,7 @@
             </div>
             <div class="item-carrousel" id="item-carrousel2">
                 <div class="img-carrousel" id="img-carrousel2"><img src="/img/lentesHome2.png" alt="imagenHome2"></div>
-                <div class="flechas-carrousel">
+                <div class="arrows-carrousel">
                     <a href="#item-carrousel1">
                         <i class="fas fa-angle-double-left"></i>
                     </a>
@@ -30,7 +30,7 @@
             </div>
             <div class="item-carrousel" id="item-carrousel3">
                 <div class="img-carrousel" id="img-carrousel3"><img src="/img/lentesHome3.png" alt="imagenHome3"></div>
-                <div class="flechas-carrousel">
+                <div class="arrows-carrousel">
                     <a href="#item-carrousel2">
                         <i class="fas fa-angle-double-left"></i>
                     </a>
@@ -41,7 +41,7 @@
             </div>
             <div class="item-carrousel" id="item-carrousel4">
                 <div class="img-carrousel" id="img-carrousel4"><img src="/img/lentesHome4.png" alt="imagenHome4"></div>
-                <div class="flechas-carrousel">
+                <div class="arrows-carrousel">
                     <a href="#item-carrousel3">
                         <i class="fas fa-angle-double-left"></i>
                     </a>
@@ -54,7 +54,7 @@
                 <div class="img-carrousel" id="img-carrousel5">
                     <img src="/img/lentesHome5.png" alt="imagenHome5">
                 </div>
-                <div class="flechas-carrousel">
+                <div class="arrows-carrousel">
                     <a href="#item-carrousel4">
                         <i class="fas fa-angle-double-left"></i>
                     </a>
@@ -64,10 +64,10 @@
                 </div>
             </div>
         </div>
-        <div class="publicidad-home">
-            <div class="publicidad-img"><img src="/img/publiLentes1.jpg" alt="publicidad1"></div>
-            <div class="publicidad-texto">
-                <h2 class="titulo">Moda sustentable</h2>
+        <div class="ad-home">
+            <div class="ad-img"><img src="/img/publiLentes1.jpg" alt="ad1"></div>
+            <div class="ad-text">
+                <h2 class="title-home">Moda sustentable</h2>
                 <h3>Recycled colections</h3>
                 <p>Cada año ocho millones de toneladas de desechos plásticos terminan en el océano, y sólo la mitad de
                     estos han sido fabricados hace apenas 15 años. Los números son contundentes y estas cifras desaniman
@@ -75,9 +75,9 @@
                     temperaturas más altas de las que podrían alcanzar en el mar. Es por esto que cada vez más tiendas
                     están siguiendo la tendencia de buscar una segunda vida a este material desechable, creando anteojos
                     de sol y gafas de lectura a través del plástico reciclado.</p>
-                <a href="#" class="link-publi">Clickeá para ver toda la colección</a>
+                <a href="#" class="link-add">Clickeá para ver toda la colección</a>
             </div>
-            <div class="publicidad-img"><img src="/img/publiLentes2.jpg" alt="publicidad1" id="publi-img2"></div>
+            <div class="ad-img"><img src="/img/publiLentes2.jpg" alt="ad1" id="publi-img2"></div>
         </div>
     </main>
     <%- include('partials/footer.ejs')%>

@@ -17,17 +17,21 @@ const controller ={
         res.render(path.join(__dirname,"../views/vistaPerfil.ejs"))
     },
     search: (req,res)=>{
-        let busqueda = req.query.search        
+        let busqueda = req.query.search ; 
+        let resultadoBusqueda = []      
         for (let i = 0; i < listaProductos.length; i++) {
-            let resultadoBusqueda = []
+            
             if(listaProductos[i].nombre.includes(busqueda)){
                 resultadoBusqueda.push(listaProductos[i])
-            };
+                
+            }
+           
             console.log(resultadoBusqueda);
-            res.render('resultadobusqueda',{resultadoBusqueda:resultadoBusqueda})
+            
             
             
         };
+        res.render('resultadobusqueda',{resultadoBusqueda:resultadoBusqueda})
        
     }
 }

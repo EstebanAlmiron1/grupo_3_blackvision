@@ -20,13 +20,13 @@
     box-sizing: border-box;
 }
 
-body{
+.body-index{
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-header{
+.main-header{
     background-color: var(--marron);
     width: 100%;
     display: flex;
@@ -34,10 +34,10 @@ header{
     justify-content: space-between;
     
 }
-header a {
+.main-header a {
     color: #474747;
 }
-.header-izq{
+.header-left{
     width: 45%;
     display: flex;
     flex-wrap: wrap;    
@@ -52,17 +52,17 @@ header a {
 #linkmainlogo{
     display: none;
 }
-.header-izq a{
+.header-left a{
     transition: all 0.8s ease-in-out;
 }
-.header-izq a:hover{
+.header-left a:hover{
     transform: scale(1.2);
 }
-.header-izq div{
+.header-left div{
     width: 20%;
     
 }
-.header-inicio{
+.header-ini{
     width: 70%;
 }
 .header-prod{
@@ -73,7 +73,7 @@ header a {
     width: 70%;
     font-size: 70%;
 }
-.header-der{
+.header-right{
     width: 45%;
     display: flex;
     flex-wrap: wrap;    
@@ -81,24 +81,24 @@ header a {
     align-items: center;
     margin-right: 10px;    
 }
-.header-der i{
+.header-right i{
     color: #474747;
     font-size:larger;
     margin: 10px;
     padding-left: 10px;   
     transition: all 0.8s; 
 }
-.header-izq i:hover{
+.header-left i:hover{
     transform: scale(1.2);
 }
-.header-izq i{
+.header-left i{
     color: #474747;
     font-size:larger;
     margin: 10px;
     padding-left: 10px;   
     transition: all 0.8s; 
 }
-.header-der i:hover{
+.header-right i:hover{
     transform: scale(1.2);
 }
 .header-search{
@@ -142,11 +142,11 @@ header a {
 .imglogo:hover{
     transform: scale(0.9);
 }
-header div div{
+.main-header div div{
     display: flex;
     justify-content: center;
 }
-#contenedorItemsCarrousel{
+#carrouselItemsConteiner{
     height: 20vh;
     
     background-size: cover;
@@ -168,7 +168,7 @@ header div div{
     height: 100%;
     
 }
-.flechas-carrousel{
+.arrows-carrousel{
     height: 100%;
     width: 100%;
     position: absolute;
@@ -179,46 +179,46 @@ header div div{
     padding: 10px;
     
 }
-.flechas-carrousel i{
+.arrows-carrousel i{
     opacity: 0.5;
     transition: all 0.2s ease-out;
     font-size: 1.5em;
 }
-.flechas-carrousel i:hover{
+.arrows-carrousel i:hover{
     opacity: 1;
     transform:scale(1.1);
 }
-.flechas-carrousel a{
+.arrows-carrousel a{
      
     color:#F6BA6F;
 
 }
-.publicidad-home{
+.ad-home{
     width: 100%;
     
     
 }
-.publicidad-home img{
+.ad-home img{
     width: 100%;
     height: 100%;
     border: 2px solid #5b94b3;
 }
-h2.titulo{
+h2.title-home{
     font-size: larger;
     padding: 5px;
 }
-.publicidad-texto h3{
+.ad-text h3{
     font-size: 0.9em;
     font-style: italic;
     padding: 5px;
     
 }
-.publicidad-texto p{
+.ad-text p{
     padding: 5px;
     text-align: center;
     line-height: 27px;
 }
-.publicidad-texto{
+.ad-text{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -226,7 +226,7 @@ h2.titulo{
     
     color: var(--negro);
 }
-.link-publi{
+.link-add{
     font-size: smaller;
     text-align: start;
     margin-bottom: 15px;
@@ -234,7 +234,7 @@ h2.titulo{
     transition: all 0.5s;
 
 }
-.link-publi:hover{
+.link-add:hover{
     color: #000;
     
 }
@@ -243,7 +243,7 @@ h2.titulo{
 #publi-img2{
     margin-bottom: -5px;
 }
-footer{
+.main-footer{
     width: 100%;
     background-color: var(--marron);
     display: flex;
@@ -255,11 +255,11 @@ footer{
     margin-top: auto;
     align-self: flex-end;
 }
-.redes-titulo{
+.networks-title-home{
     width: 100%;   
     
 }
-.redes{
+.networks{
     display: flex;
     flex-wrap: wrap;       
     color:white;
@@ -276,13 +276,14 @@ footer{
     color:white;
     width: 90%;
 }
-.redes-lista{
+
+.networks-list{
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
     width: 100%;
 }
-.redes-lista div{
+.networks-list div{
     padding-left: 15px;
     
 }
@@ -294,24 +295,24 @@ ul{
     list-style-type: none;
     text-decoration: none;    
 }
-footer div a i{
+.main-footer div a i{
     margin-right: 15px;
 }
 
 .ruta{
     width: 100%;
 }
-footer div{
+.main-footer div{
     padding: 5px;
 }
-footer h4{
+.main-footer h4{
     color: black;
 }
-footer a{
+.main-footer a{
     color: #474747;
     transition: all 0.5s;
 }
-footer a:hover{
+.main-footer a:hover{
     color: #000;
     
 }
@@ -320,10 +321,10 @@ footer a:hover{
     #linkmainlogo{
         display: block;
     }
-    .header-izq i{
+    .header-left i{
         display: none;
     }
-    footer{
+    .main-footer{
         width: 100%;
         flex-direction:row;
         align-items: top;
@@ -331,17 +332,17 @@ footer a:hover{
         align-self: flex-end;
         bottom: 0;
     }
-    .redes{
+    .networks{
       width: 30%;
         
     }
-    .redes-lista{
+    .networks-list{
         display:flex;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
     }
-    .redes-lista div {
+    .networks-list div {
         width: 25%;
     }
     .config{     
@@ -350,7 +351,7 @@ footer a:hover{
     .crew{     
         width: 30%;
     }
-    .contenedorItemsCarrousel i{
+    .carrouselItemsConteiner i{
         color: #2a3a4c;
     }
 }
@@ -358,10 +359,10 @@ footer a:hover{
     #linkmainlogo{
         display: block;
     }   
-    .header-izq i{
+    .header-left i{
         display: none;
     }
-    .redes{
+    .networks{
         width: 30%;          
       }
       .config{     
@@ -370,21 +371,21 @@ footer a:hover{
       .crew{     
           width: 30%;
       }
-      .publicidad-home{
+      .ad-home{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
         justify-content: space-between;
       }
-      .publicidad-img{
+      .ad-img{
         width: 50%;
       }
-      .publicidad-texto{
+      .ad-text{
         width:100%;
         order: 1;
       }
 
-    footer{
+    .main-footer{
         margin-top: auto;
     }
 }

@@ -1,10 +1,10 @@
 const path=require('path')
 const fs = require('fs')
-let listaProductos = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/productData.json'),'utf-8'))
+let productsList = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/productData.json'),'utf-8'))
 
 const controller ={
     list:(req,res)=>{
-        res.render(path.join(__dirname,"../views/productList.ejs"))
+        res.render(path.join(__dirname,"../views/productList.ejs"),{listP:productsList})
     },
     detail:(req,res)=>{
         res.render(path.join(__dirname,"../views/productDetail.ejs"))
@@ -14,7 +14,7 @@ const controller ={
     },
     crearProcess:(req,res) =>{        
         let newProduct = {
-            "id": listaProductos.length +1,
+            "id": productsList.length +1,
             "nombre": req.body.name,
             "descripcion": req.body.description,
             "color": req.body.color,
@@ -22,9 +22,9 @@ const controller ={
             "precio": req.body.price,
             "img":req.file.filename,                     
             }
-            listaProductos.push(newProduct)
+            productsList.push(newProduct)
             
-            fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(listaProductos,null,2),'utf-8')
+            fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(productsList,null,2),'utf-8')
             res.redirect('/')
             
         },
@@ -33,7 +33,7 @@ const controller ={
         },
         editProcess:(req,res)=>{
 
-            fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(listaProductos,null,2),'utf-8')
+            fs.writeFileSync(path.join(__dirname,'../data/productData.json'),JSON.stringify(productsList,null,2),'utf-8')
             res.redirect('/')
 
         }

@@ -106,5 +106,14 @@
     "talle": "medium",
     "precio": "99000",
     "img": "1693079266300.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "MIB",
+    "descripcion": "Anteojos full black ",
+    "color": "Negro",
+    "talle": "large",
+    "precio": "65.000",
+    "img": "1693083458982.jpg"
   }
 ]

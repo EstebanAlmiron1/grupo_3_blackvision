@@ -26,8 +26,7 @@ const controller ={
                 
             }
            
-            console.log(resultadoBusqueda);
-            
+            console.log(resultadoBusqueda);            
             
             
         };

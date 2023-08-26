@@ -12,14 +12,15 @@ const controller ={
     crear: (req,res) =>{
         res.render(path.join(__dirname,"../views/productCreate.ejs"))
     },
-    crearProcess:(req,res) =>{
+    crearProcess:(req,res) =>{        
         let newProduct = {
             "id": listaProductos.length +1,
-            "nombre": req.body.nombre,
-            "descripcion": req.body.descripcion,
+            "nombre": req.body.name,
+            "descripcion": req.body.description,
             "color": req.body.color,
-            "talle": req.body.talle,
-            "precio": req.body.precio,                        
+            "talle": req.body.size,
+            "precio": req.body.price,
+            "img":req.file.filename,                     
             }
             listaProductos.push(newProduct)
             

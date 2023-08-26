@@ -2,7 +2,7 @@
     background-color: var(--rosa);
 }
 
-.main-botones{
+.main-buttons-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -11,52 +11,52 @@
     background-color: #fff;
 }
 
-.main-botones a{
+.main-buttons-list a{
     color: #000;
     transition: all 0.5s;
 }
 
-.main-botones a:hover{
+.main-buttons-list a:hover{
     color: var(--celeste);
 }
 
-.boton-filtrar{
+.filter-button-list{
     padding: 5px 20px;
     width: 50%;
     border-right: 1.5px solid var(--celeste);
     text-decoration: none;
 }
 
-.boton-ordenar{
+.order-button-list{
     padding: 5px 20px;
     width: 50%;
     text-decoration: none;
 }
 
-.rutas{
+.routes-list{
     padding: 10px 10px;
 }
 
-.rutas a{
+.routes-list a{
     color: #000;
 }
 
-.ordenar{
+.order-list{
     display: none;
 }
 
-.barra-filtros{
+.filters-bar-list{
     display: none;
 }
 
-.productos{
+.products-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 10px;
 }
 
-.productos article{
+.products-list article{
     width: 45%;
     margin-bottom: 10px;
     border: 1px solid var(--azul);
@@ -64,11 +64,11 @@
     transition: all 0.4s;
 }
 
-.productos article:hover{
+.products-list article:hover{
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.productos-img{
+.img-products-list{
     position: relative;
     box-sizing: border-box;
     border-bottom: 1px solid var(--celeste);
@@ -78,18 +78,18 @@
     background-color: #fff;
 }
 
-.productos-img img{
+.img-products-list img{
     width: 100%;
 }
 
-.productos-img .fa-chevron-left{
+.img-products-list .fa-chevron-left{
     display: none;
     position: absolute;
     left: 3%;
     top: 50%;
 }
 
-.productos-img .fa-chevron-right{
+.img-products-list .fa-chevron-right{
     display: none;
     position: absolute;
     right: 3%;
@@ -97,18 +97,18 @@
 
 }
 
-.productos-img:hover :where(.fa-chevron-left, .fa-chevron-right){
+.img-products-list:hover :where(.fa-chevron-left, .fa-chevron-right){
     display: block;
 }
 
-.productos-img .fa-heart{
+.img-products-list .fa-heart{
     display: none;
     position: absolute;
     right: 5px;
     top: 5px;
 }
 
-.productos article:hover .fa-heart{
+.products-list article:hover .fa-heart{
     display: block;
 }
 
@@ -120,28 +120,28 @@
     color: red;
 }
 
-.productos-detalles{
+.products-details-list{
     padding: 5px;
     background-color: #fff;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-.productos-detalles a{
+.products-details-list a{
     color: #000;
     text-decoration: none;
 }
 
-.envios-producto{
+.product-shipments-list{
     color: #11ad3b;
 }
 
 @media (min-width: 426px){
-    .productos article{
+    .products-list article{
         width: 30%;
     }
 
-    .productos-img .fa-heart{
+    .img-products-list .fa-heart{
         font-size: 120%;
         right: 7px;
         top: 7px;
@@ -156,11 +156,11 @@
         justify-content: space-between;
     }
 
-    .main-botones{
+    .main-buttons-list{
         display: none;
     }
 
-    .main-botones-bottom{
+    .main-buttons-bottom-list{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -169,7 +169,7 @@
         padding-bottom: 5px;
     }
 
-    .ordenar{
+    .order-list{
         display: block;
         display: flex;
         flex-wrap: wrap;
@@ -178,7 +178,7 @@
         padding: 10px 0px;
     }
 
-    .ordenar button{
+    .order-list button{
         font-size: 15px;
         padding: 0px 10px;
         margin: 0px 15px;
@@ -187,35 +187,35 @@
         border-radius: 5px;
     }
 
-    .barra-filtros{
+    .filters-bar-list{
         display: block;
         width: 20%;
         padding-left: 10px;
     }
 
-    .barra-filtros article{
+    .filters-bar-list article{
         padding-bottom: 10px;
     }
 
-    .barra-filtros h4{
+    .filters-bar-list h4{
         padding-bottom: 10px;
     }
 
-    .barra-filtros ul li{
+    .filters-bar-list ul li{
         padding-bottom: 5px;
     }
 
-    .barra-filtros a{
+    .filters-bar-list a{
         text-decoration: none;
         color: #474747;
         transition: 0.5 all;
     }
 
-    .barra-filtros a:hover{
+    .filters-bar-list a:hover{
         color: #000;
     }
 
-    .form-precio{
+    .price-form-list{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -223,39 +223,39 @@
         width: 90%;
     }
 
-    .form-precio :where(.input-min, .input-max){
+    .price-form-list :where(.min-input-list, .max-input-list){
         width: 40%;
         display: flex;
         justify-content: center;
     }
 
-    .form-precio div input{
+    .price-form-list div input{
         width: 100%;
         border: 1px solid var(--azul);
     }
 
-    .boton-enviar{
+    .send-button-list{
         display: flex;
         justify-content: center;
         width: 10%;
     }
 
-    .boton-enviar button{
+    .send-button-list button{
         border: 1px solid var(--azul);
         padding: 0px 5px;
     }
 
-    .form-precio p{
+    .price-form-list p{
         display: flex;
         justify-content: center;
         width: 10%;
     }
 
-    .productos{
+    .products-list{
         width: 80%;
     }
 
-    .productos-img .fa-heart{
+    .img-products-list .fa-heart{
         font-size: 150%;
         right: 10px;
         top: 10px;

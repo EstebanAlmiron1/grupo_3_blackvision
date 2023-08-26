@@ -4,31 +4,31 @@
 <body>
     <%- include('partials/header.ejs')%>
     <main class="main-list">
-        <section class="main-botones">
-            <article class="boton-filtrar">
+        <section class="main-buttons-list">
+            <article class="filter-button-list">
                 <a href="#"><i class="fas fa-sliders-h"></i> Filtrar</a>
             </article>
-            <article class="boton-ordenar">
+            <article class="order-button-list">
                 <a href="#"><i class="fas fa-sort-alpha-down"></i> Ordenar</a>
             </article>
         </section>
-        <section class="main-botones-bottom">
-            <article class="rutas">
+        <section class="main-buttons-bottom-list">
+            <article class="routes-list">
                 <a href="#">Lentes</a>
                 <i class="fas fa-chevron-right"></i>
                 <a href="#">Para el sol</a>
             </article>
-            <article class="ordenar">
+            <article class="order-list">
                 <p> Ordernar por </p>
                 <form action="/" method="GET">
                     <button type="submit"> Más relevantes <i class="fas fa-chevron-down"></i></button>
                 </form>
             </article>
         </section>
-        <section class="barra-filtros">
-            <article class="barra-categorias">
+        <section class="filters-bar-list">
+            <article class="categories-bar-list">
                 <h4> Categorías </h4>
-                <ul class="lista-categorias">
+                <ul class="categories-list">
                     <li><a href="#"> Anteojos de Sol </a></li>
                     <li><a href="#"> Anteojos con Aumento </a></li>
                     <li><a href="#"> Anteojos con Filtro Luz Azul </a></li>
@@ -37,216 +37,216 @@
                     <li><a href="#"> Otros </a></li>
                 </ul>
             </article>
-            <article class="barra-marca">
+            <article class="brands-bar-list">
                 <h4> Marca </h4>
-                <ul class="lista-marcas">
+                <ul class="brands-list">
                     <li><a href="#"> Vulk </a></li>
                     <li><a href="#"> Ray-Ban </a></li>
                     <li><a href="#"> Rusty </a></li>
                     <li><a href="#"> Infinit </a></li>
                 </ul>
             </article>
-            <article class="precio">
+            <article class="price-list">
                 <h4> Precio </h4>
-                <ul class="lista-precios">
+                <ul class="prices-list">
                     <li><a href="#"> Hasta $ 20.000 </a></li>
                     <li><a href="#"> $20.000 a $35.000 </a></li>
                     <li><a href="#"> Más de $35.000 </a></li>
                 </ul>
-                <form class="form-precio" action="/" method="GET">
-                    <div class="input-min">
+                <form class="price-form-list" action="/" method="GET">
+                    <div class="min-input-list">
                         <label for="minimo"></label>
                         <input type="number" name="min" id="minimo" placeholder="Mínimo">
                     </div>
                     <p> - </p>
-                    <div class="input-max">
+                    <div class="max-input-list">
                         <label for="maximo"></label>
                         <input type="number" name="max" id="maximo" placeholder="Máximo">
                     </div>
-                    <div class="boton-enviar">
+                    <div class="send-button-list">
                         <button type="submit"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </form>
             </article>
         </section>
-        <section class="productos">
+        <section class="products-list">
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 80.000</p>
-                        <h4 class="nombre-producto">Lente Blue Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 80.000</p>
+                        <h4 class="product-name-list">Lente Blue Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 500.000</p>
-                        <h4 class="nombre-producto">Lente Boquita Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 500.000</p>
+                        <h4 class="product-name-list">Lente Boquita Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 20.000</p>
-                        <h4 class="nombre-producto">Lente Yellow Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 20.000</p>
+                        <h4 class="product-name-list">Lente Yellow Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 40.000</p>
-                        <h4 class="nombre-producto">Lente Red Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 40.000</p>
+                        <h4 class="product-name-list">Lente Red Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 40.000</p>
-                        <h4 class="nombre-producto">Lente Red Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 40.000</p>
+                        <h4 class="product-name-list">Lente Red Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 40.000</p>
-                        <h4 class="nombre-producto">Lente Red Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 40.000</p>
+                        <h4 class="product-name-list">Lente Red Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 40.000</p>
-                        <h4 class="nombre-producto">Lente Red Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 40.000</p>
+                        <h4 class="product-name-list">Lente Red Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 40.000</p>
-                        <h4 class="nombre-producto">Lente Red Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 40.000</p>
+                        <h4 class="product-name-list">Lente Red Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 40.000</p>
-                        <h4 class="nombre-producto">Lente Red Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 40.000</p>
+                        <h4 class="product-name-list">Lente Red Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 40.000</p>
-                        <h4 class="nombre-producto">Lente Red Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 40.000</p>
+                        <h4 class="product-name-list">Lente Red Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 40.000</p>
-                        <h4 class="nombre-producto">Lente Red Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 40.000</p>
+                        <h4 class="product-name-list">Lente Red Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>
             <article>
-                <div class="productos-img">
+                <div class="img-products-list">
                     <a href="/product/detail"><img src="/img/lentesHome1.png" alt="Lentes" class="img-lentes"></a>
                     <i class="fas fa-chevron-left"></i>
                     <i class="fas fa-chevron-right"></i>
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="productos-detalles">
+                <div class="products-details-list">
                     <a href="/product/detail">
-                        <p class="precio-producto">$ 40.000</p>
-                        <h4 class="nombre-producto">Lente Red Label</h4>
-                        <p class="envios-producto">Envios gratis!</p>
+                        <p class="product-price-list">$ 40.000</p>
+                        <h4 class="product-name-list">Lente Red Label</h4>
+                        <p class="product-shipments-list">Envios gratis!</p>
                     </a>
                 </div>
             </article>

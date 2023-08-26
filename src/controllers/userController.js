@@ -14,7 +14,7 @@ const controller ={
         res.render(path.join(__dirname,"../views/productCart.ejs"))
     },
     profile:(req,res)=>{
-        res.render(path.join(__dirname,"../views/vistaPerfil.ejs"))
+        res.render(path.join(__dirname,"../views/profile.ejs"))
     },
     search: (req,res)=>{
         let busqueda = req.query.search ; 

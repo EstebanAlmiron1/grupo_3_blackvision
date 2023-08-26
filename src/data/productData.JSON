@@ -14,5 +14,8 @@
     "color": "rojo",
     "talle": "medium",
     "precio": "6500"
+  },
+  {
+    "id": 3
   }
 ]

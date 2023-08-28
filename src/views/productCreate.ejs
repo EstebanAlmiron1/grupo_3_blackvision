@@ -9,11 +9,11 @@
             <h2>Cargar producto para vender</h2>
             <h3> Agregue la informacion del producto</h3>
 
-            <form action="/product/crear" method="post">
+            <form action="/product/crear" method="post" enctype="multipart/form-data">
                 
-                <input type="text" placeholder="Nombre del producto" name="name-Product">
-                <input type="text" placeholder="Descripción" name="description-Product">
-                <input type="text" placeholder="Color" name="color-Product">
+                <input type="text" placeholder="Nombre del producto" name="name">
+                <input type="text" placeholder="Descripción" name="description">
+                <input type="text" placeholder="Color" name="color">
                 <input type="number" placeholder="precio" id="price" name="price">
                 <div class="form-size">
                     <label for="size">Talle: </label>

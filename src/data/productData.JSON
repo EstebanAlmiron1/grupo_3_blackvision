@@ -1,21 +1,119 @@
 [
   {
     "id": 1,
-    "nombre": "Abuela",
-    "descripcion": "Lalalala",
-    "color": "negro",
-    "talle": "medium",
-    "precio": "5500"
+    "nombre": "Ray ban",
+    "descripcion": "Marco dorado con vidrio tornasolado",
+    "color": "dorado",
+    "talle": "small",
+    "precio": "50000",
+    "img": "1693078345645.png"
   },
   {
     "id": 2,
-    "nombre": "rayban",
-    "descripcion": "linea eco",
-    "color": "rojo",
+    "nombre": "Ray ban",
+    "descripcion": "marco dorado con cristal oscuro",
+    "color": "dorado",
     "talle": "medium",
-    "precio": "6500"
+    "precio": "60000",
+    "img": "1693078424664.jpg"
   },
   {
-    "id": 3
+    "id": 3,
+    "nombre": "Rusty",
+    "descripcion": "marco negro con vidrio tornasolado ",
+    "color": "negro",
+    "talle": "large",
+    "precio": "80000",
+    "img": "1693078508054.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Rusty",
+    "descripcion": "marco negro con vidrio tornasolado verde",
+    "color": "negro",
+    "talle": "medium",
+    "precio": "100000",
+    "img": "1693078561386.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Vulk",
+    "descripcion": "marco negro con vidrio tornasolado color violeta",
+    "color": "negro",
+    "talle": "medium",
+    "precio": "70000",
+    "img": "1693078639191.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Ray ban",
+    "descripcion": "marco dorado con vidrio verde",
+    "color": "dorado ",
+    "talle": "small",
+    "precio": "35000",
+    "img": "1693078715247.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Fox",
+    "descripcion": "marco negro con vidrio color negro",
+    "color": "negro",
+    "talle": "medium",
+    "precio": "125000",
+    "img": "1693078812603.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Rusty",
+    "descripcion": "marco negro con detalles en rosa ,vidrio color amarillo",
+    "color": "negro con rosa",
+    "talle": "large",
+    "precio": "90000",
+    "img": "1693078905445.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Infinit",
+    "descripcion": "marco color animalprint con vidrio color negro ",
+    "color": "animalprint",
+    "talle": "small",
+    "precio": "89999",
+    "img": "1693079000519.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Infinit",
+    "descripcion": "marco color negro con patas amarillas ,vidrios color rosado",
+    "color": "rosado",
+    "talle": "small",
+    "precio": "150000",
+    "img": "1693079119910.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Ray ban",
+    "descripcion": "marco color negro con vidrio tornasolado color naranja",
+    "color": "negro",
+    "talle": "large",
+    "precio": "200000",
+    "img": "1693079226989.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "Rusty",
+    "descripcion": "marco color negro ,con vidrio oscuros",
+    "color": "negro",
+    "talle": "medium",
+    "precio": "99000",
+    "img": "1693079266300.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "MIB",
+    "descripcion": "Anteojos full black ",
+    "color": "Negro",
+    "talle": "large",
+    "precio": "65.000",
+    "img": "1693083458982.jpg"
   }
 ]

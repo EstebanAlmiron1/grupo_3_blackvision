@@ -1,6 +1,7 @@
 const path=require('path')
 const fs = require('fs')
 let productsList = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/productData.json'),'utf-8'))
+const {validationResult} = require('express-validator')
 
 const controller ={
     list:(req,res)=>{
@@ -12,7 +13,9 @@ const controller ={
     crear: (req,res) =>{
         res.render(path.join(__dirname,"../views/productCreate.ejs"))
     },
-    crearProcess:(req,res) =>{        
+    crearProcess:(req,res) =>{  
+        let errors = validationResult(req)
+        if(errors.errors.length > 0){}
         let newProduct = {
             "id": productsList.length +1,
             "nombre": req.body.name,
@@ -20,7 +23,7 @@ const controller ={
             "color": req.body.color,
             "talle": req.body.size,
             "precio": req.body.price,
-            "img":req.file.filename,                     
+            "img":req.file ? req.file.filename : 'logo.png' ,                     
             }
             productsList.push(newProduct)
             

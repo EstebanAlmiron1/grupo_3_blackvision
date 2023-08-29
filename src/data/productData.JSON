@@ -115,5 +115,68 @@
     "talle": "large",
     "precio": "65.000",
     "img": "1693083458982.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "ray ban",
+    "descripcion": "fachas",
+    "color": "negro",
+    "talle": "medium",
+    "precio": "56000",
+    "img": "1693350049734.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "lalala",
+    "descripcion": "asdas",
+    "color": "rojo",
+    "talle": "small",
+    "precio": "10",
+    "img": "logo.png"
+  },
+  {
+    "id": 16,
+    "nombre": "lalala",
+    "descripcion": "asdas",
+    "color": "asd",
+    "talle": "small",
+    "precio": "150",
+    "img": "1693350770592.jpg"
+  },
+  {
+    "id": 17,
+    "nombre": "prueba",
+    "descripcion": "aaa",
+    "color": "balnco",
+    "talle": "small",
+    "precio": "151",
+    "img": "logo.png"
+  },
+  {
+    "id": 18,
+    "nombre": "prueba 2",
+    "descripcion": "aaa",
+    "color": "rojno",
+    "talle": "small",
+    "precio": "150",
+    "img": "1693352551857.jpg"
+  },
+  {
+    "id": 19,
+    "nombre": "prueba 3",
+    "descripcion": "asd",
+    "color": "asd",
+    "talle": "small",
+    "precio": "150",
+    "img": "1693352620697.jpg"
+  },
+  {
+    "id": 20,
+    "nombre": "prueba 3",
+    "descripcion": "asd",
+    "color": "asd",
+    "talle": "small",
+    "precio": "151",
+    "img": "1693352659677.jpg"
   }
 ]

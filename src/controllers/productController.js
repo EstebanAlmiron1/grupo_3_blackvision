@@ -15,10 +15,10 @@ const controller ={
     crearProcess:(req,res) =>{        
         let newProduct = {
             "id": productsList.length +1,
-            "nombre": req.body.name,
-            "descripcion": req.body.description,
-            "color": req.body.color,
-            "talle": req.body.size,
+            "nombre": req.body.name.toLowerCase(),
+            "descripcion": req.body.description.toLowerCase(),
+            "color": req.body.color.toLowerCase(),
+            "talle": req.body.size.toLowerCase(),
             "precio": req.body.price,
             "img":req.file.filename,                     
             }

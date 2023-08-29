@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "nombre": "Ray ban",
-    "descripcion": "Marco dorado con vidrio tornasolado",
+    "nombre": "ray ban",
+    "descripcion": "marco dorado con vidrio tornasolado",
     "color": "dorado",
     "talle": "small",
     "precio": "50000",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "nombre": "Ray ban",
+    "nombre": "ray ban",
     "descripcion": "marco dorado con cristal oscuro",
     "color": "dorado",
     "talle": "medium",
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "nombre": "Rusty",
+    "nombre": "rusty",
     "descripcion": "marco negro con vidrio tornasolado ",
     "color": "negro",
     "talle": "large",
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "nombre": "Rusty",
+    "nombre": "rusty",
     "descripcion": "marco negro con vidrio tornasolado verde",
     "color": "negro",
     "talle": "medium",
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "nombre": "Vulk",
+    "nombre": "vulk",
     "descripcion": "marco negro con vidrio tornasolado color violeta",
     "color": "negro",
     "talle": "medium",
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "nombre": "Ray ban",
+    "nombre": "ray ban",
     "descripcion": "marco dorado con vidrio verde",
     "color": "dorado ",
     "talle": "small",
@@ -55,7 +55,7 @@
   },
   {
     "id": 7,
-    "nombre": "Fox",
+    "nombre": "fox",
     "descripcion": "marco negro con vidrio color negro",
     "color": "negro",
     "talle": "medium",
@@ -64,7 +64,7 @@
   },
   {
     "id": 8,
-    "nombre": "Rusty",
+    "nombre": "rusty",
     "descripcion": "marco negro con detalles en rosa ,vidrio color amarillo",
     "color": "negro con rosa",
     "talle": "large",
@@ -73,7 +73,7 @@
   },
   {
     "id": 9,
-    "nombre": "Infinit",
+    "nombre": "infinit",
     "descripcion": "marco color animalprint con vidrio color negro ",
     "color": "animalprint",
     "talle": "small",
@@ -82,7 +82,7 @@
   },
   {
     "id": 10,
-    "nombre": "Infinit",
+    "nombre": "infinit",
     "descripcion": "marco color negro con patas amarillas ,vidrios color rosado",
     "color": "rosado",
     "talle": "small",
@@ -91,7 +91,7 @@
   },
   {
     "id": 11,
-    "nombre": "Ray ban",
+    "nombre": "ray ban",
     "descripcion": "marco color negro con vidrio tornasolado color naranja",
     "color": "negro",
     "talle": "large",
@@ -100,7 +100,7 @@
   },
   {
     "id": 12,
-    "nombre": "Rusty",
+    "nombre": "rusty",
     "descripcion": "marco color negro ,con vidrio oscuros",
     "color": "negro",
     "talle": "medium",
@@ -109,11 +109,20 @@
   },
   {
     "id": 13,
-    "nombre": "MIB",
-    "descripcion": "Anteojos full black ",
-    "color": "Negro",
+    "nombre": "mib",
+    "descripcion": "anteojos full black ",
+    "color": "negro",
     "talle": "large",
     "precio": "65.000",
     "img": "1693083458982.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "union pacific",
+    "descripcion": "marco negro, patas doradas",
+    "color": "negro",
+    "talle": "medium",
+    "precio": "45000",
+    "img": "1693271967934.jpg"
   }
 ]

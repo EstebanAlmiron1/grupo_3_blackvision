@@ -17,14 +17,14 @@ const controller ={
         res.render(path.join(__dirname,"../views/profile.ejs"))
     },
     search: (req,res)=>{
-        let busqueda = req.query.search ; 
+        let busqueda = req.query.search.toLowerCase() ; 
         let resultadoBusqueda = []      
         for (let i = 0; i < listaProductos.length; i++) {
             if(listaProductos[i].nombre.includes(busqueda)){
                 resultadoBusqueda.push(listaProductos[i])
             }
         };
-        res.render('resultadobusqueda',{resultadoBusqueda:resultadoBusqueda})
+        res.render('resultadobusqueda',{resultadoBusqueda:resultadoBusqueda, palabra: busqueda})
        
     }
 }

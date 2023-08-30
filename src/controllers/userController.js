@@ -24,7 +24,7 @@ const controller ={
                 resultadoBusqueda.push(listaProductos[i])
             }
         };
-        res.render('resultadobusqueda',{resultadoBusqueda:resultadoBusqueda, palabra: busqueda})
+        res.render('resultadobusqueda',{resultadoBusqueda:resultadoBusqueda, palabra: busqueda,})
        
     }
 }

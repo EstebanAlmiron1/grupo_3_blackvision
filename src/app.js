@@ -21,7 +21,7 @@ app.listen(3000,()=>{
 })
 
 app.use("/",mainRouter)
-app.use("/product",productRouter)
+app.use("/products",productRouter)
 app.use("/user",userRouter)
 
 

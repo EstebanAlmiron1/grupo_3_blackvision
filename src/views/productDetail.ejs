@@ -5,20 +5,20 @@
     <%- include('partials/header.ejs')%>
     <main class="detail-main">        
         <section class="section1">
-            <h4 class="description-detail">Anteojos de sol Vulk The Guardian color negro</h4>
+            <h4 class="description-detail"><%= product.descripcion %></h4>
             <article class="images1">
                 <div class="img-detail">
-                    <img src="/img/lentesHome1.png" alt="Lentes">                    
+                    <img src="/img/products/<%= product.img %>" alt="Lentes">                    
                 </div>    
                 <div class="img-selector">
-                    <img src="/img/lentesHome1.png" alt="Lentes">
-                    <img src="/img/lentesHome1.png" alt="Lentes">
+                    <img src="/img/products/<%= product.img %>" alt="Lentes">
+                    <img src="/img/products/<%= product.img %>" alt="Lentes">
                 </div>                            
             </article>
             <article>
                 <div class="product-detail">
                     <div class="price-discount">
-                        <p class="price-detail">$40.000</p>
+                        <p class="price-detail"><%= product.precio %></p>
                         <p class="discount-detail">8% Off</p>
                     </div>
                     <p class="shipping-detail"><i class="fas fa-truck"></i> Envios gratis!</p>                    
@@ -34,16 +34,16 @@
         <section>
             <article>
                 <div class="characteristic-detail">
-                    <h4 class="characteristic-vulk">Características de Vulk</h4>
-                    <p><i class="fas fa-check-circle"></i> Marca: Vulk</p>
-                    <p><i class="fas fa-check-circle"></i> Edad: Adultos</p>
-                    <p><i class="fas fa-check-circle"></i> Género: Sin género</p>
+                    <h4 class="characteristic-vulk">Características de <%= product.nombre %></h4>
+                    <p><i class="fas fa-check-circle"></i> Marca: <%= product.nombre %></p>
+                    <p><i class="fas fa-check-circle"></i> Color: <%= product.color %></p>
+                    <p><i class="fas fa-check-circle"></i> Talle: <%= product.talle %></p>
                 </div>
             </article>
             <article>
                 <div class="detail-detail">
                     <h4 class="description-detail">DESCRIPCIÓN</h4>
-                    <p>Vulk es una de las marcas número 1 en el mercado óptico a nivel internacional. Esta empresa se caracteriza por ofrecer modelos y diseños originales y por buscar inspiración en las últimas tendencias. Además, sus colecciones ofrecen diseños #NoGender para que mujeres y hombres elijan con libertad qué diseños usar.</p>
+                    <p><%= product.descripcion %></p>
                 </div>                              
             </article>
         </section>

@@ -73,13 +73,13 @@
             <% listP.forEach(i => { %>
                 <article>
                     <div class="img-products-list">
-                        <a href="/product/detail"><img src= "/img/products/<%=i.img%>" alt="Lentes" class="img-lentes"></a>
+                        <a href="/products/detail/<%= i.id %>"><img src= "/img/products/<%=i.img%>" alt="Lentes" class="img-lentes"></a>
                         <i class="fas fa-chevron-left"></i>
                         <i class="fas fa-chevron-right"></i>
                         <i class="far fa-heart"></i>
                     </div>
                     <div class="products-details-list">
-                        <a href="/product/detail">
+                        <a href="/products/detail/<%= i.id %>">
                             <p class="product-price-list"><%= i.precio %></p>
                             <h4 class="product-name-list"><%= i.nombre %></h4>
                             <p class="product-shipments-list">Envios gratis!</p>

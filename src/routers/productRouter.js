@@ -8,6 +8,8 @@ router.get("/",controller.list)
 router.get("/detail/:id",controller.detail)
 router.get("/create",controller.crear)
 router.post("/create",uploadFile.single('image'),validations,controller.crearProcess)
-router.get("/edit",controller.edit)
+router.get("/edit/:id",controller.edit)
+router.put("/edit/:id",uploadFile.single('image'),validations,controller.editProcess)
+
 
 module.exports = router;

@@ -7,8 +7,7 @@
     "talle": "small",
     "precio": "8000",
     "img": "1693688940341.jpg",
-    "deleted":false
-    
+    "deleted": false
   },
   {
     "id": 2,
@@ -18,7 +17,7 @@
     "talle": "medium",
     "precio": "60000",
     "img": "1693078424664.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 3,
@@ -28,7 +27,7 @@
     "talle": "large",
     "precio": "80000",
     "img": "1693078508054.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 4,
@@ -38,7 +37,7 @@
     "talle": "medium",
     "precio": "100000",
     "img": "1693078561386.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 5,
@@ -48,7 +47,7 @@
     "talle": "medium",
     "precio": "70000",
     "img": "1693078639191.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 6,
@@ -58,7 +57,7 @@
     "talle": "small",
     "precio": "35000",
     "img": "1693078715247.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 7,
@@ -68,7 +67,7 @@
     "talle": "medium",
     "precio": "125000",
     "img": "1693078812603.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 8,
@@ -78,7 +77,7 @@
     "talle": "large",
     "precio": "90000",
     "img": "1693078905445.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 9,
@@ -88,7 +87,7 @@
     "talle": "small",
     "precio": "89999",
     "img": "1693079000519.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 10,
@@ -98,7 +97,7 @@
     "talle": "small",
     "precio": "150000",
     "img": "1693079119910.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 11,
@@ -108,7 +107,7 @@
     "talle": "large",
     "precio": "200000",
     "img": "1693079226989.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 12,
@@ -118,7 +117,7 @@
     "talle": "medium",
     "precio": "99000",
     "img": "1693079266300.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 13,
@@ -128,7 +127,7 @@
     "talle": "large",
     "precio": "65.000",
     "img": "1693083458982.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 14,
@@ -138,7 +137,7 @@
     "talle": "medium",
     "precio": "56000",
     "img": "1693350049734.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 15,
@@ -148,7 +147,7 @@
     "talle": "small",
     "precio": "10",
     "img": "logo.png",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 16,
@@ -158,7 +157,7 @@
     "talle": "small",
     "precio": "150",
     "img": "1693350770592.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 17,
@@ -168,7 +167,7 @@
     "talle": "small",
     "precio": "151",
     "img": "logo.png",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 18,
@@ -178,7 +177,7 @@
     "talle": "small",
     "precio": "150",
     "img": "1693352551857.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 19,
@@ -188,7 +187,7 @@
     "talle": "small",
     "precio": "150",
     "img": "1693352620697.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 20,
@@ -198,7 +197,7 @@
     "talle": "small",
     "precio": "151",
     "img": "1693352659677.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 14,
@@ -208,7 +207,7 @@
     "talle": "medium",
     "precio": "45000",
     "img": "1693271967934.jpg",
-    "deleted":false
+    "deleted": false
   },
   {
     "id": 22,
@@ -218,6 +217,6 @@
     "talle": "small",
     "precio": "",
     "img": "logo.png",
-    "deleted":false
+    "deleted": false
   }
 ]

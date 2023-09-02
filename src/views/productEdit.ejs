@@ -8,35 +8,36 @@
         <section class="register-box">
             <h1>Edición de producto</h1>
 
-            <form action="/products/edit" method="post">
-
+            <form action="/products/edit/<%=product.id %>?_method=put" method="post" enctype="multipart/form-data">
 
                 <p class="input-Product">Nombre del producto</p>
-                <input type="text" value="anteojo" name="name-Product">
+                <input type="text" value="<%=product.nombre %>" name="name">
                 <p class="input-Product">Descripcion</p>
-                <input type="text" value="grandes" name="description-Product">
+                <input type="text" value="<%=product.descripcion %>" name="description">
                 <div class="size-edit"><label for="color">Color: </label>
-                    <select name="color" >
-                        <option value="blanco">Blanco</option>
-                        <option value="rojo">Rojo</option>
-                        <option value="azul">Azul</option>
-                        <option value="negro">Negro</option>
-                        <option value="rosa">Rosa</option>
-                        <option value="dorado">Dorado</option>
-                        <option value="verde">Verde</option>
-                        <option value="otro">Otro</option>
+                    <select id="color" name="color" >
+                        <option <%= product.color== 'otro' ? 'selected' : '' %> value="otro">Otro</option>
+                        <option <%= product.color== 'blanco' ? 'selected' : '' %> value="blanco">Blanco</option>
+                        <option <%= product.color== 'rojo' ? 'selected' : '' %> value="rojo">Rojo</option>
+                        <option <%= product.color== 'azul' ? 'selected' : '' %> value="azul">Azul</option>
+                        <option <%= product.color== 'negro' ? 'selected' : '' %> value="negro">Negro</option>
+                        <option <%= product.color== 'rosa' ? 'selected' : '' %> value="rosa">Rosa</option>
+                        <option <%= product.color== 'dorado' ? 'selected' : '' %> value="dorado">Dorado</option>
+                        <option <%= product.color== 'verde' ? 'selected' : '' %> value="verde">Verde</option> 
                     </select>
                 </div>
                 <div class="size-edit"> <label for="size">Talle: </label>
                     <select  id="size" name="size">
-                        <option  value="small">Small</option>
+                        <option value="small">Small</option>
                         <option value="medium">Medium</option>
                         <option value="large">Large</option>
                     </select>
                 </div>      
                 <p class="input-Product">Actualizar precio</p>        
-                <input type="number" value="1000" placeholder="precio" id="price" name="price">
-                <label for="image-edit" class="label-edit"><i class="fas fa-upload"></i>Carga la imagen</label>
+                <input type="number" value="<%=product.precio %>" placeholder="precio" id="price" name="price">
+                <p>Imagen actual</p>
+                <img src="/img/products/<%= product.img %>" alt="">
+                <label for="image-edit" class="label-edit"><i class="fas fa-upload"></i>Editar la imagen</label>
                 <input type="file" placeholder="Carga la imagen" id="image-edit" name="image">                
                 <button type="submit">Editar producto</button>
             </form>

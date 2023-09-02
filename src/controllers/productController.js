@@ -32,9 +32,19 @@ const controller = {
         res.redirect('/')
     },
     edit: (req, res) => {
-        res.render(path.join(__dirname, "../views/productEdit.ejs"))
+        let productFound = productsList.find((i) => i.id == req.params.id);
+            
+        res.render(path.join(__dirname, "../views/productEdit.ejs"),{product: productFound})
     },
     editProcess: (req, res) => {
+        let productFound = productsList.find((i) => i.id == req.params.id);
+        productFound.nombre = req.body.name
+        productFound.descripcion = req.body.description
+        productFound.color = req.body.color
+        productFound.talle=req.body.size
+        productFound.precio=req.body.price
+        productFound.img = req.file ? req.file.filename : productFound.img
+
         fs.writeFileSync(path.join(__dirname, '../data/productData.json'), JSON.stringify(productsList, null, 2), 'utf-8')
         res.redirect('/')
     }

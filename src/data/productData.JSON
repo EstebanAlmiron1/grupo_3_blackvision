@@ -187,5 +187,14 @@
     "talle": "medium",
     "precio": "45000",
     "img": "1693271967934.jpg"
+  },
+  {
+    "id": 22,
+    "nombre": "",
+    "descripcion": "",
+    "color": "blanco",
+    "talle": "small",
+    "precio": "",
+    "img": "logo.png"
   }
 ]

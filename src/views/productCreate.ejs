@@ -13,16 +13,26 @@
                 
                 <input type="text" placeholder="Nombre del producto" name="name">
                 <input type="text" placeholder="Descripción" name="description">
-                <input type="text" placeholder="Color" name="color">
-                <input type="number" placeholder="precio" id="price" name="price">
-                <div class="form-size">
-                    <label for="size">Talle: </label>
-                    <select name="size">
+                <div class="size-edit"><label for="color">Color: </label>
+                    <select name="color" >
+                        <option value="blanco">Blanco</option>
+                        <option value="rojo">Rojo</option>
+                        <option value="azul">Azul</option>
+                        <option value="negro">Negro</option>
+                        <option value="rosa">Rosa</option>
+                        <option value="dorado">Dorado</option>
+                        <option value="verde">Verde</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="size-edit"> <label for="size">Talle: </label>
+                    <select  id="size" name="size">
                         <option value="small">Small</option>
                         <option value="medium">Medium</option>
                         <option value="large">Large</option>
                     </select>
-                </div>
+                </div>  
+                <input type="number" placeholder="precio" id="price" name="price">
                 <label for="image-create" class="label-create"><i class="fas fa-upload"></i>Carga la imagen</label>
                 <input type="file" placeholder="Carga la imagen" id="image-create" name="image">                
                 <button type="submit">Cargar producto</button>

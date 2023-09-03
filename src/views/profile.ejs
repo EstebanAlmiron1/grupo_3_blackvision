@@ -9,9 +9,10 @@
                 <h2 class="title">Información de la cuenta</h2>
                 <form action="/" method="get">
                     <h3 class="sub-title">DETALLES DE CONTACTO</h3>
-                    <p>NOMBRE Y APELLIDO</p>
-                    <p>usuario@example.com</p>
-                    <div class="edit">
+                    <img src="/img/users/<%= user.img %>" alt="ImageProfile">
+                    <p><%= user.lastname %> , <%= user.name %> </p>
+                    <p><%= user.email %></p>
+                    <div class="edit"> 
                         <button type="submit">Editar <i class="fas fa-angle-right"></i></button>
                         <button type="submit">Cambiar contraseña <i class="fas fa-angle-right"></i></button>
                     </div>
@@ -45,8 +46,8 @@
                 </form>
                 <form action="/" method="get">
                     <h3 class="sub-title">Dirección de envío predeterminada</h3>
-                    <p>Nombre y Apellido</p>
-                    <p>Calle, N°</p> 
+                    <p><%= user.lastname %> , <%= user.name %></p>
+                    <p><%= user.adress %></p> 
                     <p>Ciudad, provincia, codigo postal</p>
                     <p>Pais</p>
                     <p>Tel:</p>

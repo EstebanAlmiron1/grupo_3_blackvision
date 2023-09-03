@@ -1,7 +1,6 @@
-const path=require('path')
+const path = require('path')
 const fs = require('fs')
-const { log } = require('console')
-let listaProductos = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/productData.json'),'utf-8'))
+let userList = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8'))
 
 const controller ={
     login:(req,res)=>{
@@ -10,11 +9,28 @@ const controller ={
     register:(req,res)=>{
         res.render(path.join(__dirname,"../views/register.ejs"))
     },
+    registerProcess:(req,res)=>{
+        let newUser = {
+            "id": userList.length + 1,
+            "name": req.body.nameus.toLowerCase(),
+            "lastname": req.body.lastnameus.toLowerCase(),
+            "birthday": req.body.birthday.toLowerCase(),
+            "adress": req.body.adressus.toLowerCase(),
+            "email": req.body.emailus.toLowerCase(),
+            "password": req.body.passus,
+            "img": req.file ? req.file.filename : 'defaultUs.png',
+            "admin": false
+        }
+        userList.push(newUser)
+        fs.writeFileSync(path.join(__dirname, '../data/userData.json'), JSON.stringify(userList, null, 2), 'utf-8')
+        res.redirect('/')
+    },
     cart:(req,res)=>{
         res.render(path.join(__dirname,"../views/productCart.ejs"))
     },
     profile:(req,res)=>{
-        res.render(path.join(__dirname,"../views/profile.ejs"))
+        let userFound = userList.find((i) => i.id == req.params.id);
+        res.render(path.join(__dirname,"../views/profile.ejs"), { user: userFound })
     },
     search: (req,res)=>{
         let busqueda = req.query.search.toLowerCase() ; 

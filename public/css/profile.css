@@ -64,6 +64,7 @@
     background: var(--marron);
 }
 
+
 @media (min-width: 1025px){
     .container{
         font-size: larger;

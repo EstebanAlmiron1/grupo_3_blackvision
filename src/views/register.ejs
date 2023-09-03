@@ -8,24 +8,26 @@
         <section class="register-box">
             <h2>REGISTRARSE</h2>
             <h3>Por favor complete la siguiente informacion</h3>
-            <form action="/" method="get">
+            <form action="/user/register" method="post" enctype="multipart/form-data">
                 <label for="text"></label>
-                <input type="text" placeholder="Nombre" id="nombre">
+                <input type="text" placeholder="Nombre" id="name" name="nameus">
 
                 <label for="text"></label>
-                <input type="text" placeholder="Apellido" id="apellido">
+                <input type="text" placeholder="Apellido" id="apellido" name="lastnameus">
 
                 <label for="date"></label>
-                <input type="date"placeholder="Fecha de nacimiento" id="fden">
+                <input type="date"placeholder="Fecha de nacimiento" id="fden" name="birthday">
 
                 <label for="text"></label>
-                <input type="text" placeholder="Domicilio" id="domicilio">
+                <input type="text" placeholder="Domicilio" id="domicilio" name="adressus">
                 
                 <label for="E-mail"></label>
-                <input type="text" placeholder="Correo Electronico" id="email">
+                <input type="text" placeholder="Correo Electronico" id="email" name="emailus">
 
                 <label for="password"></label>
-                <input type="password" placeholder="Contraseña" id="password">
+                <input type="password" placeholder="Contraseña" id="password" name="passus">
+                <label for="image-edit" class="label-edit"><i class="fas fa-upload"></i>Imagen de perfil</label>
+                        <input type="file" placeholder="Carga la imagen" id="image-edit" name="imageus">
 
                 <button type="submit">CREAR UNA CUENTA</button>
             </form>

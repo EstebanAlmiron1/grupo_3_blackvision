@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator')
 let userList = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8'))
 
@@ -20,9 +21,10 @@ const controller = {
                 "birthday": req.body.birthday.toLowerCase(),
                 "adress": req.body.adressus.toLowerCase(),
                 "email": req.body.emailus.toLowerCase(),
-                "password": req.body.passus,
+                "password": bcrypt.hashSync(req.body.passus,10),
                 "img": req.file ? req.file.filename : 'defaultUs.png',
-                "admin": false
+                "admin": false,
+            "deleted":false
             }
             userList.push(newUser)
             fs.writeFileSync(path.join(__dirname, '../data/userData.json'), JSON.stringify(userList, null, 2), 'utf-8')
@@ -47,6 +49,10 @@ const controller = {
         };
         res.render('resultadobusqueda', { resultadoBusqueda: resultadoBusqueda, palabra: busqueda, })
 
+    },
+    list: (req,res)=>{
+        let userAvailable = userList.filter((i)=> i.deleted == false)
+        res.render(path.join(__dirname, "../views/users.ejs"), { user: userAvailable })
     }
 }
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs')%>
+<body>
+    <%- include('partials/header.ejs')%>
+    <main class="main-list">
+        <section class="products-list">
+            <% user.forEach(i => { %>
+                <article>
+                    <div class="img-products-list">
+                        <a href="/products/detail/<%= i.id %>"><img src= "/img/users/<%= i.img %>" alt="avatar" class="img-lentes"></a>
+                        <i class="fas fa-chevron-left"></i>
+                        <i class="fas fa-chevron-right"></i>
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="products-details-list">
+                        <a href="/products/detail/<%= i.id %>">
+                            <h4 class="product-name-list"><%= i.name %></h4>
+                            <p class="product-price-list"><%= i.lastname %></p>
+                            <p class="product-price-list"><%= i.birthday %></p>
+                            <p class="product-price-list"><%= i.adress %></p>
+                            <p class="product-price-list"><%= i.email %></p>
+                        </a>
+                    </div>
+                </article>
+            <% }); %>
+        </section>
+    </main>
+    <%- include('partials/footer.ejs')%>
+</body>
+</html>

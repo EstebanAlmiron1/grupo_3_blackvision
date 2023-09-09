@@ -1,21 +1,11 @@
 const {check} = require('express-validator')
 const validatorRegister = [
-    check('nameus').notEmpty().withMessage('Es obligatorio ingresar un nombre valido') ,
-    check('lastnameus').notEmpty().withMessage('Es obligatorio ingresar un apellido valido') ,
-    check('birthday').notEmpty().isDate().withMessage('Es obligatorio ingresar una fecha valida') ,
-    check('adressus').notEmpty().withMessage('Es obligatorio ingresar una dirección valida') ,
-    check('emailus').notEmpty().isEmail.withMessage('Es obligatorio ingresar un email valido') ,
-    check('passus').notEmpty().isLength({min:8,max:20}).withMessage('la password debe tener minimo 8 caracteres') ,
-    check('imageus').custom((value, {req})=>{
-        let file = req.file;
-        if(req.fileError){
-            throw new Error ('adjunte una imagen con formato valido')
-        }
-        else if (file.size > 1024*1024*10){
-            fs.unlinkSync(file.path)
-            throw new Error ('la imagen debe pesar menos de 10Mb')
-        }
-        return true
-    })
+    check('nameus').notEmpty().withMessage('El nombre es un campo obligatorio') ,
+    check('lastnameus').notEmpty().withMessage('El apellido es un campo obligatorio') ,
+    check('birthday').notEmpty().withMessage('La fecha es un campo obligatorio').bail().isDate().withMessage('Debe ingresar una fecha valida') ,
+    check('adressus').notEmpty().withMessage('La direccion es un campo obligatorio') ,
+    check('emailus').notEmpty().withMessage('El email es un campo obligatorio').bail().isEmail().withMessage('Debe ingresar un email valido') ,
+    check('passus').notEmpty().withMessage('La password es un campo obligatorio').bail().isLength({min:8,max:20}).withMessage('la password debe tener minimo 8 caracteres') ,
+    
 ]
 module.exports = validatorRegister

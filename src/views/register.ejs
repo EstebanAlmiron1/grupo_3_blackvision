@@ -10,24 +10,24 @@
             <h3>Por favor complete la siguiente informacion</h3>
             <form action="/user/register" method="post" enctype="multipart/form-data">
                 <% if (locals && locals.msgError) { %>
-                 <% for( let index = 0; index < array.length; index++ ) { %>
-                 
-                 <% } %>
+                 <% msgError.forEach(i => { %>
+                  <p>* <%= i.msg %></p>
+                 <% }) %>
                 <% } %>
                 <label for="text"></label>
-                <input type="text" placeholder="Nombre" id="name" name="nameus">
+                <input type="text" placeholder="Nombre" id="name" name="nameus" value="<%= locals.old && old.nameus ? old.nameus : ''%>">
 
                 <label for="text"></label>
-                <input type="text" placeholder="Apellido" id="apellido" name="lastnameus">
+                <input type="text" placeholder="Apellido" id="apellido" name="lastnameus" value="<%= locals.old && old.lastnameus ? old.lastnameus : ''%>">
 
                 <label for="date"></label>
-                <input type="date"placeholder="Fecha de nacimiento" id="fden" name="birthday">
+                <input type="date"placeholder="Fecha de nacimiento" id="fden" name="birthday" value="<%= locals.old && old.birthday ? old.birthday : ''%>">
 
                 <label for="text"></label>
-                <input type="text" placeholder="Domicilio" id="domicilio" name="adressus">
+                <input type="text" placeholder="Domicilio" id="domicilio" name="adressus" value="<%= locals.old && old.adressus ? old.adressus : ''%>">
                 
                 <label for="E-mail"></label>
-                <input type="text" placeholder="Correo Electronico" id="email" name="emailus">
+                <input type="text" placeholder="Correo Electronico" id="email" name="emailus" value="<%= locals.old && old.emailus ? old.emailus : ''%>">
 
                 <label for="password"></label>
                 <input type="password" placeholder="Contraseña" id="password" name="passus">

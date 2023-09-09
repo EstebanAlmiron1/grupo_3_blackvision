@@ -13,7 +13,7 @@ const controller = {
     },
     registerProcess: (req, res) => {
         let errors = validationResult(req)
-        if (errors.notEmpty()) {
+        if (errors.isEmpty()) {
             let newUser = {
                 "id": userList.length + 1,
                 "name": req.body.nameus.toLowerCase(),
@@ -30,6 +30,7 @@ const controller = {
             fs.writeFileSync(path.join(__dirname, '../data/userData.json'), JSON.stringify(userList, null, 2), 'utf-8')
             res.redirect('/')
         }
+        else res.render(path.join(__dirname, "../views/register.ejs"),{msgError: errors.array(), old: req.body})
 
     },
     cart: (req, res) => {

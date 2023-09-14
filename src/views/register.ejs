@@ -9,6 +9,9 @@
             <h2>REGISTRARSE</h2>
             <h3>Por favor complete la siguiente informacion</h3>
             <form action="/user/register" method="post" enctype="multipart/form-data">
+                <% if (locals.errors && errors.email) { %>                
+                <P>* <%= errors.email.msg %> </P>    
+                <%}%>                
                 <% if (locals && locals.msgError) { %>
                  <% msgError.forEach(i => { %>
                   <p>* <%= i.msg %></p>

@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator')
+const Users = require('../../models/User')
 let userList = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8'))
 
 const controller = {
@@ -13,6 +14,13 @@ const controller = {
     },
     registerProcess: (req, res) => {
         let errors = validationResult(req)
+        let userInDb = Users.findByField('email',req.body.emailus)
+        if (userInDb) {
+            return res.render(path.join(__dirname, "../views/register.ejs"),{
+                errors:{email :{msg :'email ya registrado'}},
+                old : req.body
+            })            
+        }
         if (errors.isEmpty()) {
             let newUser = {
                 "id": userList.length + 1,
@@ -21,10 +29,10 @@ const controller = {
                 "birthday": req.body.birthday.toLowerCase(),
                 "adress": req.body.adressus.toLowerCase(),
                 "email": req.body.emailus.toLowerCase(),
-                "password": bcrypt.hashSync(req.body.passus,10),
+                "password": bcrypt.hashSync(req.body.passus,10),       
                 "img": req.file ? req.file.filename : 'defaultUs.png',
                 "admin": false,
-            "deleted":false
+                "deleted":false
             }
             userList.push(newUser)
             fs.writeFileSync(path.join(__dirname, '../data/userData.json'), JSON.stringify(userList, null, 2), 'utf-8')
@@ -57,4 +65,4 @@ const controller = {
     }
 }
 
-module.exports = controller
+module.exports = controller 

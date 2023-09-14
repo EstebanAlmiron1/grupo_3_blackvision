@@ -9,6 +9,22 @@ const controller = {
     login: (req, res) => {
         res.render(path.join(__dirname, "../views/login.ejs"))
     },
+    loginProcess: (req,res) => {
+        let userToLogin = Users.findByField('email',req.body.mail)
+        if (userToLogin){
+            let passOk = bcrypt.compareSync(req.body.pass,userToLogin.password)
+            if(passOk){
+                res.redirect('/user/'+ userToLogin.id)
+            }
+            else 
+            return res.render(path.join(__dirname, "../views/login.ejs"),{
+                errors:{email :{msg :'email o contraseña inválida'}}
+            })
+        }
+        return res.render(path.join(__dirname, "../views/login.ejs"),{
+            errors:{email :{msg :'email no registrado'}}
+        })
+    },
     register: (req, res) => {
         res.render(path.join(__dirname, "../views/register.ejs"))
     },

@@ -6,7 +6,10 @@
         <section class="contenedor-loguinbox">
             <article class="login-box">
                 <h2 class="bienvenido">BIENVENIDO!</h2>
-                <form class="contenedor-form" action="/user/register" method="get">
+                <form class="contenedor-form" action="/user/login" method="post">
+                    <% if (locals.errors && errors.email) { %>                
+                        <P>* <%= errors.email.msg %> </P>    
+                        <%}%>
                     <div>
                         <label for="email"></label>
                         <input type="text" name="mail" id="email" placeholder="Correo Electronico">

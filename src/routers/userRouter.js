@@ -7,6 +7,7 @@ const controller =require('../controllers/userController')
 
 
 router.get("/login",controller.login)
+router.post("/login",controller.loginProcess)
 router.get("/register",controller.register)
 router.post("/register",uploadFile.single('imageus'),validatorRegister,controller.registerProcess)
 router.get("/cart",controller.cart)

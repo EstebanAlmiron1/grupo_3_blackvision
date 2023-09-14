@@ -1,66 +1,6 @@
 [
   {
     "id": 1,
-    "name": "lautaro",
-    "lastname": "ondarza",
-    "birthday": "1991-08-07",
-    "adress": "falsa 123",
-    "email": "la@la.com",
-    "password": "1234567",
-    "img": "1693697512252.jpg",
-    "admin": false,
-    "deleted": false
-  },
-  {
-    "id": 2,
-    "name": "prueba 2",
-    "lastname": "prueba 2",
-    "birthday": "1991-01-01",
-    "adress": "prueba 2",
-    "email": "la2@la.com",
-    "password": "prueba 2",
-    "img": "1693698099056.jpg",
-    "admin": false,
-    "deleted": false
-  },
-  {
-    "id": 3,
-    "name": "prueba 3",
-    "lastname": "prueba 3",
-    "birthday": "1992-01-01",
-    "adress": "prueba 3",
-    "email": "la3@la.com",
-    "password": "prueba 3",
-    "img": "1693698140770.jpg",
-    "admin": false,
-    "deleted": false
-  },
-  {
-    "id": 4,
-    "name": "prueba 4",
-    "lastname": "prueba 4",
-    "birthday": "1993-01-01",
-    "adress": "prueba 4",
-    "email": "la4@la.com",
-    "password": "prueba 4",
-    "img": "1693698178351.jpg",
-    "admin": false,
-    "deleted": false
-  },
-  {
-    "id": 5,
-    "name": "belen",
-    "lastname": "belen",
-    "birthday": "1990-05-06",
-    "adress": "falsa 123, muniz, bsas",
-    "email": "belen@i.com",
-    "password": "abuelalalalalala",
-    "img": "defaultUs.png",
-    "admin": false,
-    "deleted": false
-  },
-  {
-    "id": 6,
     "name": "joselu",
     "lastname": "romelu",
     "birthday": "1992-06-25",
@@ -68,6 +8,30 @@
     "email": "jj@gmail.com",
     "password": "$2a$10$HTF2pL/kNOkTfSN/Q9GFNOcKRigqpiuI0QAkKSCdK5dzgaWcdRpFe",
     "img": "1694050214070.jpg",
+    "admin": false,
+    "deleted": false
+  },
+  {
+    "id": 2,
+    "name": "fiamk",
+    "lastname": "primarykey",
+    "birthday": "2022-04-12",
+    "adress": "casa",
+    "email": "fiamm@gmail.com",
+    "password": "$2a$10$5mqJ6FKwmCU6vCvx7yHvs.Fjliwig6lDkbI1jCd0r3cQOoUsJ1Dwq",
+    "img": "defaultUs.png",
+    "admin": false,
+    "deleted": false
+  },
+  {
+    "id": 3,
+    "name": "fiamma",
+    "lastname": "ledesma",
+    "birthday": "2022-03-09",
+    "adress": "casa",
+    "email": "fiammaaa@gmail.com",
+    "password": "$2a$10$IJcggQYn26L6umyD3mDELeB7qSAZWG2Cx3ZLumAsvSq66un2z51La",
+    "img": "defaultUs.png",
     "admin": false,
     "deleted": false
   }

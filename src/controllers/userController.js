@@ -52,7 +52,7 @@ const controller = {
             }
             userList.push(newUser)
             fs.writeFileSync(path.join(__dirname, '../data/userData.json'), JSON.stringify(userList, null, 2), 'utf-8')
-            res.redirect('/')
+            res.redirect('/user/'+newUser.id)
         }
         else res.render(path.join(__dirname, "../views/register.ejs"),{msgError: errors.array(), old: req.body})
 

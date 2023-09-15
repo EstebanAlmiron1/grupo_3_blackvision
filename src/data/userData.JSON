@@ -34,5 +34,29 @@
     "img": "defaultUs.png",
     "admin": false,
     "deleted": false
+  },
+  {
+    "id": 4,
+    "name": "fiamma",
+    "lastname": "ledesma",
+    "birthday": "2022-05-18",
+    "adress": "casita",
+    "email": "fiamma1233@gmail.com",
+    "password": "$2a$10$al7YnpNAQ1RGzSfrA7MA7.Uq3ExArbF/mjRic.7prhubahvOQN3L6",
+    "img": "defaultUs.png",
+    "admin": false,
+    "deleted": false
+  },
+  {
+    "id": 5,
+    "name": "romi",
+    "lastname": "rominita",
+    "birthday": "2020-12-24",
+    "adress": "casita",
+    "email": "romicoppola@gmail.com",
+    "password": "$2a$10$uj2UzkvjcSSCgB2pP0plUeA2eO/jwICEBErKySbK52J0JVi.x/J0y",
+    "img": "defaultUs.png",
+    "admin": false,
+    "deleted": false
   }
 ]

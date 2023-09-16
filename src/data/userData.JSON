@@ -58,5 +58,65 @@
     "img": "defaultUs.png",
     "admin": false,
     "deleted": false
+  },
+  {
+    "id": 6,
+    "name": "prueba",
+    "lastname": "prueba2",
+    "birthday": "1991-09-08",
+    "adress": "falsa 123, muniz, bsas",
+    "email": "pass1234@prueba.com",
+    "password": "$2a$10$AVYRPG9flK9v9C/vW7ycge3j8QwJwOu9shfZHIXNCjtSnLNTjEEEG",
+    "img": "defaultUs.png",
+    "admin": false,
+    "deleted": false
+  },
+  {
+    "id": 7,
+    "name": "a1",
+    "lastname": "a2",
+    "birthday": "1221-12-12",
+    "adress": "test2",
+    "email": "prueba1@a.com",
+    "password": "$2a$10$t/XLQNNzKDr6yLnrOOcJkO3y3GizX9fEGkMW3v/CEHtDriLEtKRgm",
+    "img": "1694890716569.jpg",
+    "admin": false,
+    "deleted": false
+  },
+  {
+    "id": 8,
+    "name": "prueba 4",
+    "lastname": "prueba 4",
+    "birthday": "1011-01-01",
+    "adress": "lala 123",
+    "email": "la4@la.com",
+    "password": "$2a$10$b7fbd31f5rSe/EL6Na.Qjussf15UKfnz76JYWBgR.xa2onY0H.EFK",
+    "img": "defaultUs.png",
+    "admin": false,
+    "deleted": false
+  },
+  {
+    "id": 9,
+    "name": "prueba 2",
+    "lastname": "ondarza",
+    "birthday": "2002-02-02",
+    "adress": "falsa 123",
+    "email": "lala1@la.com",
+    "password": "$2a$10$J7nQwgSq9WrK.VSGmm4GregW./ojKKoUDscclyMQ428NMIMvOwLoO",
+    "img": "defaultUs.png",
+    "admin": false,
+    "deleted": false
+  },
+  {
+    "id": 10,
+    "name": "lautaro",
+    "lastname": "lautaro",
+    "birthday": "1991-08-07",
+    "adress": "falsa 123, muniz, bsas",
+    "email": "1234@gm.com",
+    "password": "$2a$10$cpl.fr53b.zTQMWwjRGhg.TPJ9/ASJX5Fdw2KrP5Yj5a.2smlG/U.",
+    "img": "defaultUs.png",
+    "admin": false,
+    "deleted": false
   }
 ]

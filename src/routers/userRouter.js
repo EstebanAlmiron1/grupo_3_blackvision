@@ -4,15 +4,21 @@ const validations = require('../middlewares/validations')
 const validatorRegister = require('../middlewares/validatorRegister')
 const uploadFile = require('../middlewares/multerUs')
 const controller =require('../controllers/userController')
+const guestMiddelware = require('../middlewares/guestMiddelware')
+const authtMiddelware = require('../middlewares/authMiddleware')
 
-
-router.get("/login",controller.login)
-router.post("/login",controller.loginProcess)
-router.get("/register",controller.register)
+//register
+router.get("/register",guestMiddelware,controller.register)
 router.post("/register",uploadFile.single('imageus'),validatorRegister,controller.registerProcess)
+//loguin
+router.get("/login",guestMiddelware,controller.login)
+router.post("/login",controller.loginProcess)
+router.get("/logout",controller.logout)
+//perfil
+router.get("/profile/:id",authtMiddelware,controller.profile)
 router.get("/cart",controller.cart)
+//otros
 router.get("/userResults", controller.search)
 router.get("/list", controller.list)
-router.get("/:id",controller.profile)
 
 module.exports=router

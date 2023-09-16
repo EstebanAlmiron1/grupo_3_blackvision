@@ -14,7 +14,9 @@ const controller = {
         if (userToLogin){
             let passOk = bcrypt.compareSync(req.body.pass,userToLogin.password)
             if(passOk){
-                res.redirect('/user/'+ userToLogin.id)
+                delete userToLogin.password
+                req.session.userLogged = userToLogin
+                res.redirect('/user/profile/'+ userToLogin.id)
             }
             else 
             return res.render(path.join(__dirname, "../views/login.ejs"),{
@@ -52,7 +54,7 @@ const controller = {
             }
             userList.push(newUser)
             fs.writeFileSync(path.join(__dirname, '../data/userData.json'), JSON.stringify(userList, null, 2), 'utf-8')
-            res.redirect('/user/'+newUser.id)
+            res.redirect('/user/profile/'+newUser.id)
         }
         else res.render(path.join(__dirname, "../views/register.ejs"),{msgError: errors.array(), old: req.body})
 
@@ -61,8 +63,8 @@ const controller = {
         res.render(path.join(__dirname, "../views/productCart.ejs"))
     },
     profile: (req, res) => {
-        let userFound = userList.find((i) => i.id == req.params.id);
-        res.render(path.join(__dirname, "../views/profile.ejs"), { user: userFound })
+        //let userFound = userList.find((i) => i.id == req.params.id);
+        res.render(path.join(__dirname, "../views/profile.ejs"), { user: req.session.userLogged })
     },
     search: (req, res) => {
         let busqueda = req.query.search.toLowerCase();
@@ -78,6 +80,11 @@ const controller = {
     list: (req,res)=>{
         let userAvailable = userList.filter((i)=> i.deleted == false)
         res.render(path.join(__dirname, "../views/users.ejs"), { user: userAvailable })
+    },
+    logout: (req,res)=>{
+        req.session.destroy()
+        return res.redirect('/')
+        
     }
 }
 

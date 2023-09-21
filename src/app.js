@@ -7,6 +7,8 @@ const session = require('express-session')
 const mainRouter=require("./routers/mainRouter")
 const productRouter=require("./routers/productRouter")
 const userRouter=require("./routers/userRouter")
+const userLogged= require("./middlewares/userLoggedMiddleware")
+const cookie = require('cookie-parser')
 
 
 app.use(express.static("public"))
@@ -18,6 +20,7 @@ app.use(session({
     resave: false,
     saveUninitialized:false
 }))
+app.use(cookie());
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -29,6 +32,8 @@ app.listen(3000,()=>{
 app.use("/",mainRouter)
 app.use("/products",productRouter)
 app.use("/user",userRouter)
+app.use(userLogged);
+
 
 
 

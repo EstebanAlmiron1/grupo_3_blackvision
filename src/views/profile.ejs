@@ -4,7 +4,7 @@
 
     <body>
         <%- include('partials/header.ejs')%>
-         <div class="container">
+        <div class="container">
             <div class="data">
                 <h2 class="title">Información de la cuenta</h2>
                 <form action="/" method="get">
@@ -15,15 +15,15 @@
                     <div class="edit"> 
                         <button type="submit">Editar <i class="fas fa-angle-right"></i></button>
                         <button type="submit">Cambiar contraseña <i class="fas fa-angle-right"></i></button>
-                        <form action="/user/logout" method="get">
-                            <input type="submit" value="Cerrar sesión"><i class="fas fa-angle-right"></i>
-                        </form>
                     </div>
                     <h3 class="sub-title">NEWSLETTER</h3>
                     <p>No está suscripto a nuestro newsletter.</p>
                     <div class="edit">
                         <button type="submit">Editar <i class="fas fa-angle-right"></i></button>
                     </div>
+                </form>
+                <form action="/user/logout" method="get">
+                    <input type="submit" value="Cerrar sesión"><i class="fas fa-angle-right"></i>
                 </form>
             </div>
             <div class="shopping">

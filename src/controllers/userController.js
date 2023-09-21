@@ -16,6 +16,9 @@ const controller = {
             if(passOk){
                 delete userToLogin.password
                 req.session.userLogged = userToLogin
+                if(req.body.remember){
+                    res.cookie("userMail", req.body.mail, {maxAge : (1000*60)*10})
+                }
                 res.redirect('/user/profile/'+ userToLogin.id)
             }
             else 
@@ -64,6 +67,7 @@ const controller = {
     },
     profile: (req, res) => {
         //let userFound = userList.find((i) => i.id == req.params.id);
+        console.log(res.locals.isLogged);
         res.render(path.join(__dirname, "../views/profile.ejs"), { user: req.session.userLogged })
     },
     search: (req, res) => {
@@ -75,16 +79,15 @@ const controller = {
             }
         };
         res.render('resultadobusqueda', { resultadoBusqueda: resultadoBusqueda, palabra: busqueda, })
-
     },
     list: (req,res)=>{
         let userAvailable = userList.filter((i)=> i.deleted == false)
         res.render(path.join(__dirname, "../views/users.ejs"), { user: userAvailable })
     },
     logout: (req,res)=>{
+        res.clearCookie("userMail")
         req.session.destroy()
         return res.redirect('/')
-        
     }
 }
 

@@ -21,6 +21,7 @@ app.use(session({
     saveUninitialized:false
 }))
 app.use(cookie());
+app.use(userLogged);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -32,7 +33,7 @@ app.listen(3000,()=>{
 app.use("/",mainRouter)
 app.use("/products",productRouter)
 app.use("/user",userRouter)
-app.use(userLogged);
+
 
 
 

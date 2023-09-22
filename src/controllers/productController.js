@@ -6,14 +6,14 @@ const { validationResult } = require('express-validator')
 const controller = {
     list: (req, res) => {
         let productsAvaliable = productsList.filter((i)=> i.deleted == false)
-        res.render(path.join(__dirname, "../views/productList.ejs"), { listP: productsAvaliable })
+        return res.render(path.join(__dirname, "../views/productList.ejs"), { listP: productsAvaliable })
     },
     detail: (req, res) => {
         let productFound = productsList.find((i) => i.id == req.params.id);
-        res.render(path.join(__dirname, "../views/productDetail.ejs"), { product: productFound })
+        return res.render(path.join(__dirname, "../views/productDetail.ejs"), { product: productFound })
     },
     crear: (req, res) => {
-        res.render(path.join(__dirname, "../views/productCreate.ejs"))
+        return res.render(path.join(__dirname, "../views/productCreate.ejs"))
     },
     crearProcess: (req, res) => {
         let errors = validationResult(req)
@@ -31,12 +31,12 @@ const controller = {
         productsList.push(newProduct)
 
         fs.writeFileSync(path.join(__dirname, '../data/productData.json'), JSON.stringify(productsList, null, 2), 'utf-8')
-        res.redirect('/')
+        return res.redirect('/')
     },
     edit: (req, res) => {
         let productFound = productsList.find((i) => i.id == req.params.id);
 
-        res.render(path.join(__dirname, "../views/productEdit.ejs"), { product: productFound })
+        return res.render(path.join(__dirname, "../views/productEdit.ejs"), { product: productFound })
     },
     editProcess: (req, res) => {
         let productFound = productsList.find((i) => i.id == req.params.id);
@@ -48,21 +48,21 @@ const controller = {
         productFound.img = req.file ? req.file.filename : productFound.img
 
         fs.writeFileSync(path.join(__dirname, '../data/productData.json'), JSON.stringify(productsList, null, 2), 'utf-8')
-        res.redirect('/')
+        return res.redirect('/')
     },
     deleteProcess: (req, res) => {
         let productFound = productsList.find((i) => i.id == req.params.id);
         productFound.deleted = true
 
         fs.writeFileSync(path.join(__dirname, '../data/productData.json'), JSON.stringify(productsList, null, 2), 'utf-8')
-        res.redirect('/')
+        return res.redirect('/')
     },
     undelteProcess:(req, res) => {
         let productFound = productsList.find((i) => i.id == req.params.id);
         productFound.deleted = false
 
         fs.writeFileSync(path.join(__dirname, '../data/productData.json'), JSON.stringify(productsList, null, 2), 'utf-8')
-        res.redirect('/')
+        return res.redirect('/')
     }
 }
 

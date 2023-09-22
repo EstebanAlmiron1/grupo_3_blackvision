@@ -7,7 +7,7 @@ let userList = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/userData
 
 const controller = {
     login: (req, res) => {
-        res.render(path.join(__dirname, "../views/login.ejs"))
+        return res.render(path.join(__dirname, "../views/login.ejs"))
     },
     loginProcess: (req,res) => {
         let userToLogin = Users.findByField('email',req.body.mail)
@@ -19,7 +19,7 @@ const controller = {
                 if(req.body.remember){
                     res.cookie("userMail", req.body.mail, {maxAge : (1000*60)*10})
                 }
-                res.redirect('/user/profile/'+ userToLogin.id)
+                return res.redirect('/user/profile/'+ userToLogin.id)
             }
             else 
             return res.render(path.join(__dirname, "../views/login.ejs"),{
@@ -31,7 +31,7 @@ const controller = {
         })
     },
     register: (req, res) => {
-        res.render(path.join(__dirname, "../views/register.ejs"))
+        return res.render(path.join(__dirname, "../views/register.ejs"))
     },
     registerProcess: (req, res) => {
         let errors = validationResult(req)
@@ -57,18 +57,17 @@ const controller = {
             }
             userList.push(newUser)
             fs.writeFileSync(path.join(__dirname, '../data/userData.json'), JSON.stringify(userList, null, 2), 'utf-8')
-            res.redirect('/user/profile/'+newUser.id)
+            return res.redirect('/user/profile/'+newUser.id)
         }
-        else res.render(path.join(__dirname, "../views/register.ejs"),{msgError: errors.array(), old: req.body})
-
+        else return res.render(path.join(__dirname, "../views/register.ejs"),{msgError: errors.array(), old: req.body})
     },
     cart: (req, res) => {
-        res.render(path.join(__dirname, "../views/productCart.ejs"))
+        return res.render(path.join(__dirname, "../views/productCart.ejs"))
     },
     profile: (req, res) => {
         //let userFound = userList.find((i) => i.id == req.params.id);
         console.log(res.locals.isLogged);
-        res.render(path.join(__dirname, "../views/profile.ejs"), { user: req.session.userLogged })
+        return res.render(path.join(__dirname, "../views/profile.ejs"), { user: req.session.userLogged })
     },
     search: (req, res) => {
         let busqueda = req.query.search.toLowerCase();
@@ -78,11 +77,11 @@ const controller = {
                 resultadoBusqueda.push(listaProductos[i])
             }
         };
-        res.render('resultadobusqueda', { resultadoBusqueda: resultadoBusqueda, palabra: busqueda, })
+        return res.render('resultadobusqueda', { resultadoBusqueda: resultadoBusqueda, palabra: busqueda, })
     },
     list: (req,res)=>{
         let userAvailable = userList.filter((i)=> i.deleted == false)
-        res.render(path.join(__dirname, "../views/users.ejs"), { user: userAvailable })
+        return res.render(path.join(__dirname, "../views/users.ejs"), { user: userAvailable })
     },
     logout: (req,res)=>{
         res.clearCookie("userMail")

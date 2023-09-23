@@ -87,7 +87,6 @@ const controller = {
         res.clearCookie("userMail")
         req.session.destroy()
         return res.redirect('/') 
-        console.log()
     }
 }
 

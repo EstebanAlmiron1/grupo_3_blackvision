@@ -86,7 +86,8 @@ const controller = {
     logout: (req,res)=>{
         res.clearCookie("userMail")
         req.session.destroy()
-        return res.redirect('/')
+        return res.redirect('/') 
+        console.log()
     }
 }
 

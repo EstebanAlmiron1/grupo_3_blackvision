@@ -325,6 +325,11 @@ ul{
     .header-left i{
         display: none;
     }
+    .header-left div i{
+        display: block;
+        padding-right: 50px;
+    }
+    
     .main-footer{
         width: 100%;
         flex-direction:row;
@@ -363,6 +368,7 @@ ul{
     .header-left i{
         display: none;
     }
+    
     .networks{
         width: 30%;          
       }

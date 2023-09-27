@@ -4,6 +4,9 @@
         <a href="/" id="linkmainlogo">Inicio</a>
         <a href="/products" id="linkmainlogo">Productos</a>
         <a href="/#" id="linkmainlogo">Sale</a>
+        <% if (locals.isLogged) { %>
+            <div class="header-agregarproducto"><a href="/products/create"><i class="fas fa-cart-plus"></i></a></div>
+        <% } %>
         <i class="fas fa-bars"></i>
     </div>
     <div class="header-right">
@@ -19,8 +22,5 @@
         </div>
         <div class="header-carrito"><a href="/user/cart"><i class="fas fa-briefcase"></a></i></div>
         <div class="header-micuenta"><a href="/user/login"><i class="far fa-user"></i></a></div>
-        <% if (locals.isLogged) { %>
-            <div class="header-agregarproducto"><a href="/products/create"><i class="far fa-user"></i></a></div>
-        <% } %>
     </div>
 </header>

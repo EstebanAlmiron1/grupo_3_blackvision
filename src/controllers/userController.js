@@ -66,7 +66,7 @@ const controller = {
     },
     profile: (req, res) => {
         //let userFound = userList.find((i) => i.id == req.params.id);
-        console.log(res.locals.isLogged);
+        //console.log(res.locals.isLogged);
         return res.render(path.join(__dirname, "../views/profile.ejs"), { user: req.session.userLogged })
     },
     search: (req, res) => {

@@ -2,15 +2,14 @@ const path = require('path')
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator')
-const Users = require('../database/models/UserFalso')
-let userList = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/userData.json'), 'utf-8'))
+const db = require('../database/models')
 
 const controller = {
     login: (req, res) => {
         return res.render(path.join(__dirname, "../views/login.ejs"))
     },
     loginProcess: (req,res) => {
-        let userToLogin = Users.findByField('email',req.body.mail)
+        let userToLogin = db.User.findOne('email',req.body.mail)
         if (userToLogin){
             let passOk = bcrypt.compareSync(req.body.pass,userToLogin.password)
             if(passOk){

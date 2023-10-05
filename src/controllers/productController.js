@@ -1,11 +1,12 @@
 const path = require('path')
 const fs = require('fs')
-let productsList = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productData.json'), 'utf-8'))
+let productsList = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productData.json'), 'utf-8'))//
+//const db = require('../database/models')
 const { validationResult } = require('express-validator')
 
 const controller = {
-    list: (req, res) => {
-        let productsAvaliable = productsList.filter((i)=> i.deleted == false)
+    list: async (req, res) => {
+        let productsAvaliable = await db.Product.findAll()
         return res.render(path.join(__dirname, "../views/productList.ejs"), { listP: productsAvaliable })
     },
     detail: (req, res) => {
@@ -18,16 +19,14 @@ const controller = {
     crearProcess: (req, res) => {
         let errors = validationResult(req)
         if (errors.errors.length > 0) { }
-        let newProduct = {
-            "id": productsList.length + 1,
-            "nombre": req.body.name.toLowerCase(),
-            "descripcion": req.body.description.toLowerCase(),
-            "color": req.body.color.toLowerCase(),
-            "talle": req.body.size.toLowerCase(),
-            "precio": req.body.price,
+        let newProduct = db.Product.create({
+            "name": req.body.name.toLowerCase(),
+            "description": req.body.description.toLowerCase(),
+            //"color": req.body.color.toLowerCase(),
+            //"talle": req.body.size.toLowerCase(),
+            //"price": req.body.price,
             "img": req.file ? req.file.filename : 'logo.png',
-            "deleted": false
-        }
+        })
         productsList.push(newProduct)
 
         fs.writeFileSync(path.join(__dirname, '../data/productData.json'), JSON.stringify(productsList, null, 2), 'utf-8')

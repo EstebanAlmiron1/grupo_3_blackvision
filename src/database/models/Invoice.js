@@ -1,42 +1,38 @@
 module.exports= function(sequelize,DataTypes){
-    let alias = 'User'
+    let alias = 'Invoice'
     let cols = {
         id:{
             autoIncrement: true,
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        first_name:{
+        name:{
             type: DataTypes.STRING
         },
-        last_name:{
-            type: DataTypes.STRING
-        },
-        birthdate:{
+        date:{
             type: DataTypes.DATE
         },
-        address:{
-            type: DataTypes.STRING
-        },
-        img:{
+        number:{
             type: DataTypes.INTEGER
         },
-        id_roles:{
+        total:{
+            type: DataTypes.DECIMAL
+        },
+        id_users:{
             type: DataTypes.INTEGER
         },
-        mail:{
-            type: DataTypes.STRING
-        },
-
+        id_type:{
+            type: DataTypes.INTEGER
+        }
     }
     let config = {
-        tableName: 'user',
+        tableName: 'invoices',
         timestamps: true,
         paranoid: true,
         deletedAt: "deleted_at",
         updatedAt: "updated_at",
         createdAt: "created_at"
     }
-    let User = sequelize.define(alias,cols,config)
-    return User
+    let Invoice = sequelize.define(alias,cols,config)
+    return Invoice
 }

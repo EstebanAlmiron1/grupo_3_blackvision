@@ -3,13 +3,14 @@ const fs = require('fs')
 const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator')
 const db = require('../database/models')
+const { CharsetToEncoding } = require('mysql2')
 
 const controller = {
     login: (req, res) => {
         return res.render(path.join(__dirname, "../views/login.ejs"))
     },
-    loginProcess: (req,res) => {
-        let userToLogin = db.User.findOne('email',req.body.mail)
+    loginProcess: async (req,res) => { 
+        let userToLogin = await db.User.findOne({where:{email: req.body.email}})
         if (userToLogin){
             let passOk = bcrypt.compareSync(req.body.pass,userToLogin.password)
             if(passOk){
@@ -31,10 +32,10 @@ const controller = {
     },
     register: (req, res) => {
         return res.render(path.join(__dirname, "../views/register.ejs"))
-    },
-    registerProcess: (req, res) => {
+    }, 
+    registerProcess: async (req, res) => {
         let errors = validationResult(req)
-        let userInDb = Users.findByField('email',req.body.emailus)
+        let userInDb = await db.User.findOne({where:{email: req.body.email}})
         if (userInDb) {
             return res.render(path.join(__dirname, "../views/register.ejs"),{
                 errors:{email :{msg :'email ya registrado'}},
@@ -42,8 +43,7 @@ const controller = {
             })            
         }
         if (errors.isEmpty()) {
-            let newUser = {
-                "id": userList.length + 1,
+            db.User.create({            
                 "name": req.body.nameus.toLowerCase(),
                 "lastname": req.body.lastnameus.toLowerCase(),
                 "birthday": req.body.birthday.toLowerCase(),
@@ -53,10 +53,9 @@ const controller = {
                 "img": req.file ? req.file.filename : 'defaultUs.png',
                 "admin": false,
                 "deleted":false
-            }
-            userList.push(newUser)
-            fs.writeFileSync(path.join(__dirname, '../data/userData.json'), JSON.stringify(userList, null, 2), 'utf-8')
-            return res.redirect('/user/profile/'+newUser.id)
+
+            })
+            return res.redirect('/user/profile/1')
         }
         else return res.render(path.join(__dirname, "../views/register.ejs"),{msgError: errors.array(), old: req.body})
     },
@@ -67,8 +66,8 @@ const controller = {
         //let userFound = userList.find((i) => i.id == req.params.id);
         //console.log(res.locals.isLogged);
         return res.render(path.join(__dirname, "../views/profile.ejs"), { user: req.session.userLogged })
-    },
-    search: (req, res) => {
+    }, 
+    /*search: (req, res) => {
         let busqueda = req.query.search.toLowerCase();
         let resultadoBusqueda = []
         for (let i = 0; i < listaProductos.length; i++) {
@@ -77,9 +76,9 @@ const controller = {
             }
         };
         return res.render('resultadobusqueda', { resultadoBusqueda: resultadoBusqueda, palabra: busqueda, })
-    },
-    list: (req,res)=>{
-        let userAvailable = userList.filter((i)=> i.deleted == false)
+    },*/ 
+    list: async (req,res)=>{
+        let userAvailable = await db.User.findAll()
         return res.render(path.join(__dirname, "../views/users.ejs"), { user: userAvailable })
     },
     logout: (req,res)=>{

@@ -30,7 +30,7 @@ module.exports= function(sequelize,DataTypes){
 
     }
     let config = {
-        tableName: 'user',
+        tableName: 'users',
         timestamps: true,
         paranoid: true,
         deletedAt: "deleted_at",

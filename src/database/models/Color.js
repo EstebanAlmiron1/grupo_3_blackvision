@@ -19,5 +19,6 @@ module.exports= function(sequelize,DataTypes){
         createdAt: "created_at"
     }
     let Color = sequelize.define(alias,cols,config)
+    
     return Color
 }

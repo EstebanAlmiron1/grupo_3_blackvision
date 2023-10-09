@@ -10,7 +10,7 @@ const controller = {
         return res.render(path.join(__dirname, "../views/login.ejs"))
     },
     loginProcess: async (req,res) => { 
-        let userToLogin = await db.User.findOne({where:{email: req.body.email}})
+        let userToLogin = await db.User.findOne({where:{mail: req.body.mail}})
         if (userToLogin){
             let passOk = bcrypt.compareSync(req.body.pass,userToLogin.password)
             if(passOk){

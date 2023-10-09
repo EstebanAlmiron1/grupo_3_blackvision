@@ -19,7 +19,7 @@ module.exports= function(sequelize,DataTypes){
             type: DataTypes.STRING
         },
         img:{
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING(255)
         },
         id_roles:{
             type: DataTypes.INTEGER
@@ -27,6 +27,9 @@ module.exports= function(sequelize,DataTypes){
         mail:{
             type: DataTypes.STRING
         },
+        password:{
+            type: DataTypes.STRING(255)
+        }
 
     }
     let config = {

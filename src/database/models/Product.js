@@ -41,5 +41,24 @@ module.exports= function(sequelize,DataTypes){
         createdAt: "created_at"
     }
     let Product = sequelize.define(alias,cols,config)
+    Product.associate = function (models) {
+        Product.belongsTo(models.Color,{
+           foreignKey :'id_color',
+           AS : 'colores'
+        }),
+        Product.belongsTo(models.Brand,{
+            foreignKey :'id_brand',
+            AS : 'marcas'
+        }),
+        Product.belongsTo(models.Size,{
+            foreignKey :'id_size',
+            AS : 'talles'
+        }),
+        Product.belongsTo(models.Category,{
+            foreignKey :'id_category',
+            AS : 'categorias'
+        })
+
+    }
     return Product
 }

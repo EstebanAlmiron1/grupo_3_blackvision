@@ -19,5 +19,11 @@ module.exports= function(sequelize,DataTypes){
         createdAt: "created_at"
     }
     let Brand = sequelize.define(alias,cols,config)
+    Brand.associate = function (models) {
+        Brand.hasMany(models.Product,{
+           foreignKey :'id_brand',
+           AS : 'productos'
+        })
+    }
     return Brand
 }

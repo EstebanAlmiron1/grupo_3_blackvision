@@ -19,6 +19,11 @@ module.exports= function(sequelize,DataTypes){
         createdAt: "created_at"
     }
     let Color = sequelize.define(alias,cols,config)
-    
+    Color.associate = function (models) {
+        Color.hasMany(models.Product,{
+           foreignKey :'id_color',
+           AS : 'productos'
+        })
+    }
     return Color
 }

@@ -1,25 +1,19 @@
 module.exports= function(sequelize,DataTypes){
-    let alias = 'Size'
+    let alias = 'categoria'
     let cols = {
         id:{
             autoIncrement: true,
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        size:{
+        name:{
             type: DataTypes.STRING
         },
     }
     let config = {
-        tableName: 'size',
+        tableName: 'categoria',
         timestamps: false,
     }
-    let Size = sequelize.define(alias,cols,config)
-    Size.associate = function (models) {
-        Size.hasMany(models.Product,{
-           foreignKey :'id_size',
-           AS : 'productos'
-        })
-    }
-    return Size
+    let Rol = sequelize.define(alias,cols,config)
+    return Rol
 }

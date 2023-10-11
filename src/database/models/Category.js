@@ -1,5 +1,5 @@
 module.exports= function(sequelize,DataTypes){
-    let alias = 'categoria'
+    let alias = 'category'
     let cols = {
         id:{
             autoIncrement: true,
@@ -11,9 +11,9 @@ module.exports= function(sequelize,DataTypes){
         },
     }
     let config = {
-        tableName: 'categoria',
+        tableName: 'category',
         timestamps: false,
     }
-    let Rol = sequelize.define(alias,cols,config)
-    return Rol
+    let category = sequelize.define(alias,cols,config)
+    return category
 }

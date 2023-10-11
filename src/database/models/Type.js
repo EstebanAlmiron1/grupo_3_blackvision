@@ -15,5 +15,11 @@ module.exports= function(sequelize,DataTypes){
         timestamps: false,
     }
     let Type = sequelize.define(alias,cols,config)
+    Type.associate = function (models) {
+        Type.hasMany(models.Invoice,{
+           foreignKey :'id_type',
+           AS : 'invoices'
+        })
+    }
     return Type
 }

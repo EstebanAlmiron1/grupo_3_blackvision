@@ -41,5 +41,11 @@ module.exports= function(sequelize,DataTypes){
         createdAt: "created_at"
     }
     let User = sequelize.define(alias,cols,config)
+    User.associate = function (models) {
+        User.hasMany(models.Rol,{
+           foreignKey :'id_roles',
+           AS : 'roles'
+        })
+    }
     return User
 }

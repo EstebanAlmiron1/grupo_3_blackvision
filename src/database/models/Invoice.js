@@ -34,5 +34,11 @@ module.exports= function(sequelize,DataTypes){
         createdAt: "created_at"
     }
     let Invoice = sequelize.define(alias,cols,config)
+    Invoice.associate = function (models) {
+        Invoice.belongsTo(models.Type,{
+            foreignKey :'id_type',
+            AS : 'invoices'
+        })
+    }  
     return Invoice
 }

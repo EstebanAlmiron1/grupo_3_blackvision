@@ -37,7 +37,7 @@ module.exports= function(sequelize,DataTypes){
     Invoice.associate = function (models) {
         Invoice.belongsTo(models.Type,{
             foreignKey :'id_type',
-            AS : 'invoices'
+            AS : 'tipo'
         })
     }  
     return Invoice

@@ -34,7 +34,7 @@ module.exports= function(sequelize,DataTypes){
     }
     let config = {
         tableName: 'products',
-        timestamps: true,
+        timestamps: false,
         paranoid: true,
         deletedAt: "deleted_at",
         updatedAt: "updated_at",
@@ -57,6 +57,13 @@ module.exports= function(sequelize,DataTypes){
         Product.belongsTo(models.Category,{
             foreignKey :'id_category',
             AS : 'categorias'
+        }),
+        Product.belongsToMany(models.Invoice,{
+            foreignKey :'id_invoices',
+            through: 'Invoice_product',
+            otherKey:'id_products',
+            timestamps: false,
+            AS : 'facturas'
         })
 
     }

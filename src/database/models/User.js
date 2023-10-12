@@ -42,9 +42,13 @@ module.exports= function(sequelize,DataTypes){
     }
     let User = sequelize.define(alias,cols,config)
     User.associate = function (models) {
-        User.hasMany(models.Rol,{
+        User.belongsTo(models.Rol,{
            foreignKey :'id_roles',
-           AS : 'usuarios'
+           AS : 'roles'
+        }),
+    User.hasMany(models.Invoice,{
+            foreignKey :'id_users',
+            AS : 'facturas'
         })
     }
     return User

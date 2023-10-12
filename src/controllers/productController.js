@@ -13,19 +13,28 @@ const controller = {
         let productFound =  db.Product.findByPk(req.params.id); 
         return res.render(path.join(__dirname, "../views/productDetail.ejs"), { product: productFound })
     },
-    crear: (req, res) => {
-        return res.render(path.join(__dirname, "../views/productCreate.ejs"))
+    crear: async (req, res) => {
+        let size = await db.Size.findAll();
+        let category = await db.Category.findAll();
+        let color = await db.Color.findAll();
+        let brand = await db.Brand.findAll();
+        return res.render(path.join(__dirname, "../views/productCreate.ejs"),{size:size,category:category,color:color,brand:brand})
     },
-    crearProcess: async (req, res) => {
+    crearProcess: (req, res) => {
         let errors = validationResult(req)
-        if (errors.errors.length > 0) { }
-        let newProduct = await db.Product.create({
+        if (errors.errors.length > 0) {console.log(errors)}
+        let newProduct = db.Product.create({
             "name": req.body.name.toLowerCase(),
             "description": req.body.description.toLowerCase(),
-            "color": req.body.color.toLowerCase(),            
+            "id_color": req.body.color,            
             "price": req.body.price,
             "img": req.file ? req.file.filename : 'logo.png',
+            "id_brand":req.body.brand,
+            "id_size":req.body.size,
+            "id_category":req.body.category            
         })
+        
+        
         
         return res.redirect('/')
     },

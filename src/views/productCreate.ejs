@@ -15,21 +15,42 @@
                 <input type="text" placeholder="Descripción" name="description">
                 <div class="size-edit"><label for="color">Color: </label>
                     <select name="color" >
-                        <option value="blanco">Blanco</option>
-                        <option value="rojo">Rojo</option>
-                        <option value="azul">Azul</option>
-                        <option value="negro">Negro</option>
-                        <option value="rosa">Rosa</option>
-                        <option value="dorado">Dorado</option>
-                        <option value="verde">Verde</option>
-                        <option value="otro">Otro</option>
+                        <% for (let index = 0; index < color.length; index++) {%> 
+                            <%const element = color[index]%>
+                            <option value="<%=element.id%>">
+                                <%=element.name%>
+                            </option>                                                        
+                        <%} %>
                     </select>
                 </div>
                 <div class="size-edit"> <label for="size">Talle: </label>
                     <select  id="size" name="size">
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
+                        <% for (let index = 0; index < size.length; index++) {%>
+                            <%const element = size[index]%>
+                            <option value="<%=element.id%>">
+                                <%=element.size%>
+                            </option>                                                        
+                        <%} %>                        
+                    </select>
+                </div>
+                <div class="size-edit"> <label for="category">Categoria: </label>
+                    <select  id="category" name="category">
+                        <% for (let index = 0; index < category.length; index++) {%>
+                            <%const element = category[index]%>
+                            <option value="<%=element.id%>">
+                                <%=element.name%>
+                            </option>                                                        
+                        <%} %>                        
+                    </select>
+                </div>
+                <div class="size-edit"> <label for="brand">Marca: </label>
+                    <select  id="brand" name="brand">
+                        <% for (let index = 0; index < brand.length; index++) {%>
+                            <%const element = brand[index]%>
+                            <option value="<%=element.id%>">
+                                <%=element.name%>
+                            </option>                                                        
+                        <%} %>                        
                     </select>
                 </div>  
                 <input type="number" placeholder="precio" id="price" name="price">

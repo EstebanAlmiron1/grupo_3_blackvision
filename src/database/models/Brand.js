@@ -12,11 +12,11 @@ module.exports= function(sequelize,DataTypes){
     }
     let config = {
         tableName: 'brands',
-        timestamps: true,
-        paranoid: true,
-        deletedAt: "deleted_at",
+        timestamps: false,
+        /*paranoid: true,
+        deletedAt: "deleted_at", //preguntar
         updatedAt: "updated_at",
-        createdAt: "created_at"
+        createdAt: "created_at"*/
     }
     let Brand = sequelize.define(alias,cols,config)
     Brand.associate = function (models) {

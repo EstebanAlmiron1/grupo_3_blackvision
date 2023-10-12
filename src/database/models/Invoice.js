@@ -38,7 +38,19 @@ module.exports= function(sequelize,DataTypes){
         Invoice.belongsTo(models.Type,{
             foreignKey :'id_type',
             AS : 'tipo'
+        }),
+        Invoice.belongsToMany(models.Product,{
+            foreignKey :'id_products',
+            through: 'Invoice_product',
+            otherKey:'id_invoices',
+            timestamps: false,
+            AS : 'productos'            
+        }), 
+        Invoice.belongsTo(models.User,{
+            foreignKey :'id_users',
+            AS : 'usuario'
         })
+
     }  
     return Invoice
 }

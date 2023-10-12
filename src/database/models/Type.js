@@ -18,7 +18,7 @@ module.exports= function(sequelize,DataTypes){
     Type.associate = function (models) {
         Type.hasMany(models.Invoice,{
            foreignKey :'id_type',
-           AS : 'invoices'
+           AS : 'facturas'
         })
     }
     return Type

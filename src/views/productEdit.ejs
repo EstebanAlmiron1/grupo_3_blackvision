@@ -12,46 +12,73 @@
                         enctype="multipart/form-data">
 
                         <p class="input-Product">Nombre del producto</p>
-                        <input type="text" value="<%=product.nombre %>" name="name">
+                        <input type="text" value="<%=product.name %>" name="name">
                         <p class="input-Product">Descripcion</p>
-                        <input type="text" value="<%=product.descripcion %>" name="description">
-                        <div class="size-edit"><label for="color">Color: </label>
-                            <select id="color" name="color">
-                                <option <%=product.color=='otro' ? 'selected' : '' %> value="otro">Otro</option>
-                                <option <%=product.color=='blanco' ? 'selected' : '' %> value="blanco">Blanco</option>
-                                <option <%=product.color=='rojo' ? 'selected' : '' %> value="rojo">Rojo</option>
-                                <option <%=product.color=='azul' ? 'selected' : '' %> value="azul">Azul</option>
-                                <option <%=product.color=='negro' ? 'selected' : '' %> value="negro">Negro</option>
-                                <option <%=product.color=='rosa' ? 'selected' : '' %> value="rosa">Rosa</option>
-                                <option <%=product.color=='dorado' ? 'selected' : '' %> value="dorado">Dorado</option>
-                                <option <%=product.color=='verde' ? 'selected' : '' %> value="verde">Verde</option>
-                            </select>
-                        </div>
+                        <input type="text" value="<%=product.description %>" name="description">
                         <div class="size-edit"> <label for="size">Talle: </label>
-                            <select id="size" name="size">
-                                <option value="small">Small</option>
-                                <option value="medium">Medium</option>
-                                <option value="large">Large</option>
+                            <select  id="size" name="size">
+                                <% for (let index = 0; index < size.length; index++) {%>
+                                    <%const element = size[index]%>
+                                    <% if (element.id == product.id_size){ %>                                
+                                    <option value="<%=element.id%>"selected>
+                                        <%=element.size%>
+                                    </option>                                                        
+                                <%}else{%> 
+                                    <option value="<%= element.id %>">
+                                        <%=element.size%>
+                                    </option>
+                                    <% } }%>                                                
                             </select>
                         </div>
+                        <div class="size-edit"> <label for="category">Categoria: </label>
+                            <select  id="category" name="category">
+                                <% for (let index = 0; index < category.length; index++) {%>
+                                    <%const element = category[index]%>
+                                    <% if (element.id == product.id_category){ %>                                
+                                    <option value="<%=element.id%>"selected>
+                                        <%=element.name%>   
+                                    </option>                                                        
+                                    <%}else{%> 
+                                        <option value="<%= element.id %>">
+                                            <%=element.name%>
+                                        </option>
+                                        <% } }%>                    
+                            </select>
+                        </div>
+                        <div class="size-edit"> <label for="brand">Marca: </label>
+                            <select  id="brand" name="brand">
+                                <% for (let index = 0; index < brand.length; index++) {%>
+                                    <%const element = brand[index]%>
+                                    <% if (element.id == product.id_brand){ %>                                
+                                    <option value="<%=element.id%>"selected>
+                                        <%=element.name%>   
+                                    </option>                                                        
+                                    <%}else{%> 
+                                        <option value="<%= element.id %>">
+                                            <%=element.name%>
+                                        </option>
+                                        <% } }%>                         
+                            </select>
+                        </div>  
                         <p class="input-Product">Actualizar precio</p>
-                        <input type="number" value="<%=product.precio %>" placeholder="precio" id="price" name="price">
+                        <input type="number" value="<%=product.price %>" placeholder="Precio" id="price" name="price">
                         <p>Imagen actual</p>
                         <img src="/img/products/<%= product.img %>" alt="">
                         <label for="image-edit" class="label-edit"><i class="fas fa-upload"></i>Editar la imagen</label>
                         <input type="file" placeholder="Carga la imagen" id="image-edit" name="image">
 
+                        <button type="submit">Editar producto</button> 
                     </form>
-                    <% if (product.deleted==false) { %>
+                    
                         <form action="/products/edit/<%=product.id %>?_method=delete" method="post">
                             <button type="submit">Eliminar producto</button>
                         </form>
-                        <% } else {%>
+                       
                             <form action="/products/edit/<%=product.id %>" method="post">
                                 <button type="submit">Alta de producto</button>
                             </form>
-                            <% }%>
-
+                        
+                    
                 </section>
             </main>
             <%- include('partials/footer.ejs')%>

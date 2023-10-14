@@ -23,7 +23,16 @@ module.exports= function(sequelize,DataTypes){
         },
         id_type:{
             type: DataTypes.INTEGER
-        }
+        },
+        created_at:{
+            type: DataTypes.DATE
+        },
+        deleted_at:{
+            type: DataTypes.DATE
+        },
+        updated_at:{
+            type: DataTypes.DATE
+        } 
     }
     let config = {
         tableName: 'invoices',

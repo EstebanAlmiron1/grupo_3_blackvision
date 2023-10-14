@@ -40,36 +40,37 @@ const controller = {
     },
     edit: async (req, res) => {
         let productFound = await db.Product.findByPk(req.params.id);
-
-        return res.render(path.join(__dirname, "../views/productEdit.ejs"), { product: productFound })
+        let size = await db.Size.findAll();
+        let category = await db.Category.findAll();
+        let color = await db.Color.findAll();
+        let brand = await db.Brand.findAll();
+        console.log("este es clog de created"+ productFound.created_at)
+        console.log("este es clog de deleted"+ productFound.deleted_at)
+        return res.render(path.join(__dirname, "../views/productEdit.ejs"),{size:size,category:category,color:color,brand:brand,product: productFound})
     },
     editProcess: async (req, res) => {
         
+        let productFound = await db.Product.findByPk(req.params.id);
+        console.log(productFound.img)
         db.Product.update({
             name: req.body.name,
             description:req.body.description,
             price:req.body.price,
-            //img:req.body.img, lo de la imagen ver como funciona el tema de edicion creo qeu es productFound.img
-            //id_brand: , no tenemos marca en el formulario, se debe aregar
+            img: req.file ? req.file.filename : productFound.img ,
+            id_brand:req.body.brand,
             id_color: req.body.color, 
             id_size: req.body.size,
-            //id_category: lo mismo que en brand, cuando lo agreguemos ya hacemos lo de crud tambien
-
+            id_category: req.body.category
+            
         },{where:{id:req.params.id}})
         return res.redirect('/')
     },
     deleteProcess: (req, res) => {
-        let productFound = productsList.find((i) => i.id == req.params.id);
-        productFound.deleted = true
-
-        fs.writeFileSync(path.join(__dirname, '../data/productData.json'), JSON.stringify(productsList, null, 2), 'utf-8')
+        db.Product.destroy({where:{id:req.params.id}})
         return res.redirect('/')
     },
     undelteProcess:(req, res) => {
-        let productFound = productsList.find((i) => i.id == req.params.id);
-        productFound.deleted = false
-
-        fs.writeFileSync(path.join(__dirname, '../data/productData.json'), JSON.stringify(productsList, null, 2), 'utf-8')
+        db.Product.restore({where:{id:req.params.id}})
         return res.redirect('/')
     }
 }

@@ -5,10 +5,10 @@
     <%- include('partials/header.ejs')%>
     <main class="detail-main">        
         <section class="section1">
-            <h4 class="description-detail"><%= product.descripcion %></h4>
+            <h4 class="description-detail"></h4>
             <article class="images1">
                 <div class="img-detail">
-                    <img src="/img/products/<%= product.img %>" alt="Lentes">                    
+                    <img src= "/img/products/<%= product.img%>" alt="Lentes">                    
                 </div>    
                 <div class="img-selector">
                     <img src="/img/products/<%= product.img %>" alt="Lentes">
@@ -35,16 +35,20 @@
             <article>
                 <div class="characteristic-detail">
                     <h4 class="characteristic-vulk">Características de <%= product.nombre %></h4>
-                    <p><i class="fas fa-check-circle"></i> Marca: <%= product.nombre %></p>
-                    <p><i class="fas fa-check-circle"></i> Color: <%= product.color %></p>
-                    <p><i class="fas fa-check-circle"></i> Talle: <%= product.talle %></p>
+                    <p><i class="fas fa-check-circle"></i> Marca: <%= product.Brand.name %></p>
+                    <p><i class="fas fa-check-circle"></i> Color: <%= product.Color.name %></p>
+                    <p><i class="fas fa-check-circle"></i> Talle: <%= product.Size.size %></p>
+                    <p><i class="fas fa-check-circle"></i> Categoria: <%= product.Category.name %></p>
                 </div>
             </article>
             <article>
                 <div class="detail-detail">
                     <h4 class="description-detail">DESCRIPCIÓN</h4>
-                    <p><%= product.descripcion %></p>
-                </div>                              
+                    <p><%= product.description %></p>                    
+                </div>
+                <form class="button-detail" action="/products/edit/<%= product.id %>" method="GET"> 
+                    <button class="buys-detail">Editar producto</button>                                   
+                </form>                       
             </article>
         </section>
     </main>

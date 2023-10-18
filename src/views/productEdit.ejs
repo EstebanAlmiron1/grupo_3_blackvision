@@ -59,6 +59,21 @@
                                         </option>
                                         <% } }%>                         
                             </select>
+                        </div>
+                        <div class="size-edit"> <label for="color">Color: </label>
+                            <select  id="color" name="color">
+                                <% for (let index = 0; index < color.length; index++) {%>
+                                    <%const element = color[index]%>
+                                    <% if (element.id == product.id_color){ %>                                
+                                    <option value="<%=element.id%>"selected>
+                                        <%=element.name%>
+                                    </option>                                                        
+                                <%}else{%> 
+                                    <option value="<%= element.id %>">
+                                        <%=element.name%>
+                                    </option>
+                                    <% } }%>                                                
+                            </select>
                         </div>  
                         <p class="input-Product">Actualizar precio</p>
                         <input type="number" value="<%=product.price %>" placeholder="Precio" id="price" name="price">
@@ -67,7 +82,7 @@
                         <label for="image-edit" class="label-edit"><i class="fas fa-upload"></i>Editar la imagen</label>
                         <input type="file" placeholder="Carga la imagen" id="image-edit" name="image">
 
-                        <button type="submit">Editar producto</button> 
+                        <button type="submit">Confirmar edicion</button> 
                     </form>
                         <% if (product.deleted_at == null) { %>
                             <form action="/products/edit/<%=product.id %>?_method=delete" method="post">
@@ -77,8 +92,7 @@
                             <form action="/products/edit/<%=product.id %>" method="post">
                                 <button type="submit">Alta de producto</button>
                             </form>
-                            <% }%>
-                    
+                            <% }%>                    
                 </section>
             </main>
             <%- include('partials/footer.ejs')%>

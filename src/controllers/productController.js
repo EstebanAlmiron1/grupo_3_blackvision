@@ -10,7 +10,8 @@ const controller = {
         return res.render(path.join(__dirname, "../views/productList.ejs"), { listP: productsAvaliable })
     },
     detail: async (req, res) => {
-        let productFound =  db.Product.findByPk(req.params.id); 
+        let productFound = await db.Product.findByPk(req.params.id,{include:[{association:"Size"},{association:"Color"},{association:"Brand"},{association:"Category"}]});
+        console.log("producto del detalle" + productFound.Size.size); 
         return res.render(path.join(__dirname, "../views/productDetail.ejs"), { product: productFound })
     },
     crear: async (req, res) => {
@@ -43,8 +44,7 @@ const controller = {
         let size = await db.Size.findAll();
         let category = await db.Category.findAll();
         let color = await db.Color.findAll();
-        let brand = await db.Brand.findAll();
-        
+        let brand = await db.Brand.findAll();      
         return res.render(path.join(__dirname, "../views/productEdit.ejs"),{size:size,category:category,color:color,brand:brand,product: productFound})
     },
     editProcess: async (req, res) => {
@@ -62,7 +62,7 @@ const controller = {
             id_category: req.body.category
             
         },{where:{id:req.params.id}})
-        return res.redirect('/')
+        return res.redirect('/products/detail/'+ req.params.id)
     },
     deleteProcess: (req, res) => {
         db.Product.destroy({where:{id:req.params.id}})

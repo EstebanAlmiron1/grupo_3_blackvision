@@ -44,8 +44,7 @@ const controller = {
         let category = await db.Category.findAll();
         let color = await db.Color.findAll();
         let brand = await db.Brand.findAll();
-        console.log("este es clog de created"+ productFound.created_at)
-        console.log("este es clog de deleted"+ productFound.deleted_at)
+        
         return res.render(path.join(__dirname, "../views/productEdit.ejs"),{size:size,category:category,color:color,brand:brand,product: productFound})
     },
     editProcess: async (req, res) => {

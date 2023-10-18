@@ -69,15 +69,15 @@
 
                         <button type="submit">Editar producto</button> 
                     </form>
-                    
-                        <form action="/products/edit/<%=product.id %>?_method=delete" method="post">
-                            <button type="submit">Eliminar producto</button>
-                        </form>
-                       
+                        <% if (product.deleted_at == null) { %>
+                            <form action="/products/edit/<%=product.id %>?_method=delete" method="post">
+                                <button type="submit">Eliminar producto</button>
+                            </form>
+                        <% }else{ %>
                             <form action="/products/edit/<%=product.id %>" method="post">
                                 <button type="submit">Alta de producto</button>
                             </form>
-                        
+                            <% }%>
                     
                 </section>
             </main>

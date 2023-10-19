@@ -6,9 +6,14 @@ const { validationResult } = require('express-validator')
 
 const controller = {
     list: async (req, res) => {
-        let productsAvaliable = await db.Product.findAll()
-
-        console.log(res.locals.userLogged + "este es el pointer" );
+        let userAdmin = req.session.userLogged.id_roles ? req.session.userLogged.id_roles : 'te deslogueaste'
+        console.log('si es igual a 1, entonces es admin = ' + userAdmin );
+        let productsAvaliable = await db.Product.findAll(/*{  preguntar al profe como hacer lo de paranoid false
+            if (userAdmin == 1) {
+                paranoid : false
+            }
+        }*/)
+        
 
         return res.render(path.join(__dirname, "../views/productList.ejs"), { listP: productsAvaliable })
     },

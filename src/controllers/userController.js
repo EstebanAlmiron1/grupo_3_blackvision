@@ -62,6 +62,7 @@ const controller = {
     },
     profile: async (req, res) => {
         let userFind = await db.User.findByPk(req.params.id);
+                
         return res.render(path.join(__dirname, "../views/profile.ejs"), { user: req.session.userLogged })
     }, 
     /*search: (req, res) => {

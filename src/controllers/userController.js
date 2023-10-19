@@ -35,7 +35,7 @@ const controller = {
     }, 
     registerProcess: async (req, res) => {
         let errors = validationResult(req)
-        let userInDb = await db.User.findOne({where:{email: req.body.email}})
+        let userInDb = await db.User.findOne({where:{mail: req.body.emailus}})
         if (userInDb) {
             return res.render(path.join(__dirname, "../views/register.ejs"),{
                 errors:{email :{msg :'email ya registrado'}},
@@ -44,27 +44,24 @@ const controller = {
         }
         if (errors.isEmpty()) {
             db.User.create({            
-                "name": req.body.nameus.toLowerCase(),
-                "lastname": req.body.lastnameus.toLowerCase(),
-                "birthday": req.body.birthday.toLowerCase(),
-                "adress": req.body.adressus.toLowerCase(),
-                "email": req.body.emailus.toLowerCase(),
+                "first_name": req.body.nameus.toLowerCase(),
+                "last_name": req.body.lastnameus.toLowerCase(),
+                "birthdate": req.body.birthday.toLowerCase(),
+                "address": req.body.adressus.toLowerCase(),
+                "mail": req.body.emailus.toLowerCase(),
                 "password": bcrypt.hashSync(req.body.passus,10),       
                 "img": req.file ? req.file.filename : 'defaultUs.png',
-                "admin": false,
-                "deleted":false
-
+                "id_roles": 1
             })
             return res.redirect('/user/profile/1')
         }
         else return res.render(path.join(__dirname, "../views/register.ejs"),{msgError: errors.array(), old: req.body})
     },
     cart: (req, res) => {
-        return res.render(path.join(__dirname, "../views/productCart.ejs"))
+        return res.render(path.join(__dirname, "../views/productCart.ejs"))//tarea fiamma
     },
-    profile: (req, res) => {
-        //let userFound = userList.find((i) => i.id == req.params.id);
-        //console.log(res.locals.isLogged);
+    profile: async (req, res) => {
+        let userFind = await db.User.findByPk(req.params.id);
         return res.render(path.join(__dirname, "../views/profile.ejs"), { user: req.session.userLogged })
     }, 
     /*search: (req, res) => {

@@ -10,8 +10,8 @@
                 <form action="/" method="get">
                     <h3 class="sub-title">DETALLES DE CONTACTO</h3>
                     <img src="/img/users/<%= user.img %>" alt="ImageProfile">
-                    <p><%= user.lastname %> , <%= user.name %> </p>
-                    <p><%= user.email %></p>
+                    <p><%= user.last_name %> , <%= user.first_name %> </p>
+                    <p><%= user.mail %></p>
                     <div class="edit"> 
                         <button type="submit">Editar <i class="fas fa-angle-right"></i></button>
                         <button type="submit">Cambiar contraseña <i class="fas fa-angle-right"></i></button>
@@ -49,8 +49,8 @@
                 </form>
                 <form action="/" method="get">
                     <h3 class="sub-title">Dirección de envío predeterminada</h3>
-                    <p><%= user.lastname %> , <%= user.name %></p>
-                    <p><%= user.adress %></p> 
+                    <p><%= user.last_name %> , <%= user.first_name %></p>
+                    <p><%= user.address %></p> 
                     <p>Ciudad, provincia, codigo postal</p>
                     <p>Pais</p>
                     <p>Tel:</p>

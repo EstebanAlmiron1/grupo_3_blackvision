@@ -17,7 +17,7 @@ const controller = {
                 delete userToLogin.password
                 req.session.userLogged = userToLogin
                 if(req.body.remember){
-                    res.cookie("userMail", req.body.mail, {maxAge : (1000*60)*10})
+                    res.cookie("userMail", req.body.mail, {maxAge : (4000*60)*10})
                 }
                 return res.redirect('/user/profile/'+ userToLogin.id)
             }

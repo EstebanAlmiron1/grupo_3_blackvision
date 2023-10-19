@@ -7,6 +7,9 @@ const { validationResult } = require('express-validator')
 const controller = {
     list: async (req, res) => {
         let productsAvaliable = await db.Product.findAll()
+
+        console.log(res.locals.userLogged + "este es el pointer" );
+
         return res.render(path.join(__dirname, "../views/productList.ejs"), { listP: productsAvaliable })
     },
     detail: async (req, res) => {

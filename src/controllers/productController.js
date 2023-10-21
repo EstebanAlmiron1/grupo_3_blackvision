@@ -6,20 +6,13 @@ const { validationResult } = require('express-validator')
 
 const controller = {
     list: async (req, res) => {
-        let userAdmin = req.session.userLogged.id_roles ? req.session.userLogged.id_roles : 'te deslogueaste'
-        console.log('si es igual a 1, entonces es admin = ' + userAdmin );
-        let productsAvaliable = await db.Product.findAll(/*{  preguntar al profe como hacer lo de paranoid false
-            if (userAdmin == 1) {
-                paranoid : false
-            }
-        }*/)
+        let productsAvaliable = await db.Product.findAll()
         
 
         return res.render(path.join(__dirname, "../views/productList.ejs"), { listP: productsAvaliable })
     },
     detail: async (req, res) => {
-        let productFound = await db.Product.findByPk(req.params.id,{include:[{association:"Size"},{association:"Color"},{association:"Brand"},{association:"Category"}]});
-        console.log("producto del detalle" + productFound.Size.size); 
+        let productFound = await db.Product.findByPk(req.params.id,{include:[{association:"Size"},{association:"Color"},{association:"Brand"},{association:"Category"}]}); 
         return res.render(path.join(__dirname, "../views/productDetail.ejs"), { product: productFound })
     },
     crear: async (req, res) => {

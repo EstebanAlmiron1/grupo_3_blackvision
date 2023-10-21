@@ -46,9 +46,13 @@
                     <h4 class="description-detail">DESCRIPCIÓN</h4>
                     <p><%= product.description %></p>                    
                 </div>
-                <form class="button-detail" action="/products/edit/<%= product.id %>" method="GET"> 
-                    <button class="buys-detail">Editar producto</button>                                   
-                </form>                       
+                <% if (locals.isLogged) {%>
+                   <% if (locals.userLogged.id_roles == 1) { %>
+                        <form class="button-detail" action="/products/edit/<%= product.id %>" method="GET"> 
+                          <button class="buys-detail">Editar producto</button>                                   
+                      </form>   
+                     <% }}%>
+                                      
             </article>
         </section>
     </main>

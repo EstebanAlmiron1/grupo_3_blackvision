@@ -56,7 +56,16 @@
     padding-top: 10px;
 }
 
-.products-list article{
+.avaliable{
+    width: 45%;
+    margin-bottom: 10px;
+    border: 1px solid var(--azul);
+    border-radius: 5px;
+    transition: all 0.4s;
+    height: 325px;
+    background-color: #fff;
+}
+.deletedArticle{
     width: 45%;
     margin-bottom: 10px;
     border: 1px solid var(--azul);
@@ -66,7 +75,7 @@
     background-color: #fff;
 }
 
-.products-list article:hover{
+.avaliable:hover{
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -114,7 +123,7 @@
     top: 5px;
 }
 
-.products-list article:hover .fa-heart{
+.avaliable:hover .fa-heart{
     display: block;
 }
 
@@ -143,7 +152,7 @@
 }
 
 @media (min-width: 426px){
-    .products-list article{
+    .avaliable{
         width: 30%;
     }
 
@@ -261,7 +270,7 @@
         width: 80%;
     }
 
-    .products-list article{
+    .avaliable{
         height: 400px;
     }
 

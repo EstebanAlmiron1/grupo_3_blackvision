@@ -7,7 +7,7 @@ const { CharsetToEncoding } = require('mysql2')
 
 const controller = {
     login: (req, res) => {
-        return res.render(path.join(__dirname, "../views/login.ejs"))
+        return res.render("login")
     },
     loginProcess: async (req,res) => { 
         let userToLogin = await db.User.findOne({where:{mail: req.body.mail}})
@@ -22,22 +22,22 @@ const controller = {
                 return res.redirect('/user/profile/'+ userToLogin.id)
             }
             else 
-            return res.render(path.join(__dirname, "../views/login.ejs"),{
+            return res.render("login",{
                 errors:{email :{msg :'email o contraseña inválida'}}
             })
         }
-        return res.render(path.join(__dirname, "../views/login.ejs"),{
+        return res.render("login",{
             errors:{email :{msg :'email no registrado'}}
         })
     },
     register: (req, res) => {
-        return res.render(path.join(__dirname, "../views/register.ejs"))
+        return res.render("register")
     }, 
     registerProcess: async (req, res) => {
         let errors = validationResult(req)
         let userInDb = await db.User.findOne({where:{mail: req.body.emailus}})
         if (userInDb) {
-            return res.render(path.join(__dirname, "../views/register.ejs"),{
+            return res.render("register",{
                 errors:{email :{msg :'email ya registrado'}},
                 old : req.body
             })            
@@ -55,15 +55,15 @@ const controller = {
             })
             return res.redirect('/user/profile/1')
         }
-        else return res.render(path.join(__dirname, "../views/register.ejs"),{msgError: errors.array(), old: req.body})
+        else return res.render("register",{msgError: errors.array(), old: req.body})
     },
     cart: (req, res) => {
-        return res.render(path.join(__dirname, "../views/productCart.ejs"))//tarea fiamma
+        return res.render("productCart")//tarea fiamma
     },
     profile: async (req, res) => {
         let userFind = await db.User.findByPk(req.params.id);
                 
-        return res.render(path.join(__dirname, "../views/profile.ejs"), { user: req.session.userLogged })
+        return res.render("profile", { user: req.session.userLogged })
     }, 
     /*search: (req, res) => {
         let busqueda = req.query.search.toLowerCase();
@@ -77,7 +77,7 @@ const controller = {
     },*/ 
     list: async (req,res)=>{
         let userAvailable = await db.User.findAll()
-        return res.render(path.join(__dirname, "../views/users.ejs"), { user: userAvailable })
+        return res.render("users", { user: userAvailable })
     },
     logout: (req,res)=>{
         res.clearCookie("userMail")

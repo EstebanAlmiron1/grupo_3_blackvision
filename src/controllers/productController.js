@@ -6,10 +6,16 @@ const { validationResult } = require('express-validator')
 
 const controller = {
     list: async (req, res) => {
-        let productsAvaliable = await db.Product.findAll()
-        
+        if (locals.isLogged) {
+            if (locals.userLogged.id_roles == 1) {
+                let productsAvaliable = await db.Product.findAll({paranoid: false})
+                return res.render(path.join(__dirname, "../views/productList.ejs"), { listP: productsAvaliable })
+            }
+        } else {
+            let productsAvaliable = await db.Product.findAll()
+            return res.render(path.join(__dirname, "../views/productList.ejs"), { listP: productsAvaliable })
 
-        return res.render(path.join(__dirname, "../views/productList.ejs"), { listP: productsAvaliable })
+        }
     },
     detail: async (req, res) => {
         let productFound = await db.Product.findByPk(req.params.id,{include:[{association:"Size"},{association:"Color"},{association:"Brand"},{association:"Category"}]}); 

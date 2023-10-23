@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator')
 const db = require('../database/models')
 const { CharsetToEncoding } = require('mysql2')
+const { log } = require('console')
 
 const controller = {
     login: (req, res) => {
@@ -66,9 +67,14 @@ const controller = {
         return res.render("profile", { user: req.session.userLogged })
     }, 
     search: async (req, res) => {
-        let busqueda = '%'+req.query.search+'%';
-        let searchResult = await db.Product.findAll({where:{name:{[db.Sequelize.Op.like]:busqueda}}})
-        
+        let busqueda = req.query.search;
+        let searchResult = await db.Product.findAll({where:{[db.Sequelize.Op.or]:[
+            {name:{[db.Sequelize.Op.like]:'%'+busqueda+'%'}},
+            {description:{[db.Sequelize.Op.like]:'%'+busqueda+'%'}}
+            
+        ]
+            }})
+        console.log(searchResult);
         return res.render('resultadobusqueda', { resultadoBusqueda: searchResult, palabra: busqueda, })
     },
     list: async (req,res)=>{

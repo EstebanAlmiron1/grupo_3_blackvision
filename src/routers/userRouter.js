@@ -18,7 +18,7 @@ router.get("/logout",controller.logout)
 router.get("/profile/:id",authtMiddelware,controller.profile)
 router.get("/cart",controller.cart)
 //otros
-//router.get("/userResults", controller.search)
+router.get("/userResults", controller.search)
 router.get("/list", controller.list)
 
 module.exports=router

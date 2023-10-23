@@ -1,6 +1,5 @@
 const path = require('path')
 const fs = require('fs')
-//let productsList = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productData.json'), 'utf-8'))//
 const db = require('../database/models')
 const { validationResult } = require('express-validator')
 

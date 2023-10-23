@@ -1,7 +1,7 @@
-const path=require('path')
+const path = require('path')
 
-const controller ={
-    home:(req,res)=>{        
+const controller = {
+    home: (req, res) => {
         return res.render("index")
     }
 }

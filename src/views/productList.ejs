@@ -71,7 +71,7 @@
         </section>
         <section class="products-list">
             <% listP.forEach(i => { %>
-                <article>
+                <article class="avaliable">
                     <div class="img-products-list">
                         <a href="/products/detail/<%= i.id %>"><img src= "/img/products/<%=i.img%>" alt="Lentes" class="img-lentes"></a>
                         <i class="fas fa-chevron-left"></i>
@@ -80,9 +80,13 @@
                     </div>
                     <div class="products-details-list">
                         <a href="/products/detail/<%= i.id %>">
-                            <p class="product-price-list"><%= i.precio %></p>
-                            <h4 class="product-name-list"><%= i.nombre %></h4>
+                            <p class="product-price-list"><%= i.price %></p>
+                            <h4 class="product-name-list"><%= i.name %></h4>
+                            <p></p>
                             <p class="product-shipments-list">Envios gratis!</p>
+                            <% if (i.deleted_at != null) { %>
+                               <p class="product-shipments-list">Producto borrado</p>
+                            <% } %>
                         </a>
                     </div>
                 </article>

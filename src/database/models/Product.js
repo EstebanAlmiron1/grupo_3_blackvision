@@ -43,7 +43,7 @@ module.exports= function(sequelize,DataTypes){
     }
     let config = {
         tableName: 'products',
-        timestamps: false,
+        timestamps: true,
         paranoid: true,
         deletedAt: "deleted_at",
         updatedAt: "updated_at",

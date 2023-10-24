@@ -72,7 +72,7 @@
         </section>
         <section class="products-list">
             <% resultadoBusqueda.forEach(i => { %>
-                <% if (resultadoBusqueda.length > 0) { %>
+                <% if (resultadoBusqueda.length == 0) { %>
                 <article>
                     <div class="img-products-list">
                         <a href="/products/detail/<%= i.id %>"><img src= "/img/products/<%=i.img%>" alt="Lentes" class="img-lentes"></a>
@@ -82,13 +82,18 @@
                     </div>
                     <div class="products-details-list">
                         <a href="/products/detail/<%= i.id %>">
-                            <p class="product-price-list"><%= i.precio %></p>
-                            <h4 class="product-name-list"><%= i.nombre %></h4>
+                            <p class="product-price-list"><%= i.price %></p>
+                            <h4 class="product-name-list"><%= i.name %></h4>
                             <p class="product-shipments-list">Envios gratis!</p>
                         </a>
                     </div>
                 </article>
-                <% } else { %> <p>No encontramos ningun producto relacionado</p></article>
+                <% } else { %> 
+                    <article>                        
+                        <div class="products-details-list"> 
+                                <p class="product-shipments-list">No hay productos relacionados con tu busqueda</p>
+                        </div>
+                    </article>
                     <% } %>
             <% }); %>
         </section>

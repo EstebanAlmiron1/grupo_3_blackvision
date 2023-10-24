@@ -8,7 +8,7 @@
             <h4 class="description-detail"></h4>
             <article class="images1">
                 <div class="img-detail">
-                    <img src= "/img/products/<%= product.img%>" alt="Lentes">                    
+                    <img id="image" src= "/img/products/<%= product.img%>" alt="<%= product.img%>">                    
                 </div>    
                 <div class="img-selector">
                     <img src="/img/products/<%= product.img %>" alt="Lentes">
@@ -25,26 +25,27 @@
                 </div>
             </article>
             <article>
-                <form class="button-detail" action="/user/cart" method="GET"> 
+                <div class="button-detail"> 
                     <button class="buys-detail">Comprar ahora</button>
                     <button class="add-detail">Agregar al carrito</button>                 
-                </form>
+                </div>
             </article>
         </section>
         <section>
             <article>
                 <div class="characteristic-detail">
-                    <h4 class="characteristic-vulk">Características de <%= product.nombre %></h4>
-                    <p><i class="fas fa-check-circle"></i> Marca: <%= product.Brand.name %></p>
-                    <p><i class="fas fa-check-circle"></i> Color: <%= product.Color.name %></p>
-                    <p><i class="fas fa-check-circle"></i> Talle: <%= product.Size.size %></p>
-                    <p><i class="fas fa-check-circle"></i> Categoria: <%= product.Category.name %></p>
+                    <h4 class="characteristic-vulk">Características de <span id="name"><%= product.nombre %></span></h4>
+                    <p><i class="fas fa-check-circle"></i> Id: <span id="idProduct"><%= product.id %></span></p>
+                    <p><i class="fas fa-check-circle"></i> Marca: <span id="brand"><%= product.Brand.name %></span></p>
+                    <p><i class="fas fa-check-circle"></i> Color: <span id="color"><%= product.Color.name %></span></p>
+                    <p><i class="fas fa-check-circle"></i> Talle: <span id="size"><%= product.Size.size %></span></p>
+                    <p><i class="fas fa-check-circle"></i> Categoria: <span id="category"><%= product.Category.name %></span></p>
                 </div>
             </article>
             <article>
                 <div class="detail-detail">
                     <h4 class="description-detail">DESCRIPCIÓN</h4>
-                    <p><%= product.description %></p>                    
+                    <p id="description"><%= product.description %></p>                    
                 </div>
                 <form class="button-detail" action="/products/edit/<%= product.id %>" method="GET"> 
                     <button class="buys-detail">Editar producto</button>                                   
@@ -53,5 +54,6 @@
         </section>
     </main>
     <%- include('partials/footer.ejs')%>
+    <script src="/js/addToCart.js"></script>
 </body>
 </html>

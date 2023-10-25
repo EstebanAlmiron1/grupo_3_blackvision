@@ -30,7 +30,7 @@ window.onload = function ( ) {
             size: size.innerText,
             category: category.innerText,
             description: description.innerText,
-            price: price.innerText,
+            price: parseFloat(price.innerText),
             img: img.alt
         }
 

@@ -21,5 +21,5 @@ const validatorRegister = [
     check('emailus').notEmpty().withMessage('El email es un campo obligatorio').bail().isEmail().withMessage('Debe ingresar un email valido') ,
     check('passus').notEmpty().withMessage('La password es un campo obligatorio').bail().isLength({min:8,max:20}).withMessage('la password debe tener minimo 8 caracteres') ,
     
-]
+  ]
 module.exports = validatorRegister

@@ -41,23 +41,32 @@ const controller = {
         let brand = await db.Brand.findAll();
         return res.render("productCreate", { size: size, category: category, color: color, brand: brand })
     },
-    crearProcess: (req, res) => {
+    crearProcess: async (req, res) => {
+        let size = await db.Size.findAll();
+        let category = await db.Category.findAll();
+        let color = await db.Color.findAll();
+        let brand = await db.Brand.findAll();
+
         let errors = validationResult(req)
-        if (errors.errors.length > 0) { console.log(errors) }
-        let newProduct = db.Product.create({
-            "name": req.body.name.toLowerCase(),
-            "description": req.body.description.toLowerCase(),
-            "id_color": req.body.color,
-            "price": req.body.price,
-            "img": req.file ? req.file.filename : 'logo.png',
-            "id_brand": req.body.brand,
-            "id_size": req.body.size,
-            "id_category": req.body.category
-        })
+        console.log(req.body.size)
+        if (errors.isEmpty()) { 
+            let newProduct = db.Product.create({
+                "name": req.body.name.toLowerCase(),
+                "description": req.body.description.toLowerCase(),
+                "id_color": req.body.color,
+                "price": req.body.price,
+                "img": req.file ? req.file.filename : 'logo.png',
+                "id_brand": req.body.brand,
+                "id_size": req.body.size,
+                "id_category": req.body.category                
+            })
+            return res.redirect('/')
+        }else {res.render("productCreate",{errores:errors.array(),old:req.body,size: size, category: category, color: color, brand: brand}) }
+        
 
 
 
-        return res.redirect('/')
+        
     },
     edit: async (req, res) => {
         let size = await db.Size.findAll();

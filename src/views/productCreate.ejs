@@ -37,13 +37,13 @@
                         <% for (let index = 0; index < size.length; index++) {%>
                             <%const element = size[index]%>
                            
-                            <% if (element.id == size.id){ %>                                
+                            <% if (element.id == size.id_size){ %>                         
                                 <option value="<%=element.id%>"selected>
-                                    <%=element.size%>
+                                    <%=element.size%> 
                                 </option>                                                        
                             <%}else{%> 
                                 <option value="<%= element.id %>">
-                                    <%=element.name%>
+                                    <%=element.size%>
                                 </option>
                                 <% } }%>   
                            
@@ -70,7 +70,7 @@
                         <%} %>                        
                     </select>
                 </div>  
-                <input type="number" placeholder="precio" id="price" name="price" value="<%= locals.old && old.price ? old.price : ''%>>
+                <input type="number" placeholder="precio" id="price" name="price" value="<%= locals.old && old.price ? old.price : ''%>">
                 <label for="image-create" class="label-create"><i class="fas fa-upload"></i>Carga la imagen</label>
                 <input type="file" placeholder="Carga la imagen" id="image-create" name="image">                
                 <button type="submit">Cargar producto</button>

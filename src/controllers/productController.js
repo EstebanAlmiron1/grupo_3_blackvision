@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const db = require('../database/models')
 const { validationResult } = require('express-validator')
+const nodemon = require('nodemon')
 
 const controller = {
     list: async (req, res) => {
@@ -47,9 +48,7 @@ const controller = {
         let color = await db.Color.findAll();
         let brand = await db.Brand.findAll();
 
-        let errors = validationResult(req)
-        console.log(errors)
-        
+        let errors = validationResult(req)       
         if (errors.isEmpty()) { 
             let newProduct = db.Product.create({
                 "name": req.body.name.toLowerCase(),
@@ -60,11 +59,11 @@ const controller = {
                 "id_brand": req.body.brand,
                 "id_size": req.body.size,
                 "id_category": req.body.category                
-            })
+            })            
             return res.redirect('/')
-        }else {res.render("productCreate",{errores:errors.array(),old:req.body,size: size, category: category, color: color, brand: brand}) }
-        
-
+        }else { console.log(req.body+ "error");res.render("productCreate",{errores:errors.array(),old:req.body,size: size, category: category, color: color, brand: brand}) }
+       
+       
 
 
         

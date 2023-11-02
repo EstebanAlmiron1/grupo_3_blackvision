@@ -48,7 +48,8 @@ const controller = {
         let brand = await db.Brand.findAll();
 
         let errors = validationResult(req)
-        console.log(req.body.size)
+        console.log(errors)
+        
         if (errors.isEmpty()) { 
             let newProduct = db.Product.create({
                 "name": req.body.name.toLowerCase(),

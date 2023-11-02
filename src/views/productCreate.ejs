@@ -20,8 +20,8 @@
             </ul>    
             <form action="/products/create" method="post" enctype="multipart/form-data">
                 
-                <input type="text" placeholder="Nombre del producto" name="name">
-                <input type="text" placeholder="Descripción" name="description">
+                <input type="text" placeholder="Nombre del producto" name="name" value="<%= locals.old && old.name ? old.name : ''%>">
+                <input type="text" placeholder="Descripción" name="description" value="<%= locals.old && old.description ? old.description : ''%>">
                 <div class="size-edit"><label for="color">Color: </label>
                     <select name="color" >
                         <% for (let index = 0; index < color.length; index++) {%> 
@@ -36,10 +36,18 @@
                     <select  id="size" name="size">
                         <% for (let index = 0; index < size.length; index++) {%>
                             <%const element = size[index]%>
-                            <option value="<%=element.id%>">
-                                <%=element.size%>
-                            </option>                                                        
-                        <%} %>                        
+                           
+                            <% if (element.id == size.id){ %>                                
+                                <option value="<%=element.id%>"selected>
+                                    <%=element.size%>
+                                </option>                                                        
+                            <%}else{%> 
+                                <option value="<%= element.id %>">
+                                    <%=element.name%>
+                                </option>
+                                <% } }%>   
+                           
+                                            
                     </select>
                 </div>
                 <div class="size-edit"> <label for="category">Categoria: </label>
@@ -62,7 +70,7 @@
                         <%} %>                        
                     </select>
                 </div>  
-                <input type="number" placeholder="precio" id="price" name="price">
+                <input type="number" placeholder="precio" id="price" name="price" value="<%= locals.old && old.price ? old.price : ''%>>
                 <label for="image-create" class="label-create"><i class="fas fa-upload"></i>Carga la imagen</label>
                 <input type="file" placeholder="Carga la imagen" id="image-create" name="image">                
                 <button type="submit">Cargar producto</button>

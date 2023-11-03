@@ -6,14 +6,14 @@ const validations = [
         let file = req.file;
         if(file){
             if(req.fileError){
-                throw new Error ('adjunte una imagen con formato valido')
+                throw new Error ('Adjunte una imagen con formato valido')
             }
             else if (file.size > 1024*1024*10){
                 fs.unlinkSync(file.path)
-                throw new Error ('la imagen debe pesar menos de 10Mb')
+                throw new Error ('*La imagen debe pesar menos de 10Mb')
             }
             return true
-        }else {throw new Error ('debe cargar una imagen')}
+        }else {throw new Error ('* El producto debe tener una imagen')}
         
     })
 ]

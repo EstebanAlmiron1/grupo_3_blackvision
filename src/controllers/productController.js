@@ -62,7 +62,7 @@ const controller = {
                 "id_category": req.body.category                
             })            
             return res.redirect('/')
-        }else { console.log(req.body+ "error");res.render("productCreate",{errores:errors.array(),old:req.body,size: size, category: category, color: color, brand: brand}) }
+        }else {res.render("productCreate",{errores:errors.array(),old:req.body,size: size, category: category, color: color, brand: brand}) }
        
        
 

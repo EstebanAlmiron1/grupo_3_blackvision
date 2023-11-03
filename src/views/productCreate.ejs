@@ -38,13 +38,13 @@
                         
                         <% for (let index = 0; index < size.length; index++) {%>
                             <%const element = size[index]%>                            
-                            <% if (element.id == size.size){ %>                                
+                            <% if (element.id == size.size_size){ %>                         
                                 <option value="<%=element.id%>"selected>
-                                    <%=element.size%>
+                                    <%=element.size%> 
                                 </option>                                                        
                             <%}else{%> 
                                 <option value="<%= element.id %>">
-                                    <%=element.size%>  
+                                    <%=element.size%>
                                 </option>
                                 <% } }%>   
                            

@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const db = require('../database/models')
 const { validationResult } = require('express-validator')
+const { log } = require('console')
 
 const controller = {
     list: async (req, res) => {
@@ -46,9 +47,10 @@ const controller = {
         let category = await db.Category.findAll();
         let color = await db.Color.findAll();
         let brand = await db.Brand.findAll();
+        let old = JSON.parse(JSON.stringify(req.body))
 
         let errors = validationResult(req)
-        console.log(errors)
+        
         
         if (errors.isEmpty()) { 
             let newProduct = db.Product.create({
@@ -62,7 +64,8 @@ const controller = {
                 "id_category": req.body.category                
             })
             return res.redirect('/')
-        }else {res.render("productCreate",{errores:errors.array(),old:req.body,size: size, category: category, color: color, brand: brand}) }
+        }else {console.log(old);
+            res.render("productCreate",{errores:errors.array(),oldData: old,size: size, category: category, color: color, brand: brand}) }
         
 
 

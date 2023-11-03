@@ -52,7 +52,7 @@ const controller = {
                 "mail": req.body.emailus.toLowerCase(),
                 "password": bcrypt.hashSync(req.body.passus, 10),
                 "img": req.file ? req.file.filename : 'defaultUs.png',
-                "id_roles": 1
+                "id_roles": 2
             })
             return res.redirect('/user/profile/1')
         }

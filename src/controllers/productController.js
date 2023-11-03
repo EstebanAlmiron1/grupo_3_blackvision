@@ -8,14 +8,14 @@ const controller = {
     list: async (req, res) => {
         if (req.session.userLogged) {
             if (req.session.userLogged.id_roles == 1) {
-                let productsAvaliable = await db.Product.findAll({ paranoid: false })
+                let productsAvaliable = await db.Product.findAll({ include: [{ association: "Brand" }], paranoid: false, })
                 return res.render("productList", { listP: productsAvaliable })
             } else {
-                let productsAvaliable = await db.Product.findAll()
+                let productsAvaliable = await db.Product.findAll({ include: [{ association: "Brand" }]})
                 return res.render("productList", { listP: productsAvaliable })
             }
         } else {
-            let productsAvaliable = await db.Product.findAll()
+            let productsAvaliable = await db.Product.findAll({ include: [{ association: "Brand" }]})
             return res.render("productList", { listP: productsAvaliable })
 
         }

@@ -68,6 +68,8 @@
     transition: all 0.4s;
     display: flex;
     flex-wrap: wrap;
+    place-content: space-around;
+    background-color: white;
 }
 
 .user-list article:hover{

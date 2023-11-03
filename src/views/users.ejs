@@ -10,9 +10,7 @@
                 <article>
                     <div class="img-user-list">
                         <a href="/user/profile/<%= i.id %>"><img src= "/img/users/<%= i.img %>" alt="avatar" class="img-lentes"></a>
-                        <i class="fas fa-chevron-left"></i>
-                        <i class="fas fa-chevron-right"></i>
-                        <i class="far fa-heart"></i>
+                        
                     </div>
                     <div class="user-details-list">
                         <a href="/user/profile/<%= i.id %>">
@@ -21,6 +19,7 @@
                             <p class="product-price-list"><%= i.birthdate %></p>
                             <p class="product-price-list"><%= i.address %></p>
                             <p class="product-price-list"><%= i.mail %></p>
+                            <p class="product-price-list"><%= i.id_roles == 1 ? 'ADMINISTRADOR' : 'COMPRADOR' %></p>
                         </a>
                     </div>
                 </article>

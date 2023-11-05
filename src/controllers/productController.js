@@ -3,7 +3,7 @@ const fs = require('fs')
 const db = require('../database/models')
 const { validationResult } = require('express-validator')
 const nodemon = require('nodemon')
-
+ 
 const controller = {
     list: async (req, res) => {
         if (req.session.userLogged) {
@@ -47,8 +47,7 @@ const controller = {
         let category = await db.Category.findAll();
         let color = await db.Color.findAll();
         let brand = await db.Brand.findAll();
-        let old = JSON.parse(JSON.stringify(req.body))
-
+        let old = JSON.parse(JSON.stringify(req.body))        
         let errors = validationResult(req)       
         if (errors.isEmpty()) { 
             let newProduct = db.Product.create({
@@ -62,7 +61,8 @@ const controller = {
                 "id_category": req.body.category                
             })            
             return res.redirect('/')
-        }else {res.render("productCreate",{errores:errors.array(),old:req.body,size: size, category: category, color: color, brand: brand}) }
+        }else {
+            res.render("productCreate",{errores:errors.array(),old:old,size: size, category: category, color: color, brand: brand}) }
        
        
 

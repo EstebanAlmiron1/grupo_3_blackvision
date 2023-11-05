@@ -2,45 +2,61 @@
 <html lang="en">
 <%- include('partials/head.ejs')%>
 
-<body>
-    <%- include('partials/header.ejs')%>
-    <main>
-        <section class="register-box">
-            <h2>REGISTRARSE</h2>
-            <h3>Por favor complete la siguiente informacion</h3>
-            <form action="/user/register" method="post" enctype="multipart/form-data">
-                <% if (locals.errors && errors.email) { %>                
-                <P>* <%= errors.email.msg %> </P>    
-                <%}%>                
-                <% if (locals && locals.msgError) { %> 
-                 <% msgError.forEach(i => { %>
-                  <p>* <%= i.msg %></p>
-                 <% }) %>
-                <% } %>
-                <label for="text"></label>
-                <input type="text" placeholder="Nombre" id="name" name="nameus" value="<%= locals.old && old.nameus ? old.nameus : ''%>">
+    <body>
+        <%- include('partials/header.ejs')%>
+            <section class="register-box">
+                <h2>REGISTRARSE</h2>
+                <h3>Por favor complete la siguiente informacion</h3>
+                <form class="form-register" action="/user/register" method="post" enctype="multipart/form-data">
+                    <ul class="register-errors">
+                        <% if (locals.errors && errors.email) { %>
+                            <li>* <%= errors.email.msg %>
+                            </li>
+                            <%}%>
+                                <% if (locals && locals.msgError) { %>
+                                    <% msgError.forEach(i=> { %>
+                                        <li>* <%= i.msg %>
+                                        </li>
+                                        <% }) %>
+                                            <% } %>
+                    </ul>
 
-                <label for="text"></label>
-                <input type="text" placeholder="Apellido" id="apellido" name="lastnameus" value="<%= locals.old && old.lastnameus ? old.lastnameus : ''%>">
+                                            <label for="text"></label>
+                                            <input type="text" placeholder="Nombre" id="name" name="nameus"
+                                                value="<%= locals.old && old.nameus ? old.nameus : ''%>">
 
-                <label for="date"></label>
-                <input type="date"placeholder="Fecha de nacimiento" id="fden" name="birthday" value="<%= locals.old && old.birthday ? old.birthday : ''%>">
+                                            <label for="text"></label>
+                                            <input type="text" placeholder="Apellido" id="apellido" name="lastnameus"
+                                                value="<%= locals.old && old.lastnameus ? old.lastnameus : ''%>">
 
-                <label for="text"></label>
-                <input type="text" placeholder="Domicilio" id="domicilio" name="adressus" value="<%= locals.old && old.adressus ? old.adressus : ''%>">
-                
-                <label for="E-mail"></label>
-                <input type="text" placeholder="Correo Electronico" id="email" name="emailus" value="<%= locals.old && old.emailus ? old.emailus : ''%>">
+                                            <label for="date"></label>
+                                            <input type="date" placeholder="Fecha de nacimiento" id="fden"
+                                                name="birthday"
+                                                value="<%= locals.old && old.birthday ? old.birthday : ''%>">
 
-                <label for="password"></label>
-                <input type="password" placeholder="Contraseña" id="password" name="passus">
-                <label for="image-edit" class="label-edit"><i class="fas fa-upload"></i>Imagen de perfil</label>
-                        <input type="file" placeholder="Carga la imagen" id="image-edit" name="imageus">
+                                            <label for="text"></label>
+                                            <input type="text" placeholder="Domicilio" id="domicilio" name="adressus"
+                                                value="<%= locals.old && old.adressus ? old.adressus : ''%>">
 
-                <button type="submit">CREAR UNA CUENTA</button>
-            </form>
-        </section>
-    </main>  
-    <%- include('partials/footer.ejs')%>
-</body>
+                                            <label for="E-mail"></label>
+                                            <input type="text" placeholder="Correo Electronico" id="email"
+                                                name="emailus"
+                                                value="<%= locals.old && old.emailus ? old.emailus : ''%>">
+
+                                            <label for="password"></label>
+                                            <input type="password" placeholder="Contraseña" id="password" name="passus">
+                                            <label for="image-edit" class="label-edit"><i
+                                                    class="fas fa-upload"></i>Imagen de perfil</label>
+                                            <input type="file" placeholder="Carga la imagen" id="image-edit"
+                                                name="imageus">
+
+                                            <button type="submit">CREAR UNA CUENTA</button>
+                </form>
+            </section>
+            </main>
+            <%- include('partials/footer.ejs')%>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="/js/validationsRegister.js"></script>
+    </body>
+
 </html>

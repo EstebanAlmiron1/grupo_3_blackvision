@@ -17,9 +17,9 @@ const validatorRegister = [
 
   return true;
     }),
-    check('adressus').notEmpty().withMessage('*La direccion es un campo obligatorio') ,
-    check('emailus').notEmpty().withMessage('*El email es un campo obligatorio').bail().isEmail().withMessage('Debe ingresar un email valido') ,
-    check('passus').notEmpty().withMessage('*La password es un campo obligatorio').bail().isLength({min:8,max:20}).withMessage('la password debe tener minimo 8 caracteres') ,
+    check('adressus').notEmpty().withMessage('*El domicilio es un campo obligatorio') ,
+    check('emailus').notEmpty().withMessage('*El email es un campo obligatorio').bail().isEmail().withMessage('*Email con formato invalido') ,
+    check('passus').notEmpty().withMessage('*La password es un campo obligatorio').bail().isLength({min:8,max:20}).withMessage('*La password debe tener minimo 8 caracteres') ,
     
   ]
 module.exports = validatorRegister

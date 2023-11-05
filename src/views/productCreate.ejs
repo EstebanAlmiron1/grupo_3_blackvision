@@ -8,7 +8,7 @@
         <section class="register-box">
             <h2>Cargar producto para vender</h2>
             <h3> Agregue la informacion del producto</h3>
-            <ul>
+            <ul class="ul-errors">
                 <% if (locals.errores) { %>
                     <% for (let index = 0; index < errores.length; index++) {%> 
                         <%const element = errores[index]%>
@@ -16,9 +16,9 @@
                             <%=element.msg%>
                         </li>                                                        
                     <%} %>
-               <% } %>
+                <% } %>
             </ul>    
-            <form action="/products/create" method="post" enctype="multipart/form-data">
+            <form class="form-productCreate" action="/products/create" method="post" enctype="multipart/form-data">
                 
                 <input type="text" placeholder="Nombre del producto" name="name" value="<%= locals.old && old.name ? old.name : ''%>">
                 <input type="text" placeholder="Descripción" name="description" value="<%= locals.old && old.description ? old.description : ''%>">
@@ -43,12 +43,12 @@
                                     <%=element.name%>
                                 </option>                                                        
                             <%} %>
-                     <% } %>
+                        <% } %>
                     </select>
                 </div>
                 <div class="size-edit"> <label for="size">Talle: </label>
                     <select  id="size" name="size">
-                       <% if (locals.errores) { %>
+                        <% if (locals.errores) { %>
                         <% for (let index = 0; index < size.length; index++) {%>
                             <%const element = size[index]%>                            
                             <% if (element.id == old.size){ %>                         
@@ -67,7 +67,7 @@
                                 <%=element.size%>
                             </option>                                                        
                         <%} %>
-                 <% } %>
+                    <% } %>
 
                     </select>
                 </div>
@@ -92,7 +92,7 @@
                                     <%=element.name%>
                                 </option>                                                        
                             <%} %>
-                     <% } %>                       
+                        <% } %>                       
                     </select>
                 </div>
                 <div class="size-edit"> <label for="brand">Marca: </label>
@@ -116,7 +116,7 @@
                                     <%=element.name%>
                                 </option>                                                        
                             <%} %>
-                     <% } %>                    
+                        <% } %>                    
                     </select>
                 </div>  
                 <input type="number" placeholder="precio" id="price" name="price" value="<%= locals.old && old.price ? old.price : ''%>">
@@ -127,5 +127,7 @@
         </section>
     </main>  
     <%- include('partials/footer.ejs')%>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/validationsProductCreate.js"></script>
 </body>
 </html>

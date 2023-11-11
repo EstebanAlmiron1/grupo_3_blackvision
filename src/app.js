@@ -9,6 +9,8 @@ const productRouter=require("./routers/productRouter")
 const userRouter=require("./routers/userRouter")
 const userLogged= require("./middlewares/userLoggedMiddleware")
 const cookie = require('cookie-parser')
+const apiUser = require('./routers/apis/userRouteApis')
+const apiProduct = require('./routers/apis/productRouteApis')
 
 
 app.use(express.static("public"))
@@ -33,6 +35,8 @@ app.listen(3000,()=>{
 app.use("/",mainRouter)
 app.use("/products",productRouter)
 app.use("/user",userRouter)
+app.use('/api/user', apiUser)
+app.use('/api/product',apiProduct)
 
 
 

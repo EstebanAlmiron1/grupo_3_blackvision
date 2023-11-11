@@ -1,10 +1,8 @@
-const path = require('path')
-const fs = require('fs')
+
 const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator')
 const db = require('../database/models')
-const { CharsetToEncoding } = require('mysql2')
-const { log } = require('console')
+
 
 const controller = {
     login: (req, res) => {

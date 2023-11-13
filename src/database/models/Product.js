@@ -53,26 +53,26 @@ module.exports= function(sequelize,DataTypes){
     Product.associate = function (models) {
         Product.belongsTo(models.Color,{
            foreignKey :'id_color',
-           AS : 'colores'
+           as : 'colores'
         }),
         Product.belongsTo(models.Brand,{
             foreignKey :'id_brand',
-            AS : 'marcas'
+            as : 'marcas'
         }),
         Product.belongsTo(models.Size,{
             foreignKey :'id_size',
-            AS : 'talles'
+            as : 'talles'
         }),
         Product.belongsTo(models.Category,{
             foreignKey :'id_category',
-            AS : 'categorias'
+            as : 'categorias'
         }),
         Product.belongsToMany(models.Invoice,{
             foreignKey :'id_invoices',
             through: 'Invoice_product',
             otherKey:'id_products',
             timestamps: false,
-            AS : 'facturas'
+            as : 'facturas'
         })
 
     }

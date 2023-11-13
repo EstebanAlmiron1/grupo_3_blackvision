@@ -18,7 +18,7 @@ module.exports= function(sequelize,DataTypes){
     Rol.associate = function (models) {
         Rol.hasMany(models.User,{
             foreignKey :'id_roles',
-            AS : 'usuarios'
+            as : 'usuarios'
         })
     }  
     return Rol

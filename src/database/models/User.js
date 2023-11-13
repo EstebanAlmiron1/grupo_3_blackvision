@@ -53,11 +53,11 @@ module.exports= function(sequelize,DataTypes){
     User.associate = function (models) {
         User.belongsTo(models.Rol,{
            foreignKey :'id_roles',
-           AS : 'roles'
+           as : 'roles'
         }),
     User.hasMany(models.Invoice,{
             foreignKey :'id_users',
-            AS : 'facturas'
+            as : 'facturas'
         })
     }
     return User

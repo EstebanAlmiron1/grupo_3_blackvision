@@ -25,23 +25,21 @@ const controller = {
     },
     detail: async (req,res) => {
         const product = await db.Product.findByPk(req.params.id, { include: [{ association: "talles" }, { association: "colores" }, { association: "marcas" }, { association: "categorias" }] })
-        const [size,colors,brands,categories]= await Promise.all([db.Size.findOne({ where: { id: product.id_size }}),db.Color.findOne({ where: { id: product.id_color }}),db.Brand.findOne({ where: { id: product.id_brand}}),db.Category.findOne({ where: { id: product.id_category}})]);
+        
         let response = {
             id:product.id,
             name:product.name,
             description: product.description,
             price:product.price,
-            brand:brands.name,
-            size:size.size,
-            color:colors.name,
-            category: categories.name,
+            brand:product.marcas,
+            size: product.talles,
+            color:product.colores,
+            category: product.categorias,
             url_imagen:'/img/products/'+product.img,
-
-            relations: []
             
         }
-        response.relations = product._options.include.map(row=>{return row.as}
-        )
+        
+        
        res.json(response)
 
 

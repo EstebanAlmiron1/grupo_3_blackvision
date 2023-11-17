@@ -18,7 +18,8 @@ const controller = {
             name: row.name,
             description: row.description,
             category: row.Category,
-            detail: '/api/product/detail/'+row.id
+            detail: '/api/product/detail/'+row.id,
+            img: '/img/products/'+row.img
         }
        })
        res.json(respuesta)
@@ -35,7 +36,7 @@ const controller = {
             size: product.talles,
             color:product.colores,
             category: product.categorias,
-            url_imagen:'/img/products/'+product.img,
+            url_imagen:'/img/products/'+product.img
             
         }
         

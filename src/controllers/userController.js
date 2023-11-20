@@ -62,7 +62,7 @@ const controller = {
     profile: async (req, res) => {
         let userFind = await db.User.findByPk(req.params.id);
 
-        return res.render("profile", { user: req.session.userLogged })
+        return res.render("profile", { user: userFind })
     },
     search: async (req, res) => {
         let busqueda = req.query.search;
@@ -85,6 +85,39 @@ const controller = {
     logout: (req, res) => {
         res.clearCookie("userMail")
         req.session.destroy()
+        return res.redirect('/')
+    },
+    edit: async (req, res) => {
+        let userFound = await db.User.findByPk(req.params.id)
+        
+        return res.render('userEdit',{user:userFound})
+    },
+    editProcess: async (req, res) => {
+        let userFound = await db.User.findByPk(req.params.id)
+        let errors = validationResult(req)
+
+        if (errors.isEmpty()) {db.User.update({
+            first_name: req.body.nameus,
+            last_name: req.body.lastnameus,
+            birthdate: req.body.birthday,
+            address: req.body.adressus,
+            img: req.file ? req.file.filename : userFound.img,
+            mail: req.body.emailus,
+            password: req.body.passus? bcrypt.hashSync(req.body.passus, 10):userFound.password,            
+
+        }, { where: { id: req.params.id } })
+        return res.redirect('/user/profile/'+ userFound.id)
+        }else return res.render("userEdit", { msgError: errors.array(), user:userFound })
+        
+        
+        
+    },
+    deleteProcess: (req, res) => {
+        db.Product.destroy({ where: { id: req.params.id } })
+        return res.redirect('/')
+    },
+    undelteProcess: (req, res) => {
+        db.Product.restore({ where: { id: req.params.id } })
         return res.redirect('/')
     }
 }

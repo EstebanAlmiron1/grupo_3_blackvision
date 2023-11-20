@@ -7,23 +7,20 @@
         <div class="container">
             <div class="data">
                 <h2 class="title">Información de la cuenta</h2>
-                <form action="/" method="get">
+                <div>
                     <h3 class="sub-title">DETALLES DE CONTACTO</h3>
                     <img src="/img/users/<%= user.img %>" alt="ImageProfile">
                     <p><%= user.last_name %> , <%= user.first_name %> </p>
-                    <p><%= user.mail %></p>
-                    <div class="edit"> 
-                        <button type="submit">Editar <i class="fas fa-angle-right"></i></button>
-                        <button type="submit">Cambiar contraseña <i class="fas fa-angle-right"></i></button>
-                    </div>
+                    <p><%= user.mail %></p>                    
                     <h3 class="sub-title">NEWSLETTER</h3>
                     <p>No está suscripto a nuestro newsletter.</p>
-                    <div class="edit">
-                        <button type="submit">Editar <i class="fas fa-angle-right"></i></button>
-                    </div>
+                    
+                </div>
+                <form class="edit" action="/user/edit/<%= user.id %>"> 
+                    <input type="submit" value="Editar">                        
                 </form>
                 <form action="/user/logout" method="get">
-                    <input type="submit" value="Cerrar sesión"><i class="fas fa-angle-right"></i>
+                    <input type="submit" value="Cerrar sesión">
                 </form>
             </div>
             <div class="shopping">

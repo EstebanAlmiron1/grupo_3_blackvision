@@ -2,20 +2,20 @@ const path = require('path')
 const fs = require('fs')
 const db = require('../database/models')
 const { validationResult } = require('express-validator')
-const nodemon = require('nodemon')
+
  
 const controller = {
     list: async (req, res) => {
         if (req.session.userLogged) {
             if (req.session.userLogged.id_roles == 1) {
-                let productsAvaliable = await db.Product.findAll({ include: [{ association: "Brand" }], paranoid: false, })
+                let productsAvaliable = await db.Product.findAll({ include: [{ association: "marcas" }], paranoid: false, })
                 return res.render("productList", { listP: productsAvaliable })
             } else {
-                let productsAvaliable = await db.Product.findAll({ include: [{ association: "Brand" }]})
+                let productsAvaliable = await db.Product.findAll({ include: [{ association: "marcas" }]})
                 return res.render("productList", { listP: productsAvaliable })
             }
         } else {
-            let productsAvaliable = await db.Product.findAll({ include: [{ association: "Brand" }]})
+            let productsAvaliable = await db.Product.findAll({ include: [{ association: "marcas" }]})
             return res.render("productList", { listP: productsAvaliable })
 
         }
@@ -23,14 +23,14 @@ const controller = {
     detail: async (req, res) => {
         if (req.session.userLogged) {
             if (req.session.userLogged.id_roles == 1) {
-                let productFound = await db.Product.findByPk(req.params.id, { include: [{ association: "Size" }, { association: "Color" }, { association: "Brand" }, { association: "Category" }], paranoid: false });
+                let productFound = await db.Product.findByPk(req.params.id, { include: [{ association: "talles" }, { association: "colores" }, { association: "marcas" }, { association: "categorias" }], paranoid: false });
                 return res.render("productDetail", { product: productFound })
             } else {
-                let productFound = await db.Product.findByPk(req.params.id, { include: [{ association: "Size" }, { association: "Color" }, { association: "Brand" }, { association: "Category" }] });
+                let productFound = await db.Product.findByPk(req.params.id, { include: [{ association: "talles" }, { association: "colores" }, { association: "marcas" }, { association: "categorias" }] });
                 return res.render("productDetail", { product: productFound })
             }
         } else {
-            let productFound = await db.Product.findByPk(req.params.id, { include: [{ association: "Size" }, { association: "Color" }, { association: "Brand" }, { association: "Category" }] });
+            let productFound = await db.Product.findByPk(req.params.id, { include: [{ association: "talles" }, { association: "colores" }, { association: "marcas" }, { association: "categorias" }] });
             return res.render("productDetail", { product: productFound })
 
         }
@@ -93,7 +93,7 @@ const controller = {
     editProcess: async (req, res) => {
 
         let productFound = await db.Product.findByPk(req.params.id);
-        console.log(productFound.img)
+        
         db.Product.update({
             name: req.body.name,
             description: req.body.description,
@@ -108,11 +108,11 @@ const controller = {
         return res.redirect('/products/detail/' + req.params.id)
     },
     deleteProcess: (req, res) => {
-        db.Product.destroy({ where: { id: req.params.id } })
+        db.User.destroy({ where: { id: req.params.id } })
         return res.redirect('/')
     },
     undelteProcess: (req, res) => {
-        db.Product.restore({ where: { id: req.params.id } })
+        db.User.restore({ where: { id: req.params.id } })
         return res.redirect('/')
     }
 }

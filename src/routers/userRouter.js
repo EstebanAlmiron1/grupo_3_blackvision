@@ -13,7 +13,7 @@ const validatorEditUser = require('../middlewares/validatorEditUser')
 //register
 router.get("/register",guestMiddelware,controller.register)
 router.post("/register",uploadFile.single('imageus'),validatorRegister,controller.registerProcess)
-//loguin
+//login
 router.get("/login",guestMiddelware,controller.login)
 router.post("/login",controller.loginProcess)
 router.get("/logout",controller.logout)

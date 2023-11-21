@@ -91,10 +91,15 @@ const controller = {
 
     },
     editProcess: async (req, res) => {
-
+        let size = await db.Size.findAll();
+        let category = await db.Category.findAll();
+        let color = await db.Color.findAll();
+        let brand = await db.Brand.findAll();
+        //
+        let errors = validationResult(req)  
         let productFound = await db.Product.findByPk(req.params.id);
         
-        db.Product.update({
+        if (errors.isEmpty()) {db.Product.update({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
@@ -105,7 +110,12 @@ const controller = {
             id_category: req.body.category
 
         }, { where: { id: req.params.id } })
-        return res.redirect('/products/detail/' + req.params.id)
+        return res.redirect('/products/detail/' + req.params.id)}
+        else {
+            let productFound = await db.Product.findByPk(req.params.id);
+            return res.render("productEdit", { errores:errors.array(),size: size, category: category, color: color, brand: brand, product: productFound })
+        } 
+        
     },
     deleteProcess: (req, res) => {
         db.User.destroy({ where: { id: req.params.id } })

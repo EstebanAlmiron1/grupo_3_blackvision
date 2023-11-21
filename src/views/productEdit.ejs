@@ -7,6 +7,16 @@
             <main>
                 <section class="register-box">
                     <h1>Edición de producto</h1>
+                    <ul class="ul-errors">
+                        <% if (locals.errores) { %>
+                            <% for (let index = 0; index < errores.length; index++) {%> 
+                                <%const element = errores[index]%>
+                                <li>
+                                    <%=element.msg%>
+                                </li>                                                        
+                            <%} %>
+                        <% } %>
+                    </ul>    
 
                     <form action="/products/edit/<%=product.id %>?_method=put" method="post"
                         enctype="multipart/form-data">

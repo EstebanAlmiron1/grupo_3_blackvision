@@ -33,6 +33,7 @@ const controller = {
         return res.render("register")
     },
     registerProcess: async (req, res) => {
+        console.log(req.body);
         let errors = validationResult(req)
         let userInDb = await db.User.findOne({ where: { mail: req.body.emailus } })
         if (userInDb) {
@@ -45,7 +46,7 @@ const controller = {
             db.User.create({
                 "first_name": req.body.nameus.toLowerCase(),
                 "last_name": req.body.lastnameus.toLowerCase(),
-                "birthdate": req.body.birthday.toLowerCase(),
+                "birthdate": req.body.birthday,
                 "address": req.body.adressus.toLowerCase(),
                 "mail": req.body.emailus.toLowerCase(),
                 "password": bcrypt.hashSync(req.body.passus, 10),

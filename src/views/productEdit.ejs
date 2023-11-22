@@ -18,7 +18,7 @@
                         <% } %>
                     </ul>    
 
-                    <form action="/products/edit/<%=product.id %>?_method=put" method="post"
+                    <form class="form-productEdit" action="/products/edit/<%=product.id %>?_method=put" method="post"
                         enctype="multipart/form-data">
 
                         <p class="input-Product">Nombre del producto</p>
@@ -106,6 +106,8 @@
                 </section>
             </main>
             <%- include('partials/footer.ejs')%>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="/js/validationsProductEdit.js"></script>
     </body>
 
 </html>

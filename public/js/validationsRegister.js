@@ -33,7 +33,7 @@ window.onload = function (){
 
         if(form.passus.value == ''){
             errors.push('*La password es un campo obligatorio')
-        }else if (form.passus.value.length > 8) {
+        }else if (form.passus.value.length < 8) {
             errors.push('*La password debe tener minimo 8 caracteres')
         }
         

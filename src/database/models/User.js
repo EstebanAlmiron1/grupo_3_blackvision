@@ -13,7 +13,7 @@ module.exports= function(sequelize,DataTypes){
             type: DataTypes.STRING
         },
         birthdate:{
-            type: DataTypes.DATE
+            type: DataTypes.DATEONLY
         },
         address:{
             type: DataTypes.STRING

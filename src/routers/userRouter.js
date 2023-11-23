@@ -22,10 +22,13 @@ router.get("/profile/:id",authtMiddelware,controller.profile)
 router.get("/cart",controller.cart)
 //otros
 router.get("/userResults", controller.search)
-router.get("/list",authtMiddelware, adminMiddleware, controller.list)
-router.get("/edit/:id",controller.edit)
-router.put("/edit/:id",uploadFile.single('image'),validatorEditUser,controller.editProcess)
+router.get("/edit/:id",authtMiddelware,controller.edit)
+router.put("/edit/:id",uploadFile.single('imageus'),validatorEditUser,controller.editProcess)
 router.delete("/edit/:id",controller.deleteProcess)
 router.post("/edit/:id",controller.undelteProcess)
+//admin Edit
+router.get("/list",authtMiddelware, adminMiddleware, controller.list)
+router.get("/adminedit/:id",authtMiddelware, adminMiddleware,controller.adminUserEdit)
+router.put("/adminedit/:id",uploadFile.single('imageus'),validatorEditUser,controller.adminUserEditProcess)
 
 module.exports=router

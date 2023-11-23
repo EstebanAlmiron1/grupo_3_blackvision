@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs')%>
+
+    <body>
+        <%- include('partials/header.ejs')%>
+            <section class="register-box">
+                <h2>EDITAR USUARIO</h2>
+                <h3>Por favor complete la siguiente informacion</h3>
+                <form class="form-editUser" action="/user/adminedit/<%=user.id %>?_method=put" method="post" enctype="multipart/form-data">
+                    <ul class="register-errors">
+                        <% if (locals.errors) { %>
+                            <li>* <%= errors.email.msg %>
+                            </li>
+                            <%}%>
+                                <% if (locals && locals.msgError) { %>
+                                    <% msgError.forEach(i=> { %>
+                                        <li>* <%= i.msg %>
+                                        </li>
+                                        <% }) %>
+                                            <% } %>
+                    </ul>
+
+                    <label for="text"></label>
+                    <input type="text" placeholder="Nombre" id="name" name="nameus"
+                        value="<%= user.first_name%>">
+
+                    <label for="text"></label>
+                    <input type="text" placeholder="Apellido" id="apellido" name="lastnameus"
+                        value="<%= user.last_name%>">
+
+                    <label for="date"></label>
+                    <input type="date" placeholder="Fecha de nacimiento" id="fden" name="birthday"
+                        value="<%= user.birthdate%>">
+
+                    <label for="text"></label>
+                    <input type="text" placeholder="Domicilio" id="domicilio" name="adressus"
+                        value="<%= user.address%>">
+
+                    <label for="E-mail"></label>
+                    <input type="text" placeholder="Correo Electronico" id="email" name="emailus"
+                        value="<%= user.mail%>">
+
+                    <label for="password">Editar contraseña</label>
+                    <input type="password" placeholder="Contraseña nueva" id="password" name="passus">
+                    <p>Imagen de perfil actual</p>
+                    <img src="/img/users/<%= user.img %>" alt="foto-perfil-edit">
+                    <label for="image-edit" class="label-edit"><i class="fas fa-upload"></i>Cambia la imagen de perfil</label>
+                    <input type="file" placeholder="Carga la imagen" id="image-edit" name="imageus">
+
+                    <button type="submit">EDITAR LA CUENTA</button>
+                </form>
+                <% if (user.deleted_at == null) { %>
+                    <form action="/user/edit/<%=user.id %>?_method=delete" method="post">
+                        <button type="submit">Eliminar usuario</button>
+                    </form>
+                <% }else{ %>
+                    <form action="/products/edit/<%=user.id %>" method="post">
+                        <button type="submit">Alta de usuario</button>
+                    </form>
+                    <% }%> 
+            </section>
+            </main>
+            <%- include('partials/footer.ejs')%>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="/js/validationsEditUser.js"></script>
+    </body>
+
+</html>

@@ -21,6 +21,7 @@
                             <p class="product-price-list"><%= i.mail %></p>
                             <p class="product-price-list"><%= i.id_roles == 1 ? 'ADMINISTRADOR' : 'COMPRADOR' %></p>
                         </a>
+                        <a href="/user/adminedit/<%= i.id %>"><button>Edicion de admin</button></a>
                     </div>
                 </article>
             <% }); %>

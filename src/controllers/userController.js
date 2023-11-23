@@ -88,7 +88,7 @@ const controller = {
         return res.redirect('/')
     },
     edit: async (req, res) => {
-        let userFound = await db.User.findByPk(req.params.id)
+        let userFound = req.session.userLogged
         
         return res.render('userEdit',{user:userFound})
     },
@@ -119,6 +119,32 @@ const controller = {
     undelteProcess: (req, res) => {
         db.Product.restore({ where: { id: req.params.id } })
         return res.redirect('/')
+    },
+    adminUserEdit: async (req, res) => {
+        let userFind = await db.User.findByPk(req.params.id)
+        
+        return res.render('adminUserEdit',{user:userFind})
+    },
+    adminUserEditProcess: async (req, res) => {
+        let userFound = await db.User.findByPk(req.params.id)
+        console.log(req.file);
+        let errors = validationResult(req)
+
+        if (errors.isEmpty()) {db.User.update({
+            first_name: req.body.nameus,
+            last_name: req.body.lastnameus,
+            birthdate: req.body.birthday,
+            address: req.body.adressus,
+            img: req.file ? req.file.filename : userFound.img,
+            mail: req.body.emailus,
+            password: req.body.passus? bcrypt.hashSync(req.body.passus, 10):userFound.password,            
+
+        }, { where: { id: req.params.id } })
+        return res.redirect('/user/list')
+        }else return res.render("adminUserEdit", { msgError: errors.array(), user:userFound })
+        
+        
+        
     }
 }
 

@@ -39,6 +39,7 @@ header div {
     width:100%;
 }
 
+
 .register-box button{
     display: flex;
     flex-direction: column;
@@ -57,7 +58,9 @@ header div {
 .register-box button:hover{
     box-shadow: 0px 0px 10px var(--celeste);
 }
-
+.register-box img{
+    max-width: 50%;
+}
 @media (min-width: 426px){
     
 }

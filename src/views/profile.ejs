@@ -19,6 +19,9 @@
                 <form class="edit" action="/user/edit/<%= user.id %>"> 
                     <input type="submit" value="Editar">                        
                 </form>
+                <% if (user.id_roles == 1) { %>
+                    <a href="/user/list/"><button>LISTA Y EDICION DE USUARIOS</button></a>
+                 <% } %>
                 <form action="/user/logout" method="get">
                     <input type="submit" value="Cerrar sesión">
                 </form>

@@ -223,10 +223,11 @@
 }
 .slider-wrapper .image-list .image-item{
     
-    height: 400px;
+    height: 35vh;
     object-fit: cover;
 
 }
+
 
 .ad-home{
     width: 100%;

@@ -147,53 +147,87 @@
     display: flex;
     justify-content: center;
 }
-#carrouselItemsConteiner{
-    height: 20vh;
-    
-    background-size: cover;
-    overflow: hidden;
-    background-color: #ADE4DB;
-    
-}
-.item-carrousel{
-    
-    height: 100%;
+
+.slider-wrapper{
     position: relative;
 }
-.img-carrousel{
-    height: 100%;
-    display: flex;
-    justify-content: center;
+.slider-wrapper .slide-button{
+    position: absolute;
+    top: 50%;
+    color: #F6BA6F;
+    background-color: #6DA9E4;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    transform: translateY(-50%);
 }
-.img-carrousel img{
-    height: 100%;
+.slider-wrapper .slide-button:hover{
+    background: #ADE4DB;
+}
+.slider-wrapper .slide-button#prev-slide{
+    left: 20px;
     
 }
-.arrows-carrousel{
-    height: 100%;
+.slider-wrapper .slide-button#next-slide{
+    right: 20px;
+}
+.slider-wrapper .image-list{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 18px;
+    font-size: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.slider-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+}
+.carrouselConteiner .slider-scrollbar{
+    height: 24px;
     width: 100%;
-    position: absolute;
-    top:0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+}
+.slider-scrollbar .scrollbar-track{
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 4px;
+}
+.slider-scrollbar:hover .scrollbar-track{
+    height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #6DA9E4;
+    border-radius: inherit;
     
 }
-.arrows-carrousel i{
-    opacity: 0.5;
-    transition: all 0.2s ease-out;
-    font-size: 1.5em;
+.slider-scrollbar .scrollbar-thumb:active{
+    
+    height: 8px;
+    top: -2px;
 }
-.arrows-carrousel i:hover{
-    opacity: 1;
-    transform:scale(1.1);
+.slider-scrollbar .scrollbar-thumb ::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
 }
-.arrows-carrousel a{
-     
-    color:#F6BA6F;
+.slider-wrapper .image-list .image-item{
+    
+    height: 400px;
+    object-fit: cover;
 
 }
+
 .ad-home{
     width: 100%;
     
@@ -358,9 +392,7 @@ ul{
     .crew{     
         width: 30%;
     }
-    .carrouselItemsConteiner i{
-        color: #2a3a4c;
-    }
+    
 }
 @media (min-width: 769px){ 
     #linkmainlogo{

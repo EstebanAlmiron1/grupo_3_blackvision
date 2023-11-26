@@ -5,65 +5,25 @@
 <body class="body-index">
     <%- include('partials/header.ejs')%>
     <main>
-        <div id="carrouselItemsConteiner">
-            <div class="item-carrousel" id="item-carrousel1">
-                <div class="img-carrousel" id="img-carrousel1"><img src="/img/lentesHome1.png" alt="imagenHome1"></div>
-                <div class="arrows-carrousel">
-                    <a href="#item-carrousel5">
-                        <i class="fas fa-angle-double-left"></i>
-                    </a>
-                    <a href="#item-carrousel2">
-                        <i class="fas fa-angle-double-right"></i>
-                    </a>
+       <h2 class="title-home">Ultimos productos</h2>
+        <div class="carrouselConteiner">
+            <div class="slider-wrapper">
+                <button id="prev-slide" class="slide-button fas fa-chevron-left"></button>
+                <div class="image-list">
+                    <% nuevos.forEach(i => { %>
+                        <a href="/products/detail/<%= i.id %>"> <img src= "/img/products/<%=i.img%>" alt="img-<%=i.id%>" class="image-item"> </a>
+                    <% }); %>
                 </div>
+                <button id="next-slide" class="slide-button fas fa-chevron-right"></button>
             </div>
-            <div class="item-carrousel" id="item-carrousel2">
-                <div class="img-carrousel" id="img-carrousel2"><img src="/img/lentesHome2.png" alt="imagenHome2"></div>
-                <div class="arrows-carrousel">
-                    <a href="#item-carrousel1">
-                        <i class="fas fa-angle-double-left"></i>
-                    </a>
-                    <a href="#item-carrousel3">
-                        <i class="fas fa-angle-double-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="item-carrousel" id="item-carrousel3">
-                <div class="img-carrousel" id="img-carrousel3"><img src="/img/lentesHome3.png" alt="imagenHome3"></div>
-                <div class="arrows-carrousel">
-                    <a href="#item-carrousel2">
-                        <i class="fas fa-angle-double-left"></i>
-                    </a>
-                    <a href="#item-carrousel4">
-                        <i class="fas fa-angle-double-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="item-carrousel" id="item-carrousel4">
-                <div class="img-carrousel" id="img-carrousel4"><img src="/img/lentesHome4.png" alt="imagenHome4"></div>
-                <div class="arrows-carrousel">
-                    <a href="#item-carrousel3">
-                        <i class="fas fa-angle-double-left"></i>
-                    </a>
-                    <a href="#item-carrousel5">
-                        <i class="fas fa-angle-double-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="item-carrousel" id="item-carrousel5">
-                <div class="img-carrousel" id="img-carrousel5">
-                    <img src="/img/lentesHome5.png" alt="imagenHome5">
-                </div>
-                <div class="arrows-carrousel">
-                    <a href="#item-carrousel4">
-                        <i class="fas fa-angle-double-left"></i>
-                    </a>
-                    <a href="#item-carrousel1">
-                        <i class="fas fa-angle-double-right"></i>
-                    </a>
+            <div class="slider-scrollbar">
+                <div class="scrollbar-track">
+                    <div class="scrollbar-thumb"></div>
                 </div>
             </div>
         </div>
+
+
         <div class="ad-home">
             <div class="ad-img"><img src="/img/publiLentes1.jpg" alt="ad1"></div>
             <div class="ad-text">
@@ -81,6 +41,7 @@
         </div>
     </main>
     <%- include('partials/footer.ejs')%>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

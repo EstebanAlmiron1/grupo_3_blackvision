@@ -216,19 +216,25 @@
     }
     .column-price p{
         padding-top: 20px;
+        font-size: x-large; 
     }
     .column-amount{
         display: flex;
         flex-direction: column;
         position: relative;
         bottom: 20px;
+        
+        
     }
     .column-amount p{
         padding-top: 20px;
+        font-size: x-large; 
+        
     }
     .column-product{
         display: flex;
         flex-direction: column;
+        font-size: x-large; 
     
     }
     .photobox{
@@ -242,6 +248,7 @@
     .column-product{
         width: 30%;
         flex-direction: column;
+        font-size: x-large; 
     }
 }
 

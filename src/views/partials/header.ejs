@@ -2,11 +2,11 @@
     <div class="header-left">
         <div class="main-logo"><a href="/"><img src="/img/logo.png" alt="logo" class="imglogo"></a></div>
         <a href="/" id="linkmainlogo">Inicio</a>
-        <a href="/products" id="linkmainlogo">Productos</a>
-        <a href="/#" id="linkmainlogo">Sale</a>
-        <% if (locals.isLogged) { %>
-            <div class="header-agregarproducto"><a href="/products/create"><i class="fas fa-cart-plus"></i></a></div>
-        <% } %>
+        <a href="/products" id="linkmainlogo">Productos</a>        
+            <% if (locals.isLogged) {%>
+            <% if (locals.userLogged.id_roles == 1) { %>
+                <div class="header-agregarproducto"><a href="/products/create"><i class="fas fa-cart-plus"></i></a></div>
+              <% }}%>
         <i class="fas fa-bars"></i>
     </div>
     <div class="header-right">

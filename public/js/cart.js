@@ -5,7 +5,7 @@ window.onload = function ( ) {
 
 let displayCarrito = function( ){
     let carrito = JSON.parse(localStorage.getItem("carrito"))
-    let carritoContainer = document.querySelector(".selected")
+    let carritoContainer = document.querySelector(".selected")    
     carritoContainer.innerHTML = " "
     carrito.forEach(element => {
         carritoContainer.innerHTML += `
@@ -75,3 +75,12 @@ let borrar = function(id){
     displayCarrito();
     actualizarTotal();
 };
+let boton =document.querySelector('.finalizar-button')
+boton.addEventListener('submit',function (e) {
+    e.preventDefault();
+    Swal.fire(
+        'Bien hecho!',
+        'Se realizó la compra con éxito!!',
+        'success'
+    ).then(() => {boton.submit();})
+})

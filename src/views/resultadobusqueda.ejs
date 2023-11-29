@@ -72,7 +72,7 @@
         </section>
         <section class="products-list">
             <% resultadoBusqueda.forEach(i => { %>
-                <% if (resultadoBusqueda.length == 0) { %>
+                <% if (resultadoBusqueda.length != 0) { %>
                 <article>
                     <div class="img-products-list">
                         <a href="/products/detail/<%= i.id %>"><img src= "/img/products/<%=i.img%>" alt="Lentes" class="img-lentes"></a>

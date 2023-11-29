@@ -6,7 +6,7 @@ const validations = require('../middlewares/validations')
 const validatorRegister = require('../middlewares/validatorRegister')
 const uploadFile = require('../middlewares/multerUs')
 const guestMiddelware = require('../middlewares/guestMiddelware')
-const authtMiddelware = require('../middlewares/authMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
 const adminMiddleware = require('../middlewares/adminMiddleware')
 const validatorEditUser = require('../middlewares/validatorEditUser')
 
@@ -18,17 +18,17 @@ router.get("/login",guestMiddelware,controller.login)
 router.post("/login",controller.loginProcess)
 router.get("/logout",controller.logout)
 //perfil
-router.get("/profile/:id",authtMiddelware,controller.profile)
-router.get("/cart",controller.cart)
+router.get("/profile/:id",authMiddleware,controller.profile)
+router.get("/cart",authMiddleware,controller.cart)
 //otros
 router.get("/userResults", controller.search)
-router.get("/edit/:id",authtMiddelware,controller.edit)
+router.get("/edit/:id",authMiddleware,controller.edit)
 router.put("/edit/:id",uploadFile.single('imageus'),validatorEditUser,controller.editProcess)
 router.delete("/edit/:id",controller.deleteProcess)
 router.post("/edit/:id",controller.undelteProcess)
 //admin Edit
-router.get("/list",authtMiddelware, adminMiddleware, controller.list)
-router.get("/adminedit/:id",authtMiddelware, adminMiddleware,controller.adminUserEdit)
+router.get("/list",authMiddleware, adminMiddleware, controller.list)
+router.get("/adminedit/:id",authMiddleware, adminMiddleware,controller.adminUserEdit)
 router.put("/adminedit/:id",uploadFile.single('imageus'),validatorEditUser,controller.adminUserEditProcess)
 
 module.exports=router

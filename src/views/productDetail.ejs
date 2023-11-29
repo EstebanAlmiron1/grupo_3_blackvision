@@ -26,8 +26,7 @@
             </article>
             <article>
                 <div class="button-detail"> 
-                    <button class="buys-detail">Comprar ahora</button>
-                    <button class="add-detail">Agregar al carrito</button>
+                    <a href="/user/cart"><button class="add-detail">Comprar ahora</button></a>
                 </div>
             </article>
         </section>
@@ -58,6 +57,7 @@
         </section>
     </main>
     <%- include('partials/footer.ejs')%>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/addToCart.js"></script>
 </body>
 </html>

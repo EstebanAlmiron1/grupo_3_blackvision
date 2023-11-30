@@ -118,11 +118,11 @@ const controller = {
         
     },
     deleteProcess: (req, res) => {
-        db.User.destroy({ where: { id: req.params.id } })
+        db.Product.destroy({ where: { id: req.params.id } })
         return res.redirect('/')
     },
     undelteProcess: (req, res) => {
-        db.User.restore({ where: { id: req.params.id } })
+        db.Product.restore({ where: { id: req.params.id } })
         return res.redirect('/')
     }
 }

@@ -81,7 +81,7 @@ const controller = {
         return res.render('resultadobusqueda', { resultadoBusqueda: searchResult, palabra: busqueda, })
     },
     list: async (req, res) => {
-        let userAvailable = await db.User.findAll()
+        let userAvailable = await db.User.findAll({paranoid: false})
         return res.render("users", { user: userAvailable })
     },
     logout: (req, res) => {
@@ -115,20 +115,20 @@ const controller = {
         
     },
     deleteProcess: (req, res) => {
-        db.Product.destroy({ where: { id: req.params.id } })
+        db.User.destroy({ where: { id: req.params.id } })
         return res.redirect('/')
     },
     undelteProcess: (req, res) => {
-        db.Product.restore({ where: { id: req.params.id } })
+        db.User.restore({ where: { id: req.params.id } })
         return res.redirect('/')
     },
     adminUserEdit: async (req, res) => {
-        let userFind = await db.User.findByPk(req.params.id)
+        let userFind = await db.User.findByPk(req.params.id,{paranoid: false})
         
         return res.render('adminUserEdit',{user:userFind})
     },
     adminUserEditProcess: async (req, res) => {
-        let userFound = await db.User.findByPk(req.params.id)
+        let userFound = await db.User.findByPk(req.params.id, {paranoid: false})
         console.log(req.file);
         let errors = validationResult(req)
 

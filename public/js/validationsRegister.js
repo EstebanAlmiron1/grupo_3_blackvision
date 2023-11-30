@@ -54,7 +54,7 @@ window.onload = function (){
             ul.innerHTML = '';
             Swal.fire(
                 'Bien hecho!',
-                'Se creo el producto!',
+                'Se registro el usuario!',
                 'success'
             ).then(() => {form.submit();})
         }

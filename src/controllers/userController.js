@@ -58,7 +58,7 @@ const controller = {
         else return res.render("register", { msgError: errors.array(), old: req.body })
     },
     cart: (req, res) => {
-        return res.render("productCart")//tarea fiamma
+        return res.render("productCart")
     },
     profile: async (req, res) => {
         let userFind = await db.User.findByPk(req.params.id);
@@ -71,12 +71,13 @@ const controller = {
             where: {
                 [db.Sequelize.Op.or]: [
                     { name: { [db.Sequelize.Op.like]: '%' + busqueda + '%' } },
-                    { description: { [db.Sequelize.Op.like]: '%' + busqueda + '%' } }
+                    { description: { [db.Sequelize.Op.like]: '%' + busqueda + '%' } },
+
 
                 ]
             }
         })
-        console.log(searchResult);
+        
         return res.render('resultadobusqueda', { resultadoBusqueda: searchResult, palabra: busqueda, })
     },
     list: async (req, res) => {

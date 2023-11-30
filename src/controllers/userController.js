@@ -117,11 +117,11 @@ const controller = {
     },
     deleteProcess: (req, res) => {
         db.User.destroy({ where: { id: req.params.id } })
-        return res.redirect('/')
+        return res.redirect('/user/list')
     },
     undelteProcess: (req, res) => {
         db.User.restore({ where: { id: req.params.id } })
-        return res.redirect('/')
+        return res.redirect('/user/list')
     },
     adminUserEdit: async (req, res) => {
         let userFind = await db.User.findByPk(req.params.id,{paranoid: false})

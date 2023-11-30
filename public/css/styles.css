@@ -224,7 +224,7 @@
 .slider-wrapper .image-list .image-item{
     aspect-ratio: 16/9;
     height: 35vh;
-    object-fit: cover;
+    object-fit: contain;
 
 }
 

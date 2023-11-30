@@ -68,6 +68,7 @@ const controller = {
     search: async (req, res) => {
         let busqueda = req.query.search;
         let searchResult = await db.Product.findAll({
+            include: [{ association: "marcas" }],
             where: {
                 [db.Sequelize.Op.or]: [
                     { name: { [db.Sequelize.Op.like]: '%' + busqueda + '%' } },
@@ -78,7 +79,7 @@ const controller = {
             }
         })
         
-        return res.render('resultadobusqueda', { resultadoBusqueda: searchResult, palabra: busqueda, })
+        return res.render('productList', { listP: searchResult, palabra: busqueda, })
     },
     list: async (req, res) => {
         let userAvailable = await db.User.findAll({paranoid: false})

@@ -18,7 +18,7 @@ function SideBar(){
         let respuesta = await fetch("/api/product")
         let data = await respuesta.json()
         setProductInfo(data)
-        console.log(data);
+        
     }
     
     const [userInfo, setUserInfo] = useState({
@@ -30,13 +30,15 @@ function SideBar(){
         let data = await respuesta.json()
         setUserInfo(data)
         ;
+        
     }
+    
     useEffect(()=>{ 
         fetchUserApi()
         fetchApi()
 
     },[])
-
+    let prueba = {prueba : 1}
     
    
     return(
@@ -98,9 +100,10 @@ function SideBar(){
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
+            
             <Switch>
-                <Route path="/" exact={true} ><ContentWrapper productInfo = {productInfo}></ContentWrapper></Route>
-                <Route path="/contentRowTop" exact={true} ><ContentRowTop userInfo ={userInfo} productInfo = {productInfo}/></Route>
+                <Route path="/" exact={true} ><ContentWrapper productInfo = {productInfo} userInfo={userInfo}></ContentWrapper></Route>
+                <Route path="/contentRowTop" exact={true} ><ContentRowTop  productInfo = {productInfo} userInfo={userInfo} /></Route>
                 <Route path="/genresInDB" exact={true} ><GenresInDb categorias= {productInfo.countByCategory}/></Route>
                 <Route path="/AllProductsReact" exact={true} ><AllProductsReact productInfo = {productInfo}/></Route>
             </Switch>

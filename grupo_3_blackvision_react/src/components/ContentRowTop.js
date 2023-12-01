@@ -3,7 +3,7 @@ import Cards from './Cards'
 import GenresInDb from './GenresInDb';
 
 function ContentRowTop({productInfo, userInfo}){
-	
+	console.log(userInfo);
 	
      
 	let productsInDB = {
@@ -21,7 +21,7 @@ function ContentRowTop({productInfo, userInfo}){
 	let usersQuantity = {
 		titulo:'Usuarios totales' ,
 		color:'warning',
-		cantidad:userInfo.count,
+		cantidad: userInfo.count,
 		icono:'fa-user-check'
 	}
 	let cartProps = [productsInDB, totalCategories, usersQuantity];
@@ -55,7 +55,7 @@ function ContentRowTop({productInfo, userInfo}){
 								</div>
 								<div className="card-body">
 									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={productInfo.products[productInfo.products.length -1].img} alt=" Star Wars - Mandalorian "/>
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={productInfo.products[productInfo.products.length -1].img} alt="last Product img"/>
 									</div>
 									<p>{productInfo.products[productInfo.products.length -1].description}</p>
 									<p>{productInfo.products[productInfo.products.length -1].id}</p>
